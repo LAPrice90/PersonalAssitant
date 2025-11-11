@@ -1,0 +1,7 @@
+[project]
+name = "luke-calendar"
+version = "0.1.0"
+
+[tool.pip]
+# if using requirements.txt instead, skip this
+
