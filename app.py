@@ -140,6 +140,12 @@ def mem_delete(session: Session, key: str):
         session.delete(row)
         session.commit()
 
+# ---------------------- Health Check ----------------------
+@app.get("/health")
+def health():
+    """Simple health ping for uptime checks."""
+    return {"ok": True}
+
 # ---------------------- Time ----------------------
 @app.get("/time.now")
 def time_now():
