@@ -1,11 +1,10 @@
-# app.py — Luke Assistant API (Calendar + Memory + Directory)
-from datetime import datetime, timezone
+# app.py — Luke Assistant API (Calendar + Memory + Directory + Equipment)
+from datetime import datetime, timezone, timedelta
 from typing import List, Optional
 import os, uuid, json, pytz
 
-from fastapi import FastAPI, Depends, HTTPException, Header, Query, Response
+from fastapi import FastAPI, Depends, HTTPException, Header, Query
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.security import HTTPBearer
 from fastapi.openapi.utils import get_openapi
 from pydantic import BaseModel, EmailStr
 from sqlmodel import Field, SQLModel, create_engine, Session, select
@@ -15,6 +14,7 @@ API_KEY = os.getenv("API_BEARER_KEY", "supersecret")
 DB_URL = os.getenv("DATABASE_URL", "sqlite:///calendar.db")
 engine = create_engine(DB_URL)
 LONDON = pytz.timezone("Europe/London")
+MAX_LIST_SPAN_HOURS = 24  # hard limit to keep responses tiny
 
 def require_bearer(authorization: Optional[str] = Header(None)):
     if not authorization or not authorization.lower().startswith("bearer "):
@@ -103,7 +103,7 @@ def get_session():
 
 # ---------------------- Helpers ----------------------
 def utc(dt: datetime) -> datetime:
-    """Ensure incoming dt is timezone aware; assume Europe/London if naive; return UTC."""
+    """Ensure incoming dt is tz-aware; assume Europe/London if naive; return UTC."""
     if dt.tzinfo:
         return dt.astimezone(timezone.utc)
     return LONDON.localize(dt).astimezone(timezone.utc)
@@ -140,7 +140,7 @@ def mem_delete(session: Session, key: str):
         session.delete(row)
         session.commit()
 
-# ---------------------- Health Check ----------------------
+# ---------------------- Health ----------------------
 @app.get("/health")
 def health():
     """Simple health ping for uptime checks."""
@@ -165,10 +165,40 @@ def freebusy(start: datetime = Query(...), end: datetime = Query(...), session: 
     return FreeBusyResponse(busy=list_busy(session, utc(start), utc(end)))
 
 @app.get("/events.list", dependencies=[Depends(require_bearer)])
-def events_list(start: datetime = Query(...), end: datetime = Query(...), session: Session = Depends(get_session)):
+def events_list(
+    start: datetime = Query(...),
+    end: datetime = Query(...),
+    limit: int = Query(500, ge=1, le=2000),
+    session: Session = Depends(get_session)
+):
     s, e = utc(start), utc(end)
-    rows = session.exec(select(Event).where(Event.start < e, Event.end > s).order_by(Event.start)).all()
-    return [e.__dict__ for e in rows]
+    if (e - s).total_seconds() > MAX_LIST_SPAN_HOURS * 3600:
+        raise HTTPException(400, f"Window too large; max {MAX_LIST_SPAN_HOURS}h")
+    rows = session.exec(
+        select(Event).where(Event.start < e, Event.end > s).order_by(Event.start).limit(limit)
+    ).all()
+    # minimal payload to keep connector happy
+    return [{"id": ev.id, "title": ev.title, "start": ev.start, "end": ev.end} for ev in rows]
+
+@app.get("/events.summary", dependencies=[Depends(require_bearer)])
+def events_summary(
+    start: datetime = Query(...),
+    end: datetime = Query(...),
+    session: Session = Depends(get_session)
+):
+    s, e = utc(start), utc(end)
+    if (e - s).total_seconds() > MAX_LIST_SPAN_HOURS * 3600:
+        raise HTTPException(400, f"Window too large; max {MAX_LIST_SPAN_HOURS}h")
+    rows = session.exec(
+        select(Event.id, Event.title, Event.start, Event.end)
+        .where(Event.start < e, Event.end > s).order_by(Event.start)
+    ).all()
+    return [{"id": r[0], "title": r[1], "start": r[2], "end": r[3]} for r in rows]
+
+@app.get("/events.latest", dependencies=[Depends(require_bearer)])
+def events_latest(limit: int = Query(10, ge=1, le=100), session: Session = Depends(get_session)):
+    rows = session.exec(select(Event).order_by(Event.start.desc()).limit(limit)).all()
+    return [{"id": ev.id, "title": ev.title, "start": ev.start, "end": ev.end} for ev in rows]
 
 @app.post("/events.create", dependencies=[Depends(require_bearer)])
 def events_create(payload: EventCreate, session: Session = Depends(get_session)):
@@ -176,7 +206,7 @@ def events_create(payload: EventCreate, session: Session = Depends(get_session))
     if payload.idempotency_key:
         ex = session.exec(select(Event).where(Event.idempotency_key == payload.idempotency_key)).first()
         if ex:
-            return {"id": ex.id, "htmlLink": f"https://calendar.local/event/{ex.id}"}
+            return {"id": ex.id, "start": ex.start, "end": ex.end}
     for b in list_busy(session, start, end):
         if overlaps(start, end, b.start, b.end):
             raise HTTPException(409, "Time conflict")
@@ -186,7 +216,8 @@ def events_create(payload: EventCreate, session: Session = Depends(get_session))
         description=payload.description, idempotency_key=payload.idempotency_key
     )
     session.add(ev); session.commit()
-    return {"id": ev.id, "htmlLink": f"https://calendar.local/event/{ev.id}"}
+    # minimal response to avoid large payloads
+    return {"id": ev.id, "start": ev.start, "end": ev.end}
 
 @app.post("/events.update", dependencies=[Depends(require_bearer)])
 def events_update(payload: EventUpdate, session: Session = Depends(get_session)):
@@ -196,7 +227,7 @@ def events_update(payload: EventUpdate, session: Session = Depends(get_session))
     new_start = utc(payload.start) if payload.start else ev.start
     new_end   = utc(payload.end)   if payload.end   else ev.end
     for b in list_busy(session, new_start, new_end):
-        if b.start == ev.start and b.end == ev.end:  # same event window
+        if b.start == ev.start and b.end == ev.end:
             continue
         if overlaps(new_start, new_end, b.start, b.end):
             raise HTTPException(409, "Time conflict")
@@ -206,7 +237,7 @@ def events_update(payload: EventUpdate, session: Session = Depends(get_session))
     ev.attendees_csv = (",".join(payload.attendees) if payload.attendees is not None else ev.attendees_csv)
     ev.description = payload.description or ev.description
     session.add(ev); session.commit()
-    return {"id": ev.id, "htmlLink": f"https://calendar.local/event/{ev.id}"}
+    return {"id": ev.id, "start": ev.start, "end": ev.end}
 
 @app.post("/events.delete", dependencies=[Depends(require_bearer)])
 def events_delete(data: dict, session: Session = Depends(get_session)):
@@ -253,9 +284,10 @@ def equipment_get_list(session: Session = Depends(get_session)):
 # ---------------------- Directory (dynamic map) ----------------------
 DEFAULT_DIRECTORY = {
     "_v": 1,
-    "calendar":  {"create": "/events.create", "list": "/events.list"},
+    "calendar":  {"create": "/events.create", "list": "/events.list", "summary": "/events.summary", "latest": "/events.latest"},
     "equipment": {"set": "/equipment.set_list", "get": "/equipment.get_list"},
-    "memory":    {"set": "/memory.set", "get": "/memory.get", "list": "/memory.list"}
+    "memory":    {"set": "/memory.set", "get": "/memory.get", "list": "/memory.list"},
+    "directory": {"get": "/directory.get", "patch": "/directory.patch"}
 }
 
 @app.get("/directory.get", dependencies=[Depends(require_bearer)])
