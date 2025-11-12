@@ -1,26 +1,26 @@
 # app.py — Luke Assistant API (Calendar + Memory + Directory)
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from typing import List, Optional
+import os, uuid, json, pytz
+
 from fastapi import FastAPI, Depends, HTTPException, Header, Query, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import HTTPBearer
 from fastapi.openapi.utils import get_openapi
 from pydantic import BaseModel, EmailStr
 from sqlmodel import Field, SQLModel, create_engine, Session, select
-import os, uuid, json, pytz
 
 # ---------------------- Config ----------------------
 API_KEY = os.getenv("API_BEARER_KEY", "supersecret")
-TZ_UTC = timezone.utc
-LONDON = pytz.timezone("Europe/London")
 DB_URL = os.getenv("DATABASE_URL", "sqlite:///calendar.db")
 engine = create_engine(DB_URL)
+LONDON = pytz.timezone("Europe/London")
 
 def require_bearer(authorization: Optional[str] = Header(None)):
     if not authorization or not authorization.lower().startswith("bearer "):
-        raise HTTPException(status_code=401, detail="Missing bearer token")
+        raise HTTPException(401, "Missing bearer token")
     if authorization.split(" ", 1)[1] != API_KEY:
-        raise HTTPException(status_code=403, detail="Invalid token")
+        raise HTTPException(403, "Invalid token")
 
 app = FastAPI(title="Luke Calendar API")
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
@@ -29,9 +29,13 @@ app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], all
 def custom_openapi():
     if app.openapi_schema:
         return app.openapi_schema
-    schema = get_openapi(title=app.title, version="1.0.0", description="Luke Assistant API", routes=app.routes)
+    schema = get_openapi(
+        title=app.title, version="1.0.0",
+        description="Luke Assistant API (time, calendar, memory, directory, equipment)",
+        routes=app.routes,
+    )
     schema.setdefault("components", {}).setdefault("securitySchemes", {})["BearerAuth"] = {
-        "type":"http","scheme":"bearer","bearerFormat":"JWT"
+        "type": "http", "scheme": "bearer", "bearerFormat": "JWT"
     }
     for path in schema.get("paths", {}).values():
         for method in path.values():
@@ -52,9 +56,9 @@ class Event(SQLModel, table=True):
     idempotency_key: Optional[str] = Field(default=None, index=True)
 
 class Memory(SQLModel, table=True):
-    key: str = Field(primary_key=True)  # e.g. "equipment/kitchen.json"
+    key: str = Field(primary_key=True)                 # e.g. "equipment/kitchen.json"
     value_json: str
-    updated_at: datetime = Field(default_factory=lambda: datetime.now(TZ_UTC))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
 class EventCreate(BaseModel):
     title: str
@@ -81,15 +85,15 @@ class BusyBlock(BaseModel):
 class FreeBusyResponse(BaseModel):
     busy: List[BusyBlock]
 
-class SlotsResponse(BaseModel):
-    slots: List[BusyBlock]
-
 class MemorySet(BaseModel):
     key: str
     value: dict
 
 class EquipmentBody(BaseModel):
     items: List[str]
+
+class DirectoryPatch(BaseModel):
+    value: dict  # shallow merge
 
 SQLModel.metadata.create_all(engine)
 
@@ -98,12 +102,13 @@ def get_session():
         yield s
 
 # ---------------------- Helpers ----------------------
-def ensure_tz(dt: datetime) -> datetime:
+def utc(dt: datetime) -> datetime:
+    """Ensure incoming dt is timezone aware; assume Europe/London if naive; return UTC."""
     if dt.tzinfo:
-        return dt.astimezone(TZ_UTC)
-    return LONDON.localize(dt).astimezone(TZ_UTC)
+        return dt.astimezone(timezone.utc)
+    return LONDON.localize(dt).astimezone(timezone.utc)
 
-def overlap(a_start, a_end, b_start, b_end) -> bool:
+def overlaps(a_start: datetime, a_end: datetime, b_start: datetime, b_end: datetime) -> bool:
     return max(a_start, b_start) < min(a_end, b_end)
 
 def list_busy(session: Session, start: datetime, end: datetime) -> List[BusyBlock]:
@@ -112,19 +117,19 @@ def list_busy(session: Session, start: datetime, end: datetime) -> List[BusyBloc
 
 def mem_get(session: Session, key: str):
     row = session.get(Memory, key)
-    return (json.loads(row.value_json) if row else None)
+    return json.loads(row.value_json) if row else None
 
 def mem_set(session: Session, key: str, value: dict):
     row = session.get(Memory, key)
     if row:
         row.value_json = json.dumps(value)
-        row.updated_at = datetime.now(TZ_UTC)
+        row.updated_at = datetime.now(timezone.utc)
         session.add(row)
     else:
         session.add(Memory(key=key, value_json=json.dumps(value)))
     session.commit()
 
-def mem_list(session: Session, prefix: Optional[str] = None):
+def mem_list(session: Session, prefix: Optional[str] = None) -> List[str]:
     q = select(Memory.key).order_by(Memory.key)
     keys = [k for (k,) in session.exec(q)]
     return [k for k in keys if (prefix is None or k.startswith(prefix))]
@@ -135,51 +140,60 @@ def mem_delete(session: Session, key: str):
         session.delete(row)
         session.commit()
 
-# ---------------------- Endpoints ----------------------
+# ---------------------- Time ----------------------
 @app.get("/time.now")
 def time_now():
-    now_utc = datetime.now(TZ_UTC)
+    now_utc = datetime.now(timezone.utc)
     now_local = now_utc.astimezone(LONDON)
     off_min = int(now_local.utcoffset().total_seconds() // 60)
-    return {"utc": now_utc.isoformat().replace("+00:00","Z"), "tz":"Europe/London",
-            "local": now_local.isoformat(), "offset_minutes": off_min}
+    return {
+        "utc": now_utc.isoformat().replace("+00:00", "Z"),
+        "tz": "Europe/London",
+        "local": now_local.isoformat(),
+        "offset_minutes": off_min
+    }
 
-# Calendar
+# ---------------------- Calendar ----------------------
 @app.get("/availability.freebusy", response_model=FreeBusyResponse, dependencies=[Depends(require_bearer)])
 def freebusy(start: datetime = Query(...), end: datetime = Query(...), session: Session = Depends(get_session)):
-    start, end = ensure_tz(start), ensure_tz(end)
-    return FreeBusyResponse(busy=list_busy(session, start, end))
+    return FreeBusyResponse(busy=list_busy(session, utc(start), utc(end)))
 
 @app.get("/events.list", dependencies=[Depends(require_bearer)])
 def events_list(start: datetime = Query(...), end: datetime = Query(...), session: Session = Depends(get_session)):
-    start, end = ensure_tz(start), ensure_tz(end)
-    rows = session.exec(select(Event).where(Event.start < end, Event.end > start).order_by(Event.start)).all()
+    s, e = utc(start), utc(end)
+    rows = session.exec(select(Event).where(Event.start < e, Event.end > s).order_by(Event.start)).all()
     return [e.__dict__ for e in rows]
 
 @app.post("/events.create", dependencies=[Depends(require_bearer)])
 def events_create(payload: EventCreate, session: Session = Depends(get_session)):
-    start, end = ensure_tz(payload.start), ensure_tz(payload.end)
+    start, end = utc(payload.start), utc(payload.end)
     if payload.idempotency_key:
         ex = session.exec(select(Event).where(Event.idempotency_key == payload.idempotency_key)).first()
-        if ex: return {"id": ex.id, "htmlLink": f"https://calendar.local/event/{ex.id}"}
+        if ex:
+            return {"id": ex.id, "htmlLink": f"https://calendar.local/event/{ex.id}"}
     for b in list_busy(session, start, end):
-        if overlap(start, end, b.start, b.end):
+        if overlaps(start, end, b.start, b.end):
             raise HTTPException(409, "Time conflict")
-    ev = Event(title=payload.title, start=start, end=end, location=payload.location,
-               attendees_csv=(",".join(payload.attendees) if payload.attendees else None),
-               description=payload.description, idempotency_key=payload.idempotency_key)
+    ev = Event(
+        title=payload.title, start=start, end=end, location=payload.location,
+        attendees_csv=(",".join(payload.attendees) if payload.attendees else None),
+        description=payload.description, idempotency_key=payload.idempotency_key
+    )
     session.add(ev); session.commit()
     return {"id": ev.id, "htmlLink": f"https://calendar.local/event/{ev.id}"}
 
 @app.post("/events.update", dependencies=[Depends(require_bearer)])
 def events_update(payload: EventUpdate, session: Session = Depends(get_session)):
     ev = session.get(Event, payload.id)
-    if not ev: raise HTTPException(404, "Event not found")
-    new_start = ensure_tz(payload.start) if payload.start else ev.start
-    new_end   = ensure_tz(payload.end)   if payload.end   else ev.end
+    if not ev:
+        raise HTTPException(404, "Event not found")
+    new_start = utc(payload.start) if payload.start else ev.start
+    new_end   = utc(payload.end)   if payload.end   else ev.end
     for b in list_busy(session, new_start, new_end):
-        if b.start == ev.start and b.end == ev.end: continue
-        if overlap(new_start, new_end, b.start, b.end): raise HTTPException(409, "Time conflict")
+        if b.start == ev.start and b.end == ev.end:  # same event window
+            continue
+        if overlaps(new_start, new_end, b.start, b.end):
+            raise HTTPException(409, "Time conflict")
     ev.title = payload.title or ev.title
     ev.start, ev.end = new_start, new_end
     ev.location = payload.location or ev.location
@@ -190,46 +204,52 @@ def events_update(payload: EventUpdate, session: Session = Depends(get_session))
 
 @app.post("/events.delete", dependencies=[Depends(require_bearer)])
 def events_delete(data: dict, session: Session = Depends(get_session)):
-    ev_id = data.get("id"); 
-    if not ev_id: raise HTTPException(400, "id required")
+    ev_id = data.get("id")
+    if not ev_id:
+        raise HTTPException(400, "id required")
     ev = session.get(Event, ev_id)
-    if ev: session.delete(ev); session.commit()
-    return {"status":"ok"}
+    if ev:
+        session.delete(ev); session.commit()
+    return {"status": "ok"}
 
-# Memory (generic JSON store)
+# ---------------------- Memory ----------------------
 @app.post("/memory.set", dependencies=[Depends(require_bearer)])
 def memory_set(payload: MemorySet, session: Session = Depends(get_session)):
-    mem_set(session, payload.key, payload.value); return {"status":"ok","key":payload.key}
+    mem_set(session, payload.key, payload.value)
+    return {"status": "ok", "key": payload.key}
 
 @app.get("/memory.get", dependencies=[Depends(require_bearer)])
 def memory_get(key: str = Query(...), session: Session = Depends(get_session)):
     val = mem_get(session, key)
-    if val is None: raise HTTPException(404, "Not found")
-    return {"key":key, "value":val}
+    if val is None:
+        raise HTTPException(404, "Not found")
+    return {"key": key, "value": val}
 
 @app.get("/memory.list", dependencies=[Depends(require_bearer)])
-def memory_list(prefix: Optional[str] = Query(None), session: Session = Depends(get_session)):
+def memory_keys(prefix: Optional[str] = Query(None), session: Session = Depends(get_session)):
     return {"keys": mem_list(session, prefix)}
 
 @app.post("/memory.delete", dependencies=[Depends(require_bearer)])
 def memory_del(payload: MemorySet, session: Session = Depends(get_session)):
-    mem_delete(session, payload.key); return {"status":"ok"}
+    mem_delete(session, payload.key)
+    return {"status": "ok"}
 
-# Equipment (convenience)
+# ---------------------- Equipment (convenience) ----------------------
 @app.post("/equipment.set_list", dependencies=[Depends(require_bearer)])
 def equipment_set_list(body: EquipmentBody, session: Session = Depends(get_session)):
-    mem_set(session, "equipment/kitchen.json", {"items": body.items}); return {"status":"ok"}
+    mem_set(session, "equipment/kitchen.json", {"items": body.items})
+    return {"status": "ok"}
 
 @app.get("/equipment.get_list", dependencies=[Depends(require_bearer)])
 def equipment_get_list(session: Session = Depends(get_session)):
-    return mem_get(session, "equipment/kitchen.json") or {"items":[]}
+    return mem_get(session, "equipment/kitchen.json") or {"items": []}
 
-# Directory (the dynamic map)
+# ---------------------- Directory (dynamic map) ----------------------
 DEFAULT_DIRECTORY = {
     "_v": 1,
-    "calendar": {"create": "/events.create", "list": "/events.list"},
+    "calendar":  {"create": "/events.create", "list": "/events.list"},
     "equipment": {"set": "/equipment.set_list", "get": "/equipment.get_list"},
-    "memory": {"set": "/memory.set", "get": "/memory.get", "list": "/memory.list"}
+    "memory":    {"set": "/memory.set", "get": "/memory.get", "list": "/memory.list"}
 }
 
 @app.get("/directory.get", dependencies=[Depends(require_bearer)])
@@ -238,19 +258,16 @@ def directory_get(session: Session = Depends(get_session)):
     if not val:
         mem_set(session, "registry/directory.json", DEFAULT_DIRECTORY)
         val = DEFAULT_DIRECTORY
-    return {"key":"registry/directory.json","value":val}
-
-class DirectoryPatch(BaseModel):
-    value: dict  # shallow-merge keys
+    return {"key": "registry/directory.json", "value": val}
 
 @app.post("/directory.patch", dependencies=[Depends(require_bearer)])
 def directory_patch(payload: DirectoryPatch, session: Session = Depends(get_session)):
     cur = mem_get(session, "registry/directory.json") or DEFAULT_DIRECTORY
     new_val = {**cur, **payload.value}
     mem_set(session, "registry/directory.json", new_val)
-    return {"status":"ok","value":new_val}
+    return {"status": "ok", "value": new_val}
 
-# Run local
+# ---------------------- Run (local) ----------------------
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", 8080)))
