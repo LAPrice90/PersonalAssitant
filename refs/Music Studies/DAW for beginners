@@ -1,0 +1,1470 @@
+Comprehensive Roadmap to Mastering Reaper
+(DAW) for Complete Beginners
+Introduction: This roadmap provides a step-by-step learning path for a complete beginner to become
+proficient in all key areas of music production using Reaper. The journey is organized into stages that
+build progressively on skills – from initial setup and recording through mixing, mastering, and advanced
+customization. At each stage, the emphasis is on hands-on learning: you will be encouraged to practice
+with real projects and exercises rather than just read or watch. A tip from experienced users is to
+dedicate time to experiment in Reaper with the user manual or forum at hand to search for answers as
+you go . Also, focus on learning only what you need at each step – don’t try to absorb all of
+Reaper’s features at once . Reaper is extremely deep and customizable, but you will gradually realize
+how features you skipped initially can become useful later. Remember to have fun during the process
+and don’t fear making mistakes – every project (even ones you scrap) builds your experience . With
+that mindset, let’s dive into the roadmap.
+Stage 1: Installation, Setup, and Basic Orientation
+In this first stage, you will get Reaper up and running, configure essential settings, and become familiar
+with the user interface. The goal is to ensure your system is ready for audio work and that you know the
+basic controls and terminology before diving into recording.
+Core Topics:
+- Installing Reaper and Licensing: Download and install the latest version of Reaper from the official
+site (the free trial is fully functional ). Learn how the licensing works (e.g. $60 discounted license for
+personal/small business use ).
+- Audio Interface Setup: Connect and configure your audio interface (or built-in sound card). In
+Reaper’s Options > Preferences > Audio > Device, select your interface as the input/output and choose
+the appropriate driver (ASIO on Windows for low latency) . Adjust buffer size and sample rate for
+a balance between low latency and stable performance . The official Reaper resources include
+guides on using an audio interface and optimizing latency .
+- Reaper Workspace Overview: Familiarize yourself with Reaper’s interface: the main timeline/
+arrange view, the Track Control Panel (where track controls like volume, pan, record-arm are located
+on the left), the Mixer (typically at the bottom, showing channel strips for tracks), and the transport bar
+(play, stop, record controls). Notice that Reaper’s tracks are “universal” – any track can hold audio or
+MIDI or video and can act as input, bus, etc., giving great flexibility .
+- Basic Navigation and UI Operations: Learn how to create a new project and save it. Practice adding a
+track (e.g. double-click in the left pane or use Insert > New Track ), naming tracks, and using basic
+transport controls (play, stop, record). Toggle the metronome on/off and adjust tempo. Also learn how
+to zoom, scroll, and toggle views (for instance, the mixer view). This stage is about getting comfortable
+moving around in Reaper’s environment.
+- Key Interface Elements: Identify the main buttons on a track’s control panel: Record Arm (enables
+recording on that track) , Mute/Solo, Volume fader/knob, Pan knob, FX (to add plugins) , Route
+(for sends and routing) , and the Envelopes/Automation button . Understanding these will
+prepare you for deeper tasks later.
+1
+2
+3
+4
+5 6
+7 8
+9
+10
+11
+12
+13 14
+14 15
+1
+Practical Exercises:
+- Install and Configure: Install Reaper and open it. Go to Preferences and configure your audio device.
+Try playing back any existing audio on your computer through Reaper (for example, drag-and-drop an
+audio file onto Reaper’s track area to import it, then play). This checks that your audio output is
+working.
+- Explore the Interface: Create a new project. Add two new tracks. Try renaming one track “Guitar” and
+the other “Vocals” (double-click the track name area to rename). Arm one track for recording (click the
+record-arm button – it should turn red). Although we won’t record just yet, notice how the meters react
+to input if you have a mic connected and enabled. Toggle the metronome and observe the count-in.
+Adjust the master volume and see its effect on playback.
+- Basic Navigation: Practice using the scroll wheel or trackpad to zoom in/out on the timeline. Move the
+edit cursor around by clicking different timeline positions. If you imported an audio file, practice
+scrolling and zooming around it. Try using the spacebar to play/stop and Home/End keys to go to
+project start/end. These small navigation skills will make the next stages easier.
+- Project Management: Save your project (use File > Save Project As…). Observe that Reaper can save all
+media in a specific folder if you check “Copy all media into project directory” – a good habit to keep
+projects organized. No need to master everything now, just be aware of how to save and reopen
+projects.
+Useful Resources:
+- Official Reaper User Guide (Quick Start): The user guide’s quick-start chapter is very helpful for
+beginners, explaining common tasks step-by-step. It covers many basics like configuring devices and
+adding tracks .
+- Reaper Official Video Guides: On the Reaper website under Resources > Videos, there are beginnerfriendly videos. For example, “This is REAPER 7: Starting a New Project” and “The Tracks” introduce the
+interface and track creation . These are created by Kenny Gioia and are clear and concise.
+- “How to Set Up Your Audio Interface in Reaper” Tutorials: Many free videos (e.g. on YouTube) walk
+through interface setup and preferences. Search for your specific interface model + “Reaper setup” if
+available. The Reaper Blog and other channels often have guidance on optimizing audio settings.
+- Reaper.fm Forums and Communities: If you run into trouble (no sound, or weird behavior), the
+official Cockos Reaper forum is extremely friendly and helpful . Don’t hesitate to ask basic questions
+there – the community is known for being supportive of beginners.
+Optional Advanced Topics (for later):
+(You do not need to master these now, but keep these in mind to explore as you become more comfortable.)
+- Customizing Layouts: Reaper allows you to customize window layouts and even undock sections of
+the interface. Down the line, you can explore the View > Screensets/Layout menu to create workspaces
+that suit different tasks (e.g. separate layouts for recording vs. mixing) .
+- Configuring Themes: Reaper’s look can be changed with user-created themes. You might later try
+installing a popular Reaper theme that you find visually appealing or clearer. This can make the
+interface more enjoyable and personalized .
+- Import/Export Configurations: As you tweak settings, know that Reaper can import/export
+configuration files (found in Preferences). Advanced users back up their configs or import custom ones
+– an optional idea once you have your environment just right.
+- Portable Install: Reaper can run as a portable installation (from a USB drive or separate folder) .
+This is useful if you want to test new settings or run Reaper on different computers without reinstalling
+– a fun thing to try later.
+16
+17
+18
+19
+20
+21
+2
+Stage 2: Audio Recording Fundamentals
+Now that you have Reaper set up and know your way around the basics, it’s time to start recording
+audio. This stage focuses on recording techniques and workflow: setting up tracks for recording,
+capturing performances, and basic management of recorded audio files. By the end of this stage, you
+should be able to record instruments or vocals in Reaper and have an understanding of how takes and
+monitoring work.
+Core Topics:
+- Track Setup for Recording: Learn how to prepare a track for recording audio. This includes arming the
+track (record-enable it) and selecting the correct input (e.g. Input 1 for your microphone, Input 2 for
+guitar, etc., depending on your audio interface). Ensure you understand mono vs. stereo input selection
+if applicable.
+- Input Monitoring: Understand how to enable input monitoring so you can hear yourself through the
+DAW while recording (the little speaker icon next to the record arm). You can choose to monitor the
+input without recording as well (by setting record mode to “Monitor only”) . Be mindful of latency – if
+there is a delay echo, you may need to lower your audio buffer size for real-time playing.
+- Setting Levels: Before recording, always check your input levels. Use the track’s meter to ensure your
+signal is not too low (which could introduce noise) and not clipping (going into the red). Aim for a
+healthy level (e.g. peaks around -12 dBFS) to allow headroom. This concept is fundamental in all DAWs.
+- Using the Metronome and Count-in: If you are recording music, you’ll likely use the metronome (click
+track) to keep time. Learn how to toggle the metronome and set a count-in (under Options > Metronome/
+Pre-roll settings). If the default metronome sound is unpleasant, know that you can customize it or even
+replace it with a different sound later , though this is optional.
+- Basic Recording Process: The workflow to record is: arm track -> position cursor -> press Record ->
+perform -> press Stop. Practice this cycle. Learn that when you stop, Reaper will prompt to save or
+delete the recording (you can configure this in preferences if you want to auto-save). Understand where
+recorded files are stored (by default in the project directory or a default path).
+- Recording Modes (Takes and Overdubs): Reaper by default records each pass as a “take” in the same
+item if you record over an existing item. Get a basic idea of how takes work: you can cycle through takes
+on a track, or later “explode” takes to separate tracks. Also know you can change recording mode to
+record into new separate tracks or use the new “layered” recording mode for comping . This is a
+more advanced detail; initially you might just do single takes, but be aware multiple takes are possible.
+- File Management: It’s good to create a habit of naming tracks before recording (so that recorded files
+get named accordingly). Also, note that you can set up paths for recorded files per project or have
+Reaper generate subfolders for you. While optional, these practices keep recordings organized
+especially as you start doing multi-track recordings.
+Practical Exercises:
+- Record a Test Audio Clip: Plug in a microphone or instrument to your interface. In Reaper, add a track,
+arm it, and select the correct input. Press record and capture about 15-30 seconds of audio – for
+example, speak a few lines or play some notes on your instrument. Press stop. Play back what you
+recorded to ensure it sounds clear and at a good level.
+- Multiple Takes: On the same track, try recording another take over the first (ensure Options > New
+recordings that overlap existing media items is set to splits takes or creates new take – the default). For
+instance, record yourself saying “Take 1…[line]”, then again “Take 2…[line]”. Notice how Reaper handles
+the two takes in one item (you’ll see take numbers). Practice switching takes: select the item and press
+T (default shortcut) or right-click and choose Take > Switch to take.... This will familiarize you with the
+concept of takes for later comping.
+- Punch-In Recording (Optional): If you feel adventurous, try a basic punch-in: enable Options > Record
+Mode: Time Selection Auto-Punch. Highlight a short section on the timeline (time selection) and record –
+22
+23 24
+25
+3
+Reaper will only record during that selected range, allowing you to “punch in” a fix in the middle of a
+performance. This is optional but demonstrates Reaper’s flexible recording modes.
+- Organize and Save: After recording, save your project. Note how Reaper prompts to save recorded
+files if you hadn’t saved the project first. It’s often wise to save a project before heavy recording and
+check File > Project Settings to ensure WAV format and a reasonable sample rate/bit depth (44.1 kHz 24-
+bit is a good default). As a mini-project, try creating a folder for a “Test Project”, save the project there,
+and record a couple of files so you can inspect that folder to see your recorded WAV files. This helps you
+understand where your takes live on disk.
+Project Idea: “Personal Podcast/Diary” – Set up a project to record a short “podcast” style diary entry or a
+musical riff each day for a week. Each day, add a new track or use new takes on the same track. This
+project will motivate you to open Reaper regularly, record something, save the project, and by the end,
+you’ll be comfortable with the basic recording workflow and managing takes (and you’ll have an
+interesting log of your progress!). This low-stakes project is just for you – no pressure on perfection.
+Useful Resources:
+- Kenny Gioia’s “Recording Audio in Reaper” Videos: The official Reaper video series has dedicated
+tutorials on recording. In This is REAPER 7, check out “Recording Audio – Part 1” and “Part 2”, which
+demonstrate arming tracks, input settings, and capturing takes . Seeing the process can greatly
+reinforce what you practice.
+- Pro Mix Academy – How to Record in Reaper (Blog Post): This step-by-step guide walks
+through setting up an interface and the recording process, reiterating many steps above (in case you
+need another explanation). It covers configuring audio preferences, arming tracks, and even basic
+troubleshooting.
+- Reaper User Guide – Recording Chapter: The user manual has a comprehensive chapter on
+recording, including punch-in, loop recording, and takes. Use it as reference if you want to learn what
+else is possible. It’s very detailed, so you can skim for the parts you need (e.g. search “punch in” or
+“takes”).
+- Community Videos (Reaper Blog, etc.): There are many community-made videos about recording
+techniques in Reaper. For example, the Reaper Blog on YouTube has a “Recording 101” type video. If you
+prefer video learning, these can be useful.
+- Forums for Troubleshooting: If you encounter issues like “I can’t hear my input” or “My recording is
+delayed,” a quick search on the Reaper forum or subreddit often reveals solutions (e.g. enabling Record
+Monitoring or adjusting latency). The Reaper.fm forums are a great place to ask for help if something
+isn’t working right .
+Optional Advanced Topics (for later):
+- Advanced Recording Modes: Reaper has loop recording (recording in a looped section, generating
+multiple takes automatically) and auto-punch recording (dropping in only during selection). Once you’re
+comfortable with basic recording, you can explore these modes to record more efficiently. They are
+great for tracking difficult parts that require multiple tries or overdubbing sections in the middle of a
+take.
+- Comping Takes: Later, learn about Reaper’s comping workflow – especially with the introduction of
+track “lanes” in newer Reaper versions (the “record to layers” feature) . This allows you to record
+multiple takes in parallel lanes and easily cut between them to compile a perfect take. It’s an essential
+skill if you record vocals or solos and want to piece together the best parts of each take.
+- SWS Extensions – Auto Color for Tracks: An SWS extension feature (discussed in Stage 10) can autocolor tracks when you arm them or based on names . This can be a nice organizational aid once
+you start doing larger recordings. It’s not vital now but worth noting for the future when your projects
+grow.
+- Recording Multiple Sources Simultaneously: Eventually, you might record a band or multiple inputs
+26
+27 28
+18
+25
+29 22
+4
+at once. Reaper can easily handle multi-track simultaneous recording. Down the line, practice creating
+multiple tracks, arming all of them, and recording (for example, record guitar and vocals on separate
+tracks at the same time). Just ensure you’ve set each track’s input correctly. This will prepare you for
+bigger sessions.
+Stage 3: Audio Editing and Arrangement Basics
+After recording audio, the next fundamental skill is editing: shaping your raw recordings into a tighter,
+polished form. In this stage, you’ll learn how to cut, move, and arrange audio items on the timeline.
+You’ll also practice basic arrangements, such as looping sections and working with regions of your
+project. The goal is to be comfortable manipulating audio clips and assembling a song or project
+structure.
+Core Topics:
+- Navigating and Selecting Items: Understand how audio recordings appear as items on tracks. Learn
+to select items (single click) and use time selection (click-drag on the timeline ruler) to choose ranges.
+Mastering selection is key to editing precisely.
+- Basic Editing Tools: Reaper’s default editing is very mouse-friendly. Key operations include: Split (cut
+an item at a point, default shortcut S ), Trim (drag item edges to shorten or extend, if looping is
+enabled), and Delete (remove an item or a portion). Practice splitting a long recording into smaller
+phrases or removing silence. Also try creating fades: drag the top corners of an item to fade in/out.
+These basics let you remove mistakes and smooth transitions.
+- Moving and Arranging Items: Click and drag items to move them along the timeline or between
+tracks. Hold Ctrl (Windows) or Option (Mac) while dragging to copy an item. This way, you can
+duplicate a chorus or repeat a beat easily. Learn snapping behavior: with Snap enabled (magnet icon),
+your edits will snap to grid lines (like measures/beats) which is useful for music. Toggle snap off if you
+need freeform editing.
+- Using the Grid and Looping: If you’re working on music, set the project tempo and grid (e.g. quarter
+notes, etc.). Import or record a drum loop and see how it aligns with the grid. Learn to loop an item:
+position your mouse at the item’s edge and drag while holding Alt (Windows) or Option (Mac) – the
+item will repeat (loop) instead of stretching. Alternatively, split out one bar of a drum loop and copypaste it multiple times.
+- Ripple Editing: Discover ripple editing modes (on the main toolbar or Options menu). Ripple editing
+moves subsequent items when you insert or remove a section, which is useful for maintaining sync
+when arranging. For example, if you cut a 4-bar section out of all tracks, ripple editing can automatically
+close that gap. Start with Ripple All Tracks mode in a test project to see how removing an item causes
+later items to slide earlier. This is optional at first, but knowing it exists will help you when doing more
+complex arrangements.
+- Regions and Markers: Begin using markers (press M during playback to drop a marker) to label
+sections (like “Intro”, “Verse”, etc.). Also try creating a region: select a time range and press Shift+R –
+a region can be moved as a block (with all content in that range) which is very useful for arranging song
+sections. These tools make it easier to visualize and rearrange a song structure.
+- Basic Tempo Adjustments: As a simple introduction to tempo and time-stretch, experiment with item
+playback rate. Hold Alt and drag an item edge to time-stretch it (make it play slower or faster) –
+ensure Preserve pitch is on in item properties if you don’t want it to change pitch. This can be useful to fit
+a loop to your project tempo. (This is a minor topic – don’t worry if it’s too much at once.)
+Practical Exercises:
+- Trimming and Cleaning a Voice Clip: Take the voice/instrument recording from Stage 2. Practice
+5
+editing it: remove any dead air at the start or end by clicking and dragging the item edges (trim), or by
+splitting ( S ) at the desired cut points and deleting the unwanted parts. Add a short fade-in at the very
+beginning and fade-out at the end to avoid clicks. This will teach you how to clean up a raw recording.
+- Loop Editing Exercise: Download a short drum loop (one or two bars of drums) in WAV format. Import
+it into Reaper (drag it onto a track). Make sure the project tempo matches the loop’s tempo (or vice
+versa). Now practice slicing and rearranging it: for example, split the loop at each beat or bar. Rearrange
+the order of a couple of slices, or copy one beat you like and replace another with it. Try looping the
+modified loop by duplicating it several times. This exercise builds skill in rhythmic editing and is actually
+quite fun .
+- Arrange a Simple Song Structure: If you have some musical recordings (or use the provided drum
+loop and perhaps record a simple guitar or piano part), practice arranging them. For instance, duplicate
+a chorus section to appear twice, or shorten a solo section from 16 bars to 8 bars by cutting out a
+portion. Use markers to label “Chorus 1”, “Chorus 2”, and so on. If you’re unsure what to arrange, you
+might take a simple 12-bar blues structure: record 12 bars of something, then duplicate it to have a
+second chorus, etc., adding markers for each chorus. The focus is on learning to copy/move items to
+build a larger structure.
+- Experiment with Ripple Edit: Make a test project with two or three tracks (e.g. drum loop on one, a
+recorded melody on another). Turn on Ripple Editing (All Tracks) – the icon with two arrows on the
+toolbar. Split and delete a section in one track and watch the other track’s item also move to close the
+gap . This shows how you can delete an entire song section across all tracks easily. Then undo and
+try inserting (copy-paste) a section with ripple on, to see everything move. Knowing this prevents a
+common newbie mistake of messing up alignment when cutting sections.
+Useful Resources:
+- Official Reaper Videos – Editing Basics: Kenny Gioia has videos like “Basic Audio Editing” in the This is
+REAPER 7 series which demonstrates splits, fades, and item moves. There’s also “Did you lose your
+record, play, stop buttons” – not directly editing, but a fun one in the Start Here section if your interface
+ever seems to glitch . It’s good to watch the editing one to visually see how to split and adjust items.
+- Reaper Blog Tutorials: The Reaper Blog (unofficial) has many tutorials on editing. Search for terms
+like “Reaper editing tips” or check their YouTube for topics on comping, ripple editing, and using the
+arrange view efficiently. They often share useful shortcut tips too.
+- ReaPack Scripts for Editing (Advanced Users): As you progress, know that the Reaper community
+has scripts (via ReaPack) to speed up editing tasks – for example, scripts to auto split items on silence,
+or to trim items in one click, etc. Keep this in mind for the future; it’s not needed now, but if you find
+yourself doing a tedious edit, there might be a script for it.
+- Editing Exercises from Other DAWs: If you search for “DAW editing exercises,” even if they are for
+another DAW, you can often do them in Reaper. For example, any tutorial on “how to comp vocals” or
+“how to edit drums to the grid” – the concepts usually apply, just the tools differ. Use Reaper’s manual or
+forum to translate those techniques into Reaper’s way of doing it.
+Optional Advanced Topics (for later):
+- Advanced Audio Editing Tools: Reaper has features like Dynamic Split (automatically split items based
+on silence or transients) and Quantize for audio (aligning transient markers to grid). Once you grasp
+manual editing, you can explore these to speed up tasks (e.g. splitting a drum recording at each hit for
+tightening timing).
+- Stretch Markers: These allow time-stretching specific parts of an item without slicing the item into
+pieces. It’s great for correcting timing on a note or aligning a drum hit without a hard cut. After you’re
+comfortable with basic splits, look into stretch markers as a way to do “elastic audio” style corrections.
+- Spectral Editing: A very powerful but advanced feature – Reaper can display a spectrogram view of an
+item and let you make edits to specific frequency content (like removing a cough or a bird chirp in the
+background of a recording). This is overkill for now, but exciting to explore later if you deal with sound
+30
+31
+32
+33
+6
+design or cleaning up audio.
+- External Editor Integration: Reaper can integrate with external audio editors (like Audacity, iZotope
+RX, etc.). If in the future you need to do detailed waveform editing or noise reduction, you can configure
+an external editor and launch it from within Reaper on a selected item. Optional, but good to know as
+you expand your toolkit.
+- Versioning and Takes Management: For large projects, you might explore using Project Tabs or
+Snapshots (via SWS extension) to keep different edit versions. For example, you could have one tab
+where you experiment with a different arrangement. This helps when you want to try radical edits
+without losing your original arrangement. Again, consider this once you’ve done a few projects and find
+the need for more complex management.
+Stage 4: MIDI Composition and Editing Basics
+With audio recording and editing under your belt, it’s time to delve into MIDI – a core aspect of modern
+music production. In this stage, you’ll learn how to create and edit MIDI tracks in Reaper, which will
+allow you to add virtual instruments (like software synthesizers or drum machines) to your projects. By
+the end of this stage, you should be comfortable recording MIDI from a keyboard (or drawing notes by
+hand) and editing MIDI data (notes and velocities) in Reaper’s piano roll.
+Core Topics:
+- MIDI Track Setup: Add a new track for MIDI composition. Remember, in Reaper a track can handle
+MIDI and audio interchangeably. Typically, you will insert a virtual instrument (VSTi) on the track first
+(we’ll cover instruments in the next stage, but you can use Reaper’s built-in ReaSynth or
+ReaSamplOmatic5000 as a simple instrument for now). Alternatively, you can create a MIDI item without
+an instrument just to see the notes.
+- MIDI Input and Recording: If you have a MIDI keyboard/controller, enable it in Reaper’s preferences
+under Audio > MIDI Devices. Set the track’s MIDI Input to your device (or to “All MIDI inputs”). Arm the
+track and press Record – now playing your keyboard should record MIDI data (notes will appear as
+vertical lines in a block, representing a MIDI “item”). The process is similar to audio recording : arm
+track, select MIDI input, record and play notes . If you don’t have a physical keyboard, you can use
+Reaper’s Virtual MIDI Keyboard (enable it from the View menu and use your PC keyboard to send
+notes).
+- Piano Roll Basics: After recording or inserting a MIDI item (you can also create an empty MIDI item by
+double-clicking a blank area on a MIDI track), open the MIDI Editor/Piano Roll (double-click the MIDI
+item). In this piano roll view, you’ll see a grid where you can edit notes. Learn to switch tools (draw or
+select notes – by default, clicking adds notes). Core editing tasks here include: adding notes (doubleclick or draw), deleting notes (select and press delete), moving notes (drag), changing note length (drag
+edge of note), and adjusting note velocity (usually via little bars or color of notes, or the velocity lane at
+bottom).
+- MIDI Note Editing: Practice common edits: quantize (align notes to grid timing if needed), transpose
+notes (select and drag them up/down to change pitch, or use numpad +/- keys by default to transpose
+selection). Understand that you can select multiple notes (click and drag a marquee or Ctrl+click) and
+move or delete them together. Also learn how to zoom in/out in the MIDI editor, and scroll to navigate
+different pitch ranges.
+- MIDI CC and Automation: Notice the lanes at the bottom of the MIDI editor (e.g. Velocity by default).
+These can display MIDI CC (Continuous Controller) data like modulation, sustain pedal, etc. For now,
+focus on note velocities – try adjusting velocity values (which often correspond to how loud or accented
+a note is). You can draw a velocity ramp or make all notes the same, and listen to the difference if your
+instrument responds to velocity (most do). Additionally, realize that you can automate MIDI parameters
+34
+35
+7
+either by recording while turning knobs on a MIDI controller or by drawing CC curves. As a simple
+exercise, you might draw a modulation wheel (CC1) curve if using a synth pad sound, to see how it
+changes the sound over time. This is an introduction to MIDI automation.
+- Using the MIDI Editor Efficiently: Learn about some useful features: the piano roll can be set to
+musical scales or snap to key (useful if you want only notes in a certain key). Also, Reaper’s MIDI editor
+has a grouping feature – if you enable Options > Automatically group MIDI notes or manually group
+notes, you can move chords together easily . You might not need grouping now, but know it’s there
+as a unique Reaper feature that can ease editing chords vs single notes.
+- Step Recording (Optional): Reaper supports step recording (entering notes one at a time at a fixed
+step length, via the Actions list). If you’re not a keyboard player, this can be a way to input a melody or
+drum pattern precisely. It’s a bit hidden (you have to assign a key or button to “Step Recording: Insert
+note…” actions). This is optional, but exploring it later might help if you prefer programming notes step
+by step.
+Practical Exercises:
+- Record a Simple Melody via MIDI: Use either a MIDI keyboard or the Virtual MIDI Keyboard. Choose
+a simple virtual instrument (e.g., ReaSynth which produces a simple tone). Arm a track for MIDI, hit
+record, and play a short melody or chord progression (even if it’s just a few notes like “Twinkle Twinkle”
+or a C major scale). After recording, play it back to hear the instrument sound. Then, open the piano roll
+and examine the notes you recorded – adjust any off-timing notes by dragging them closer to the grid
+(or try the Quantize function on a copy of the item). This exercise shows the full path from recording to
+editing a MIDI performance.
+- Program a Drum Beat: Add a virtual drum instrument (if you don’t have one, Reaper’s built-in
+ReaSamplOmatic5000 can load a WAV sample – you could load a kick, snare, etc., but for ease, consider
+using a free drum VST like MT Power DrumKit 2 or any soundfont player with a drum kit). Create a 2-
+bar empty MIDI item and open it in the MIDI editor. Manually draw in a basic drum pattern (kick on 1
+and 3, snare on 2 and 4, hi-hats on every beat, for example). Use the piano roll’s grid to line them up.
+Play it back and adjust velocities: maybe make every other hi-hat softer for groove. This will teach you
+how to compose using MIDI even if you can’t play in real-time.
+- Editing a Chord Progression: If you recorded chords or want to practice, draw a simple chord
+progression (like C major, F major, G major chords, one measure each). Once drawn, experiment with
+editing: transpose the whole progression up by 2 semitones (select all notes, hit + on numpad or drag
+up by two steps – you should hear it change key). Undo that. Try doubling the length of each chord: you
+can do this by selecting all notes and dragging their right edges to stretch (if Options > Allow trim of MIDI
+notes when splitting is on, or simply change grid size and redraw). The idea is to see that MIDI notes are
+very malleable – you can change their pitch, timing, and duration easily after the fact.
+- Use MIDI CC for Expression: In your melody or chord track, show the Modulation (CC1) lane (or
+Expression (CC11) if your instrument supports it, or simply use Pitch Wheel). Draw a sweeping curve
+while a sustained note plays (e.g., draw a pitch bend that goes up then down). Listen to how it affects
+the sound. If using ReaSynth, modulation might not do much, but pitch wheel will. This is an
+introduction to how MIDI controls can automate instrument nuances (like vibrato, filter cutoff via MIDI
+CC, etc.). It ties into the next stage where we’ll look at automation more generally.
+Useful Resources:
+- Reaper User Guide – MIDI Basics: The user guide has sections on recording MIDI and using the MIDI
+editor, including how to handle MIDI devices and routing. It’s a good reference if you get stuck on
+technical points (like enabling your MIDI input).
+- Official Videos – MIDI in Reaper: Kenny’s “Recording MIDI” video in This is REAPER 7 is a must-watch
+. It shows the process of recording a MIDI track and might introduce the virtual MIDI keyboard.
+Additionally, check “First MIDI Song” (a multi-part video series on the Reaper site) which walks through
+creating a song using MIDI step by step . That series is perfect for seeing how MIDI composition
+36
+32
+37
+8
+works in Reaper.
+- MIDI Editor Guide (Tuts+ or Reaper Blog): Envato Tuts+ has a tutorial “How to Use Reaper’s MIDI
+Editor/Envelopes” . The Reaper Blog also has videos explaining the MIDI editor features and tips (like
+using scales, humanizing, etc.). These can give you ideas on workflow improvements as you start
+working with MIDI more.
+- MIDI Drumming Resources: If you want to dive into making drum tracks, look up tutorials on
+programming drums in Reaper. Often they’ll share good practices (like using multiple tracks vs. single
+track for drum MIDI, using the built-in MIDI grooves if you have them, etc.). groove3.com (paid) and
+YouTube have content on this topic specifically for Reaper.
+- Community Forums (MIDI specific): On the Reaper forum, there’s a section for MIDI hardware and
+software. If your MIDI controller isn’t working or you have questions like “how to send MIDI to multiple
+instruments,” the forum or r/Reaper subreddit can help. MIDI can sometimes be tricky (like dealing with
+MIDI channels, program changes, etc.), so don’t hesitate to search for answers.
+Optional Advanced Topics (for later):
+- MIDI Routing and Multi-timbral Instruments: Later on, you might use one VST instrument that has
+multiple sounds (for example, a drum plugin with separate outputs for each drum, or a synth
+workstation that can play multiple parts on different MIDI channels). Reaper can route one MIDI track
+to multiple instrument tracks or route multiple MIDI channels to different sounds of one instrument.
+This is more advanced routing that you can explore when needed. It involves using sends or creating
+Instrument tracks with multiple MIDI channels.
+- MIDI Plugins and Tools: Reaper includes JSFX MIDI plugins (e.g. arpeggiators, MIDI note filters) and
+you can also use VST MIDI effects. These can perform tasks like chord generation, arpeggiation, or
+transposing notes on the fly. Once you’re comfortable with basics, try adding a JSFX Arpeggiator to a
+MIDI track, or use the Humanize function to randomize velocities/timings slightly for realism.
+- Advanced MIDI Editing Features: Reaper’s MIDI editor has many features under the hood – for
+instance, the event list view (to edit raw MIDI data), named note rows (useful if you load a drum map so
+that drums are named instead of just piano keys), and MIDI event filtering (to show/hide certain events).
+As your projects grow, learning these features can improve efficiency. For example, if you do orchestral
+MIDI work, you might use note names for articulations or use CC lanes extensively – Reaper can handle
+it all.
+- ReaControlMIDI: This is a stock plugin that lets you send MIDI CC messages and even bank/program
+changes from a convenient interface. If you have external MIDI hardware (synths) or want to automate
+patch changes, ReaControlMIDI is something to look into. It also allows you to control synth parameters
+via envelopes in the main project (like automate CCs similar to how you automate audio FX). This
+bridges the gap between MIDI and Reaper’s automation system, which leads nicely into the next stage.
+Stage 5: Working with Virtual Instruments and Plugins
+This stage expands on MIDI by focusing on virtual instruments (VSTi plugins) and also introduces using
+audio FX plugins. Essentially, you will learn how to load instruments to generate sound from MIDI, how
+to add effects to tracks, and some fundamentals of sound design within Reaper. By the end of this
+stage, you’ll be able to create a simple production using virtual instruments (like drums, bass, synths)
+and apply basic effects (EQ, reverb, etc.) to enhance the sounds.
+A Reaper project with several virtual instrument tracks (e.g. drums, bass, synth). The MIDI editor (piano roll) is
+open for one track (bottom left), and the mixer (bottom) shows inserts for effects on each track. This is the kind
+of setup you’ll create as you layer instruments and plugins in your projects.
+38
+9
+Core Topics:
+- Inserting Virtual Instruments (VSTi): Learn how to load a virtual instrument on a track. The simplest
+way: click the track’s FX button, then choose an instrument plugin (Reaper comes with a basic synth
+called ReaSynth, a sampler ReaSamplOmatic5000, and you can install third-party VSTi plugins). After
+inserting, when you play/record MIDI on that track, you should hear the instrument. Reaper also has a
+shortcut: Insert > Virtual instrument on new track… which sets up a track with an instrument in one go.
+- Managing VST Plugins: Understand the distinction between instrument plugins (which generate
+sound from MIDI) and effect plugins (which process audio). In Reaper’s FX Browser, instruments are
+usually tagged as <i>VSTi</i>. You can also install many free or paid plugins for both instruments and
+effects. Learn how to scan for new plugins (Preferences > VST > add plugin paths, if you install thirdparty plugins). By default, Reaper comes with the ReaPlugs suite covering many effect types (EQ,
+compression, reverb, delay, etc.).
+- Chain Ordering: When you add plugins to a track, note that the order matters (audio flows through
+them in series). For an instrument track, the instrument VSTi must be before any audio effects in the
+chain (since MIDI goes in, gets turned into audio by the instrument, then that audio can be processed
+by later FX). Reaper’s FX chain makes it easy to reorder by drag-and-drop. For example, you might have
+[Instrument] -> [Reverb] -> [EQ] in that order.
+- Using Built-in Instruments/Effects: Explore the quality and capabilities of Reaper’s built-in plugins.
+Reaper’s suite includes ReaEQ (a multiband equalizer), ReaComp (compressor), ReaVerbate/ReaVerb
+(reverbs), ReaDelay, ReaSynth (basic synth), ReaSamplOmatic5000 (sampler), etc. While they have
+plain interfaces, they are powerful and lightweight. For instance, add ReaEQ to a track and experiment
+with adjusting frequencies, or use ReaVerbate to add a simple room reverb. This will give you a feel for
+mixing tools. According to reviews, Reaper’s stock plugins can achieve professional sound –
+they’re fully capable of EQing, compressing, etc., to polish your mix.
+- Third-Party Plugins: Begin incorporating third-party instruments and FX. For instruments: there are
+excellent free VSTis like Vital (synth), Surge (synth), LABS by Spitfire (various instruments), Sitala
+(drum sampler), and many others . Try installing one that interests you (ensure you put the .dll
+or .vst3 in your plugin folder and re-scan). For effects: consider trying a popular free guitar amp sim if
+you play guitar, or an analog-style EQ/compressor for flavor. There’s a wealth of freebies. The key is to
+not get overwhelmed – add new plugins one at a time and learn them.
+- Presets and Plugin Settings: When using complex virtual instruments (like a synth), leverage presets
+to get started. Load a preset (most VSTi have preset browsers) and see how it sounds. Similarly, Reaper’s
+plugins often come with some presets (like ReaEQ has basic EQ presets for different uses). Using
+presets can be a quick way to learn what a plugin can do, but also try tweaking parameters to
+understand their effect (e.g., change an oscillator wave in a synth, or adjust the decay on a reverb).
+- Basic Sound Design Concepts: As you play with instruments, note basic terms: Oscillators, Filters,
+Envelopes (ADSR) on synths, or samples, velocity layers on samplers. While a deep topic on its own,
+you should at least familiarize with how to shape a synth’s sound (e.g., use a low-pass filter to make a
+synth mellow, or change the attack on an envelope to soften the note onset). Likewise for drum
+samplers, know how to load your own sample or adjust tuning. This knowledge accumulates gradually;
+don’t worry about mastering it immediately.
+- Rendering/Frezzing Virtual Instruments (Optional at this stage): If your project starts to lag due to
+heavy instrument plugins, Reaper allows you to freeze tracks (i.e. render the MIDI to audio to save CPU,
+while preserving the ability to unfreeze). Just be aware of this feature; you might not need it yet in small
+projects, but it’s good to know as you add more instruments and effects.
+Practical Exercises:
+- Create a Simple Song with 3 Instruments: Start a new project (or continue from Stage 4’s MIDI
+project). Add at least three instrument tracks, e.g.: a drum kit plugin for drums, a bass instrument, and
+a piano or synth for chords/melody. If you don’t have third-party plugins, you can use
+ReaSamplOmatic5000 for drums (load some WAV drum samples for kick, snare, hi-hat on separate
+39 40
+41 42
+10
+tracks, or use a soundfont), ReaSynth for a bass tone, and perhaps TAL-Noisemaker (free) for a synth
+lead. Record or program a short part on each track (4 or 8 bars). Now you have a simple arrangement.
+Practice mixing these: adjust volume faders so drums/bass/melody are balanced. Pan slightly if needed
+(maybe bass center, melody slightly right, something else left). This mini-production will combine all
+skills so far and make it clear how MIDI instruments and audio playback form a full song.
+- Apply Basic Effects: On your instrument tracks from above, insert some Reaper stock FX: e.g., add
+ReaEQ on the master track or individual tracks – try cutting some low frequencies on the melody to
+make space for the bass, or boosting the high end on cymbals. Add ReaComp on the drum track to
+tighten the drums (use a preset like “Drum Bus” if available, then adjust threshold). Put ReaDelay or a
+third-party delay on the lead synth to give it an echo. By toggling FX on and off (the checkbox next to
+the plugin name in the chain or the FX button on the track control panel), you can hear what each is
+doing. This trains your ear to what effects contribute. Note: don’t worry if it’s not “mixed like a record” –
+the aim is just to experiment with FX in context.
+- Explore a Synth’s Parameters: Take one virtual synth (for example, the free OB-Xd or Surge or
+ReaSynth if nothing else) and play a held note while tweaking controls. Change the waveform, filter
+cutoff, resonance, envelope attack/decay, etc., one at a time. Observe how the sound changes (e.g.,
+filter cutoff will remove high frequencies making it muffled , resonance will add a sharp peak at the
+cutoff). If the synth has modulation (LFOs), try modulating something (or simply use the mod wheel if
+it’s mapped). This exercise isn’t specific to Reaper – it’s general synth familiarity – but doing it now
+solidifies how virtual instruments operate, which helps you use them creatively in Reaper.
+- Try a Third-Party FX Plugin: Download a popular free effect, like TDR Nova (dynamic EQ) or
+OrilRiver (reverb) or Valhalla Supermassive (delay/reverb). Install it and load it on a track in Reaper.
+Experiment with presets or random adjustments. For example, put Supermassive on a synth pad track
+and choose a huge reverb preset – enjoy the ambience. The purpose is to ensure you know how to
+expand Reaper with external plugins and to get a taste of what’s out there. Over time, you’ll collect tools
+you like.
+Useful Resources:
+- Reaper Video – “FX & Plugins”: The This is REAPER 7 series has an episode on using FX and plugins .
+It likely shows how to add an effect to a track (clicking the FX button) and explains chain order. This is
+fundamental and worth watching if you haven’t already.
+- “Free Instruments Plugins” List (Reaper Blog): On the Reaper.fm videos page, there’s actually a
+whole section listing recommended free instrument plugins (Arturia Analog Lab Play, Sitala, Spitfire
+Labs, Vital, etc.) . Each of those is linked to a video explaining how to use them with Reaper. Use
+those resources to both expand your sound library and learn any specific setup quirks (for instance,
+multi-output routing for Sitala or Surge).
+- The Reaper Blog & Reapertips (FX Tutorials): These community resources often post “Top 5 free
+reverb plugins” or “How to use sidechain compression in Reaper” etc. Check out Reapertips.com for
+quick tips on plugin management (like creating shortcuts to your favorite plugins ) and The Reaper
+Blog for more in-depth examples of using effects in mixes.
+- Manual – Chapter on ReaPlugs: The user guide has a section dedicated to the built-in effects (ReaEQ,
+ReaComp, etc.) . It’s a great reference for what each parameter does. For example, if you’re not sure
+what “Ratio” on ReaComp means, the manual will explain it. Since the ReaPlugs have somewhat
+utilitarian UI, referencing the manual can demystify them.
+- Plugin Documentation and Forums: If you use third-party plugins, don’t forget to consult their
+manuals or online forums for help. For example, the Vital synth has its own manual/wiki and community
+forum. Many popular plugins have YouTube tutorials dedicated to them. Leverage those to learn the
+instrument’s deeper features (e.g., modulation matrix, effects) beyond what we cover here.
+Optional Advanced Topics (for later):
+- Sidechain Compression and Advanced Routing: A classic technique in mixing is sidechain
+43
+44
+41 45
+46
+47
+11
+compression (e.g., ducking the bass when the kick drum hits). Reaper’s flexible routing makes this easy.
+Once you’re comfortable with basic plugin use, try routing your kick track to a compressor on the bass
+track as a sidechain input, so the bass compresses with each kick. This involves using track channels
+(e.g., sending audio to channels 3-4 on the bass track where ReaComp is set to listen on auxiliary input).
+It’s an intermediate skill that yields a very useful effect for mixing.
+- Folder Tracks as Busses: Reaper allows tracks to act as group buses by using folder tracks (you make
+a track a folder, put other tracks inside it – the folder sums them). Explore using a folder for, say, all
+drum tracks, then apply one reverb on the folder to affect the whole drum bus. This is a simple
+introduction to routing and bus processing (which we cover more in Stage 8).
+- MIDI Effects and Generators: Go deeper into MIDI plugins like arpeggiators, sequencers (e.g., there’s
+a JSFX called Megababy step sequencer, and Sower or Stochas sequencer VSTs ). These tools can help
+generate patterns or add complexity to your MIDI parts. For example, you could use an arpeggiator on
+held chords to create rhythmic patterns automatically. It’s an optional creative avenue once you’re
+comfortable with manual composition.
+- Sampling and Sound Design: With ReaSamplOmatic5000 or a dedicated sampler plugin, you can start
+building your own sampled instruments (e.g., record some percussion hits and map them to different
+MIDI notes). Reaper can also record soft synths’ output to audio if you want to resample sounds.
+Getting into sampling and custom instrument creation can be a rewarding advanced topic if you’re into
+sound design.
+- Plugin Performance and Bridging: If using many heavy plugins, learn about Reaper’s performance
+view (hotkey Ctrl+P while in Performance Meter) to monitor CPU per plugin. Reaper can also run
+plugins out-of-process (bridging 32-bit plugins or running separate processes for reliability). This is
+more technical, but as you use more plugins, it’s useful to know Reaper’s robust handling options (for
+instance, if a plugin crashes, a dedicated process might prevent it from crashing Reaper). Keep this
+knowledge in your back pocket as your sessions grow.
+Stage 6: Mixing Fundamentals
+Mixing is the art and science of blending multiple tracks into a cohesive stereo output. In this stage, you
+will focus on the core mixing techniques: balancing levels, panning, EQ, compression, and using send
+effects like reverb and delay. Reaper’s mixer and routing capabilities will be your tools. By the end of
+this stage, you’ll be able to take recorded or programmed tracks and mix them into a rough but
+listenable song, applying common mix processes.
+Core Topics:
+- The Mixing Console in Reaper: Switch to the mixer view (if not visible, press Ctrl+M or enable the
+Mixer in the View menu). Each track appears as a channel strip with volume fader, pan knob, FX slots,
+sends, and routing buttons. Get comfortable with this layout – it’s analogous to a physical mixing board.
+You can mix in the track control panels too, but many find the mixer view convenient for seeing multiple
+faders at once .
+- Volume Balance: The first step in mixing is setting relative volumes. Practice adjusting faders of your
+tracks to achieve a balanced mix where all elements can be heard and the important ones (like vocals or
+lead instruments) are appropriately foregrounded. Use Reaper’s meters to ensure the master track isn’t
+clipping (you might lower all faders or the master fader to keep peaks below 0 dB). This stage is often
+called the static mix.
+- Panning: Utilize the pan knobs to position instruments in the stereo field. For example, pan guitars
+left and right, keep bass and kick center, perhaps pan backing vocals or percussion to create width.
+Panning helps prevent everything from clumping in the center and gives space in the mix. Reaper’s pan
+is by default a simple balance control (for stereo tracks), but it has options for more advanced panning
+48
+49
+12
+laws if needed. Stick to basics for now: decide where each track “sits” between left and right.
+- Equalization (EQ): EQ is essential for carving out space and shaping tone. Use ReaEQ or any EQ
+plugin. Learn to identify and adjust basic frequency areas: for instance, roll off low-end rumble on nonbass tracks (high-pass filter around 80Hz or so), cut “muddy” frequencies in certain instruments (e.g.,
+around 250Hz on guitars or vocals if they sound boomy), and add a high-shelf to cymbals or air to
+vocals (~8kHz+) for brightness . A good approach is subtractive EQ (cutting problem frequencies)
+before additive (boosting). Train your ears by soloing tracks and sweeping an EQ band with a boost to
+find harsh or muddy spots, then cut. Do subtle adjustments – small EQ moves can have a big impact in
+context.
+- Compression: Learn the purpose of compression – controlling dynamic range and adding punch or
+sustain. Start with ReaComp. Try compressing a snare or vocal: set ratio ~4:1, lower the threshold until
+you see 3-6 dB of gain reduction on peaks, then adjust attack/release (e.g., medium attack for drums to
+let the initial hit through, fast release to recover quickly). Compression can make a track sit more
+steadily in the mix or bring up details. It’s easy to overdo, so compare the compressed vs uncompressed
+by toggling the FX. Also use the makeup gain to level-match so you aren’t just preferring louder.
+Common uses: compress vocals for consistency, bass for evenness, drums for punch, guitars maybe
+lightly for sustain. ReaComp has a handy auto-release and even a built-in detector EQ if needed
+(advanced). But to start, focus on threshold, ratio, attack, release, makeup gain.
+- Send Effects (Reverb/Delay): Instead of putting a reverb on every track (which can muddy the mix
+and use more CPU), Reaper encourages using send effects. Create a new track, name it “Reverb”, and
+add a Reverb plugin (e.g., ReaVerbate or a convolution reverb). Set the reverb plugin to 100% wet (since
+this track will carry only reverb). Now send multiple tracks to this reverb track: on each track’s Routing,
+Add New Send to the Reverb track (or drag from the IO button of a track and drop on the Reverb track).
+Adjust the send level (how much of each track goes to the reverb). This way, you have a unified reverb
+“space” and you can control overall reverb volume easily. Do the same for a Delay FX track if desired.
+This teaches you Reaper’s flexible routing while also following best practices of mixing (using buses for
+FX) .
+- Mix Bus Processing: Apply mild processing on the master bus if needed – e.g., a glue compressor or
+an EQ to gently shape the entire mix (don’t overdo this at the learning stage). Understand the signal
+flow: all tracks sum to the Master. Ensure no track is clipping individually and that the Master output
+peaks around -6 dBFS or so to leave headroom for mastering. Reaper’s 64-bit mix engine makes internal
+clipping unlikely, but plugins can still clip if fed too hot, so gain staging matters. Get in the habit of
+keeping levels controlled (you can use ReaComp or a limiter on the master just to catch any overs while
+practicing, but ideally your mix should be balanced without constant limiting).
+- Referencing and A/B: Bring in a reference track (a professionally mixed song in a similar genre) by
+importing it to a track and lowering it to roughly match your mix’s volume. Mute/unmute it to compare
+how your mix’s tonal balance and levels compare. This trains your ears to mix toward a target. Reaper
+even has a JSFX called AB_LM for level-matched A/B if you want to get fancy. Early on, just use ears and
+the solo/mute. Take note: is your mix too boomy compared to reference? Too dull? Adjust accordingly
+with EQ or levels.
+Practical Exercises:
+- Mix a Provided Multitrack: Download a free multitrack project (for example, from the Cambridge MT
+“Mixing Secrets” library – they offer many beginner-friendly multitracks in various genres). Import
+the audio tracks into Reaper (they might be raw recordings). Without worrying about recording or MIDI,
+focus purely on mixing these given tracks. Set levels, pan them, add EQ to each as needed, compress
+where appropriate, and use at least one reverb send for ambience. This is mixing practice in isolation – it
+lets you work on mixing skills even if you don’t have your own recordings yet. By working with
+professionally recorded tracks, you can better hear the effect of your mix moves.
+- Remix Your Stage 5 Project: Take the mini-song you created with virtual instruments in Stage 5. Now
+mix it as if it were separate recorded tracks: treat each instrument track with EQ (e.g., high-pass the
+39
+50
+51
+13
+synth pad to avoid bass buildup, notch any resonant frequency in the lead sound, etc.) and maybe
+compression (compress the drum bus or the snare if it’s too peaky). Set up a reverb send and send your
+instruments to it to glue them in one space. Also try using a delay send for the lead if it adds vibe. The
+idea is to turn that raw balance into a more polished mix by processing. This will also teach you how
+mixing virtual instrument tracks might differ a bit from mixing recorded audio (instruments might be
+too clean/noisy or too dynamic, etc., requiring some adjustment).
+- Volume Automation for Balance: Before we formally cover automation in the next stage, you can
+already apply a bit in mixing: if one section of your song is too loud or quiet, you can use simple volume
+envelope. Show the Volume Envelope on a track (click the trim/envelope button and select volume).
+Add 2-3 points and drag the line to create a volume dip or boost for that section. For example,
+automate the rhythm guitar down a bit during the verse when the vocal is present, then back up for an
+instrumental chorus. This introduces the concept of dynamic mixing – not leaving levels static all the
+way through. It’s a key to professional mixes (riding vocals, etc.). We’ll expand on automation soon, but
+this exercise is a practical teaser.
+- Critical Listening and Iteration: Export (render) your mix to a stereo WAV or MP3. Listen to it on
+different speakers or headphones. Make notes of what could be better (maybe the vocal is too low, or
+the mix is too bass-heavy). Go back into Reaper and adjust accordingly. This exercise of rendering and
+reviewing is crucial – it mimics the real world where you test your mix on various systems. Reaper’s
+rendering (File > Render) will mix down your project; just ensure the master isn’t clipping and perhaps
+normalize to -1 dB or so if making an MP3. Each iteration, you’ll discover improvements. Don’t be afraid
+to do multiple passes – that’s how real mixing often works.
+Useful Resources:
+- REAPER Blog – “Mixing in Reaper” Series: There are blog posts and videos dedicated to mixing
+techniques within Reaper. For instance, Jon Tidey (Reaper Blog) has covered topics like gain staging in
+Reaper, using folders for buses, creating FX chains, etc. Also, Kenny’s official videos under Mixing in
+REAPER (on the Reaper site) include tutorials like “Mixing Real Drums,” “Mixing Bass,” “Panning in a Mix,”
+etc. – these are gold. They show real-world mixing scenarios in Reaper step by step. Watch a
+couple that align with your practice (e.g., if you’re mixing a rock song with live drums, Kenny’s “Mixing
+Real Live Drums” video will be directly relevant).
+- Textbook Recommendation – ReaMix: Breaking the Barriers with REAPER: This is a book by Geoffrey
+Francis (the Reaper manual author) focusing on mixing techniques in Reaper . It comes with
+example project files and step-by-step mix scenarios. It’s a bit dated (written for an older Reaper
+version) but the principles still apply. If you prefer a structured learning through reading and examples,
+ReaMix is highly regarded and specifically tailored to Reaper’s tools.
+- General Mixing Tutorials: Mixing is a universal skill, not just Reaper-specific. Resources like “The
+Mixing Secrets for the Small Studio” book, or YouTube channels like Produce Like A Pro, Pensado’s Place,
+etc., offer tons of mixing advice. As you consume those, just translate the techniques to Reaper (e.g., if
+they use an EQ in Pro Tools at 200 Hz, you can do the same with ReaEQ, etc.). One advantage of Reaper
+is its flexibility – it can do essentially everything the “big” DAWs do in mixing , so none of those
+techniques are off-limits.
+- Forums and Mix Review: Consider joining communities like r/WeAreTheMusicMakers or the Reaper
+forum’s “mix critique” threads, where you can post your mix and get feedback. It’s a great way to learn
+what to focus on. People might say “the vocal is buried” or “too much reverb on drums” – these pointers
+accelerate your learning. Just be open to critique. Cambridge MT also has a forum for discussing mixes
+of the tracks they provide. Engaging there can expose you to different mix approaches and opinions.
+Optional Advanced Topics (for later):
+- Advanced Signal Routing: Reaper’s routing shines in advanced mixing. Down the line, learn to use
+parallel processing (duplicating a track or using parallel split via JSFX or channels for, say, parallel
+compression on drums: blend a heavily compressed signal with the dry one). Also explore mid/side
+52 53
+54
+55 56
+14
+processing using plugins that support it, or routing tricks (Reaper can encode/decode MS internally
+using JSFX). These techniques allow sophisticated mix processing when basic tools aren’t enough.
+- Folder vs Bus vs VCA: Reaper now supports VCA groups (if you need analog-style voltage control
+behavior). Understanding the difference: Folders are a simple way to bus tracks and control them
+together (and route as a unit) . VCAs (voltage controlled amplifier) allow you to link faders without
+summing audio. It’s an advanced mixing concept – not necessary for small projects, but if you have
+huge sessions, you might use VCAs to control groups of tracks (e.g., all orchestral strings) without
+altering their routing. Know that Reaper gives you all these options when you need them.
+- Automation Modes & Volume Trim: When your mixes get complex, learn about different automation
+modes (Trim/Read, Latch, Touch, Write). For example, Trim/Read mode is useful for fine-tuning fader
+moves without losing your static mix setup. We’ll discuss more in Stage 7, but just be aware that Reaper
+has very powerful automation features that go hand-in-hand with mixing.
+- Mix Bus and Mastering Plugins: Many engineers use specialized plugins on the mix bus (like tape
+simulators, console emulators, or stereo wideners). As you advance, experiment with these to shape the
+overall mix. Reaper can load practically any mastering suite or third-party plugin. For instance, you
+could try a subtle tape saturation (using a free one like TDR SlickSAT or similar) on the master to add
+analog warmth. Treat this as optional seasoning – it can improve a mix’s cohesion if used wisely.
+- Loudness Metering: Eventually, you’ll think about final levels and loudness. Get familiar with the JSFX
+Master LUFS metering (Reaper provides a loudness meter in the master track FX by default). This helps
+in understanding integrated loudness of your mix. While mixing, it’s not critical to hit a specific LUFS
+(that’s more of a mastering concern), but being aware of your mix’s loudness range and peaks can
+inform your decisions (e.g., if the chorus is 6 LU louder than the verse, maybe you intended that impact
+or maybe it’s too much). This becomes more relevant as you move to mastering.
+Stage 7: Automation Techniques
+Automation is what brings static mixes and sequences to life by introducing dynamic changes over
+time. In Reaper, almost any parameter can be automated – volume, pan, plugin knobs, sends, etc. This
+stage will cover how to use automation envelopes and items to create movement and interest in your
+production, as well as to perform necessary adjustments (like volume rides on vocals). By the end, you
+should be comfortable drawing and managing automation envelopes for common tasks.
+Core Topics:
+- Volume and Pan Automation Envelopes: Each track in Reaper can show envelopes for volume, pan,
+and any FX parameters. Activate an envelope by clicking the track’s Envelope button (Trim) and ticking
+the ones you want (e.g., Volume). This will display a horizontal line (the envelope) across the track. You
+can add points to this line by clicking (Ctrl+click on PC by default) and then drag points or segments to
+adjust the value over time. For example, create a fade-out by adding a point where you want the fade to
+start (at 0 dB), another point at the end of the song at -inf dB, and dragging that down – now volume
+drops gradually. Practice doing this on a track’s volume to understand the mechanics.
+- Plugin Parameter Automation: Try automating a plugin parameter, such as a filter cutoff on a synth
+or the wet mix of a reverb. There are a couple of ways: you can use the envelope window (find the
+parameter in the FX’s list and enable its envelope), or touch the control on the plugin UI then use Param
+> Show track envelope for last touched parameter. Once visible, it behaves like the volume envelope – you
+can add points and shape it. For example, automate a low-pass filter to gradually open up (classic “filter
+sweep”) over 8 bars of a build-up. This is a creative use of automation to make a section more exciting.
+- Writing Automation in Real-Time: Reaper supports different automation modes: Trim/Read (static
+until you edit), Write (overwrites automation as you move faders), Touch (writes only when you touch a
+control), Latch (similar to touch but stays writing after touch until stop). A common approach is to use
+57
+15
+Touch mode on a track, press play, and then physically move a fader or knob (if you have a control
+surface or using the mouse on the GUI) to record automation in real time. For instance, you could “ride”
+the vocal volume fader to even out a performance – louder in quiet parts, down a bit in loud parts.
+When done, switch back to Read mode to have Reaper play back that automation. Try this on a short
+section: put a track in Touch mode, hit play, and move the volume fader with your mouse to create a
+quick volume swell or dip. Stop, then look at the envelope that was written. This teaches you how
+automation can be performed manually, not just drawn.
+- Automation Items: A powerful Reaper feature is automation items – essentially containers of
+automation that you can copy/paste like items. For example, if you create a complex pan motion over
+one bar, you can turn that into an automation item and repeat it every bar, rather than drawing it each
+time . To create one, make a time selection over the envelope, right-click and choose “Insert
+automation item”. Now that block can be copied or moved. This is optional for beginners, but worth
+knowing as it sets Reaper apart from many DAWs. It’s especially handy for tempo-synced or repetitive
+modulations.
+- Managing Multiple Envelopes: In larger projects, you might automate dozens of parameters. Reaper
+offers organization: you can show/hide envelopes, and there’s an Envelopes/Automation window
+(under View > Automation or the envelope button) where you can manage visibility and arming of
+envelopes. It’s good to learn to hide automation when you’re not working on it (for screen clarity) and
+arm only the ones you intend to write. Also, note that envelopes can be on separate lanes or in the
+media lane – whichever you prefer.
+- Editing and Finesse: Learn some editing tricks: You can select multiple envelope points (marquee
+select) and move them together, or copy/paste them. You can also shift+drag a point for finer
+resolution adjustments. The context menu on envelopes has shapes for fades (linear, square, slow start/
+end etc.) which you can apply to transitions between points for different curves. Play with those to see
+how, say, a slow-start curve differs from linear – it affects the “feel” of the automation change (e.g., a
+slow fade-in vs linear fade-in).
+- Project-wide Automation Considerations: Understand that automation data is tied to time. If you
+rearrange your song (move items around) after writing automation, you need to ensure automation
+moves too. By default, envelope points will move with media items if Options > Envelope Points move with
+media items is enabled (do check that, as it’s often on by default). This saves a lot of headache – if it’s off,
+you might move a chorus but the automation stays behind, leading to chaos. So confirm that setting to
+avoid surprises. Also, if you ripple edit, note that it should also affect envelope points (so your volume
+rides etc., remain aligned with the audio). These are details, but crucial for maintaining your mix when
+structuring the song.
+Practical Exercises:
+- Fade and Mute Automation: Take a track (say a backing guitar) and automate it to fade out for a few
+bars, then back in (simulate it dropping out for effect). For instance, during a verse, gradually lower the
+guitar to almost mute, then when the chorus hits, bring it back up. Use a volume envelope for this. This
+exercise is straightforward but shows how automation can create dynamics in an arrangement (similar
+to how a band might play softer then louder).
+- Pan Movement: If you have a sustained sound (maybe a synth pad or a long effect), try an auto-pan
+effect using automation. Draw a pan envelope that makes the sound go from left to right over 4 beats,
+and repeat. Listen to it – it adds stereo interest. Alternatively, record the pan automation live: put the
+track in Latch mode, press play, and sweep the pan knob left to right. This can also be done with an LFO
+Tool but doing it manually teaches the basics.
+- Vocal Ride: If you have a vocal (or any lead melody), do a manual volume ride to improve its
+consistency. Go through line by line: add envelope points to slightly boost a word that’s too quiet or
+reduce one that’s too loud. Essentially, you’re doing what a compressor does, but manually. This trains
+your ear to identify level inconsistencies and also shows how powerful detailed automation can be.
+Many mix engineers still automate vocals even after compression, to ensure every word is audible but
+58
+16
+not overwhelming. Aim to keep the vocal riding just above the backing music in volume throughout.
+- Creative Effect Automation: Pick a creative effect and automate it on and off. Example: automate a
+delay send – perhaps you want a “delay throw” on the last word of a vocal line. Instead of keeping the
+delay send up all the time, automate the send level: it stays at 0 (no send) and then just for that word it
+jumps to send a bunch of volume to the delay, then back down. This will result in only that word
+echoing out. Reaper can automate send levels too (show send envelopes on the destination track or via
+envelopes on the source track). Another example: automate a stutter effect by automating a mute or a
+glitch plugin on/off. The sky’s the limit – think of an effect you’d like to happen only at certain moments
+and use automation to achieve it. This exercise underscores how automation can be used for ear candy
+and not just utilitarian moves.
+- Experiment with Automation Items (advanced): If you’re feeling confident, try using automation
+items for a rhythmic effect. For instance, on a filter cutoff envelope, instead of drawing a bunch of
+points for a repeated pattern, create an automation item that does a quick oscillation (maybe a square
+wave style on/off) and then copy-paste that item across 16 bars. This could simulate a trance gate or
+rhythmic filter. It’s a niche use, but it will expose you to how automation items work (they have their
+own little container and can even be saved for reuse). If this is too confusing, skip it for now – it’ll be
+there when you need it.
+Useful Resources:
+- Official Video – “Envelopes & Automation”: Kenny’s This is REAPER 7 includes an Envelopes &
+Automation tutorial . It likely covers showing envelopes and basic editing of them. This is a perfect
+introduction if you prefer to see it done. Watch how points are added and perhaps how writing with
+faders is done.
+- Reaper Blog – Automation Tutorials: There are videos like “Understanding REAPER Automation
+Modes” on the Reaper Blog and articles on Reapertips (for example, “Guide to Automation Items in
+Reaper” ). These can clarify the differences between modes (Trim vs Write vs Latch, etc.) and give you
+visual examples of automation items. The Reapertips guide in particular explains how to use
+automation items step by step.
+- Envato Tuts+ – Reaper Automation: The Envato Tuts+ site has a tutorial “How to Use Reaper
+Automation and Envelopes” which might cover some practical scenarios. It’s always good to see
+multiple explanations to reinforce your understanding.
+- Forum Tips: If you run into any confusion (like “why is my envelope not affecting the sound” or “how
+to copy automation to another track”), the forum is helpful. Common issues like forgetting to switch back
+to Read mode (so you accidentally overwrite automation) or wanting finer control of points have known
+solutions (e.g., you can reduce the vertical scale of an envelope lane for more precision). Searching the
+Reaper forum or asking will get you those nuanced answers quickly.
+- Control Surfaces for Automation: If you ever consider using a hardware fader (MIDI controller) for
+automation, Reaper supports many protocols (Mackie Control Universal, EuCon, OSC, etc.). That’s
+beyond scope for now, but as an FYI, should you get a control surface, look up “Reaper control surface
+setup” on the forum – many users have shared configurations. Moving a physical fader to write
+automation can be more intuitive than using a mouse.
+Optional Advanced Topics (for later):
+- Parameter Modulation and LFOs: Reaper has a unique feature called Parameter Modulation
+(accessible via the FX plugin window’s Param button). This allows you to modulate a plugin parameter
+with an LFO, audio signal, or link it to another parameter. It’s like automation, but more dynamic. For
+example, you can have an EQ frequency move in sync with the amplitude of another track (dynamic EQ
+without dedicated plugin) or apply an LFO wobble to a filter without drawing it manually. Once you’re
+comfortable with standard automation, explore parameter modulation – it can achieve complex effects
+(like auto-wah, ducking synths, rhythmic tremolos, etc.) without manually drawing envelopes .
+- Global Automation Overrides: Reaper offers powerful overrides, such as globally bypassing all
+59
+60
+58
+38
+61
+17
+automation (useful if you want to do a “static mix” check) or writing current values to an entire range
+(via the Automation panel you can e.g. write current fader level to entire song). These are advanced
+mixing techniques – for instance, at the end of a mix you might decide your overall vocal automation is
+too low, you can trim it up easily rather than moving dozens of points. Keep in mind these capabilities
+for when your automation gets complex and you need to fine-tune en masse.
+- Snapshot Automation (via SWS): The SWS extension adds a feature called Snapshots which can recall
+track states (including levels, mutes, etc.). While not exactly automation, you can use snapshots to
+quickly A/B different automation or mix states. There is also Region Playlist in SWS that can automate
+playing sections in different order (like an arrangement tool). These are more production-oriented, but
+can intersect with automation usage if, say, you want to audition different rides or effect settings
+quickly.
+- MIDI Controller Automation (MIDI Learn/OSC): Another dimension is controlling Reaper’s
+parameters via external MIDI or OSC messages. Reaper allows you to MIDI learn almost any knob/fader.
+For instance, map a MIDI slider to the reverb send level of a track, and then record automation by
+moving that slider. Or use a tablet with an OSC app to write automation. Setting this up is a mini-project
+on its own (involves the Actions list or the FX “Learn” feature), but once you’re diving deeper, it can make
+automation more performance-like. Some advanced users even write automation with envelopes using
+scripts or external DAW controllers. It’s endless, but the takeaway: Reaper can adapt to how you want to
+automate, whether by drawing, performing live, or even generating via scripts.
+Stage 8: Routing, Buses, and Signal Flow (Advanced Mixing)
+Reaper’s routing capabilities are one of its strongest features. This stage is dedicated to understanding
+and exploiting routing and signal flow for complex setups: using buses, sends, sidechains, and multichannel routing. These skills are crucial for advanced mixing techniques (like submixes, parallel
+processing) and large projects (managing many tracks efficiently). By the end of this stage, you’ll have
+mastery over where your audio is going within Reaper, enabling you to set up any configuration you
+need.
+Core Topics:
+- Track Channels and Sends: In Reaper, each track can handle up to 64 channels of audio internally
+(way beyond stereo). This allows sending audio in flexible ways. For basic uses, a send takes the postfader output of one track into another track. We used this for reverb sends already. Understand how to
+adjust send properties: you can send pre-fader (so the send is unaffected by the track’s fader – useful
+for doing parallel processing) or post-fader (default, follow fader) or post-FX. You can also choose how
+many channels to send (the default 2 -> 2 means stereo to stereo). For sidechain, you often send to 3/4
+of a track that has an effect listening on 3/4. Grasping these options is key to custom routing.
+- Creating Submix Buses: Similar to using folder tracks, you can create standalone bus tracks for
+grouping. For example, route all your vocal tracks’ outputs to a “Vocal Bus” track (by changing their
+Parent Send off and adding sends to the bus, or simpler: set their Parent to None and hardware output
+to bus track as new parent – Reaper allows multiple parent folders but it’s easier to use sends in this
+case). Many users simply use folders for buses (which is fine), but sends give more freedom (one track
+can send to multiple buses, etc.). The concept: a bus is a track that sums several tracks, letting you
+process them together or control one fader. Use-case: All backing vocals to one bus with a compressor
+to glue them, or all drums to one bus for overall EQ/compression. Practice making a bus: add a new
+track “Drum Bus”, select all drum tracks and drag them onto “Drum Bus” track as a folder, or manually
+route their outputs to it. Compare folder vs send bus to see that they achieve the same summing result.
+- Sidechain and Ducking: Implement sidechain compression as touched on earlier. Choose a track to
+be compressed (e.g. Bass) and a source track to trigger (Kick drum). On the Bass track’s ReaComp, set
+18
+Detector Input to Auxiliary (meaning it will listen to channels 3/4). Then send Kick to Bass track channels
+3/4 (in Routing, add send to Bass, set Audio: 1/2 -> 3/4). Now the Bass compresses when Kick hits .
+Tweak threshold/ratio in ReaComp to get a few dB gain reduction on each kick. This is a classic routing
+trick. You can similarly sidechain a gate or any other effect that offers an aux input. Recognize that
+sidechaining is just a special case of routing one signal into another’s plugin control input.
+- Multi-Channel and Surround: If you ever do surround sound or complex multi-mic processing,
+Reaper can route multi-channel audio. For instance, ReaSurround or third-party surround plugins can
+take 6-channel input. Or if you record drums with multiple mics, you might experiment with encoding
+them to a multichannel item. While not necessary for stereo music production, know that Reaper can
+handle these scenarios. A neat trick: using extra channels for parallel processing within one track.
+Example: one track could carry both a dry and wet signal in different channel pairs, then mix them. This
+is advanced, but shows the depth of Reaper’s routing (used sometimes in mid/side encoding, etc.).
+- External Sends (ReaRoute / Hardware Outputs): If you have outboard gear or want to integrate with
+other software, Reaper’s routing extends outside the DAW. You can use Hardware Output on tracks to
+send audio out to physical outputs (to hardware effects or monitors). If you loop back external
+processing, you’ll need to manage latency (ReaInsert plugin helps to ping and compensate latency for
+hardware FX). Also, Reaper’s ReaRoute (Windows) or Rearoute-like JACK on Linux can send audio/midi to
+other software. This is a niche topic, but as you become a power user, you might route audio to a
+mastering suite or a visualizer in real-time. Just be aware that it’s possible.
+- Routing Matrix and View: Use the Routing Matrix view (View menu) to see a grid of all sends and
+hardware outs. It’s a big picture of your signal flow. At first it might look overwhelming in a large
+project, but it’s a convenient way to create or troubleshoot routing. You can click on the matrix to add
+sends or see at a glance “why am I hearing double audio? oh, a track still has parent send plus a send to
+another bus causing duplication.” Get comfortable using it as a diagnostic tool. Also note each track’s
+routing panel (the “IO” button) clearly lists all sends/receives and hardware outs for that track, which
+helps in verifying connections.
+Practical Exercises:
+- Parallel Compression Bus: Take your drum tracks (or a single drum loop). Create a send from the
+drum track(s) to a new track called “Drum Parallel” and put a compressor on “Drum Parallel” track.
+Squash it heavily (high ratio, low threshold). Now blend that underneath the original drums by adjusting
+the “Drum Parallel” track volume. This is parallel compression done via routing. Mute/unmute the
+parallel track to hear the added punch and body it gives . This exercise reinforces send usage and
+creative routing for mix benefit.
+- Wet/Dry FX Bus: Suppose you want to add distortion to vocals but only blend a bit. Instead of using
+the mix knob in a plugin, try this: duplicate the vocal track (or send it to a new track), put a distortion
+plugin 100% wet on the new track, then mix that track in at low level. This is parallel distortion. Compare
+with just inserting the plugin and using its mix knob; you might find the routing method more flexible
+(e.g., you can EQ the distorted signal differently). This trains you to think of any effect in parallel terms,
+not just compression. Reaper makes it easy to duplicate or send audio to create such parallel chains.
+- Subgroup Processing: Create a subgroup for a set of instruments and process it. For example, route
+all your backing vocals to a “BVox Bus” track. Then insert an EQ on that bus to collectively tame a
+frequency (maybe cut 300 Hz if they’re muddy as a group). Also try a reverb on the bus versus individual
+sends to reverb – notice the difference (reverb on bus means they all go into one reverb together,
+potentially sounding more unified, whereas individual sends keep them a bit separate in the reverb).
+This shows how grouping alters the sonic result and how you can choose where to place FX (on
+individuals vs on the group).
+- Sidechain a Pad with a Kick (Trance Gate): If you have a sustained pad sound, use the kick (or any
+rhythmic element) to duck it. Setup sidechain compression as described: pad track with ReaComp (Aux
+input), kick sending to pad’s 3/4. Set fast attack, medium release so the pad “pumps” with the kick. This
+is common in EDM to make space for the kick and create a pulsing effect. Tweak to taste. Now, go a step
+62
+62
+19
+further: sidechain an EQ – e.g., have the vocal trigger a dynamic EQ on a guitar bus to carve space when
+vocal is present (with a plugin like TDR Nova or ReaComp’s frequency dependent mode). This is
+advanced but extremely useful: “ducking EQ” can clear mixes nicely (like automatic scooping of mids in
+guitars when vocal sings).
+- Challenge – Complex Route Setup: Design a scenario and implement it: e.g., “I want to send my
+snare to both a plate reverb and a delay, but I want the delay repeats to go into the reverb too.” In
+Reaper, you could send Snare -> Reverb, Snare -> Delay, and then Delay -> Reverb as well. Try something
+like that to test your understanding. Another: “I want to apply a stereo widener to everything except
+bass and kick.” You could route all other tracks to a bus, apply widener there, and keep bass/kick out of
+it. These thought experiments force you to use combinations of sends, excludes (not sending some
+tracks), and possibly creative use of channel routing (like using multichannel to separate mid/side
+signals). Even if you don’t need such things now, the practice will give you confidence to route anything
+you dream up later.
+- Use the Routing Matrix: Finally, open the Routing Matrix after doing the above setups. Locate the
+intersections that represent your sends/buses. It should show dots or numbers where routing exists
+(like Kick -> Bass on 3/4, etc.). Verify it matches what you intended. This is how you’ll debug issues in
+future (e.g., if you accidentally create a feedback loop, Reaper will warn you but you can see it in the
+matrix). Try enabling View > Mixer > Layouts > Routing Matrix as a separate window so you can keep an eye
+on it while adjusting. This will cement your understanding that the matrix is just a map of what you did
+manually via track sends.
+Useful Resources:
+- Reaper User Guide – Routing Chapter: The manual explains all routing possibilities in detail,
+including diagrams of signal flow. It’s worth reading the section on Routing/Grouping Matrix and Track
+Channels to solidify concepts like channel mapping in sends . Also, the manual’s explanation of
+folder tracks and how they route audio upward to the parent is enlightening (it’s basically auto-routing).
+- Official Videos – “Sends & Busses” and “Folders”: As listed on the Reaper site , there are videos
+specifically about Sends & Busses and about using Folders. These will visually demonstrate how to
+create submixes and use sends. If anything in our text exercise felt confusing, these videos will likely
+clear it up by example.
+- Blog Tutorials on Sidechaining: Many tutorials exist on sidechain compression in Reaper, since it’s
+slightly different in setup than some DAWs (because of the need to route to 3/4). A quick search for
+“Reaper sidechain compression” yields step-by-step guides. Also, Kenny’s videos might cover it in
+context (for example, in a mixing series he might sidechain the bass). Make sure to master this from at
+least one video or article, as sidechaining is used frequently.
+- The REAPER Blog – “Understanding REAPER’s Routing” Articles: There are some older but good blog
+posts that explain concepts like “How to create a Headphone mix in Reaper” (using sends), or using
+ReaInsert for hardware – these applied scenarios can deepen your understanding. Jon (Reaper Blog)
+also had content on using Rearoute and complex MIDI routing. It might be more than you need now,
+but just know his site is a great resource if you think “Can Reaper do X routing thing?” The answer is
+usually yes, and someone likely wrote about it.
+- Community Forums and Templates: On the Reaper forum, many users share project templates or
+track templates for complex setups (like drum recording templates with multi-outs, sidechain setups,
+etc.). Studying these templates can teach you routing. For example, a popular template is a drum
+instrument routed to multiple tracks (kick, snare, etc.) – by loading it, you can inspect how the routing is
+configured (often a VSTi with multiple outputs sending to child tracks). Don’t hesitate to download some
+templates from the Reaper Stash or forum and reverse-engineer the routing for learning.
+Optional Advanced Topics (for later):
+- ReaSurround and Ambisonics: If you venture into surround sound mixing or VR/ambisonics audio,
+Reaper has plugins like ReaSurround (for positioning sounds in multi-channel field) and Ambisonic
+50 63
+64
+20
+toolsets (through community JSFX). These involve routing tracks to more than 2 channels and decoding
+to speaker setups. It’s a specialized domain, but good to know Reaper can handle film/game audio
+spatial mixes.
+- ReaRoute for Virtual Audio Cables: On Windows, ReaRoute can act as virtual ASIO channels between
+Reaper and other software. On macOS, you can use Jack or Blackhole, etc. If someday you want to use
+two DAWs together (say Reaper and Ableton Live simultaneously), you can route audio/MIDI between
+them. This is advanced and sometimes finicky, but feasible. Some producers use Reaper as a mixer for
+hardware synths, routing into Ableton, etc. The knowledge from Stage 8 makes such undertakings
+possible.
+- Complex MIDI Routing: We’ve focused on audio routing, but MIDI routing is just as flexible. You can
+send MIDI from one track to another, route different MIDI channels to different instruments, or use
+virtual MIDI buses. If you do multi-timbral instruments (like Kontakt with 16 channels), you’ll get into
+sending MIDI on channel 2 to play violins, etc., and receiving audio from it on separate outs. That’s both
+MIDI and audio routing combined. When you find the need, look up “Reaper multi-out VSTi setup” –
+many tutorials exist. It’s highly recommended to gradually learn this if you plan on using orchestral
+libraries or drum VSTs, because setting up a single instance serving many tracks is efficient.
+- Monitoring and Cue Mixes: For recording scenarios, you might route differently for monitor mixes
+(e.g., send a hotter mix to headphones). Reaper can create cue sends (pre-fader sends to an output). As
+an advanced case, imagine recording a band where each member wants a different headphone mix –
+you could set up multiple bus mixes and route them to different hardware outputs. It’s complicated, but
+Reaper can manage it. If you go deeper into recording engineering, keep in mind to learn Reaper’s
+monitor mix techniques (SWS even has a cue buss generator).
+- Preventing Feedback Loops: Reaper by default does not allow feedback routing (a track sending to
+itself indirectly), but you can force it (there’s an option to allow feedback routing). With great power
+comes responsibility – if you ever turn that on for creative feedback loops (say, feedback delay
+networks), be cautious. Advanced sound design sometimes uses intentional feedback in routing (like
+looping back an aux send). It can produce unique effects but also ear-splitting noise if not controlled.
+Explore that only when you’re very comfortable with gain staging and perhaps after reading up on safe
+practices for feedback loops.
+Stage 9: Mastering Basics
+Mastering is the final polish of a mixed track, bringing it to distribution-ready loudness and tonal
+balance, and ensuring consistency across an album or playlist. In this stage, you will learn how to
+perform a basic mastering process within Reaper on your finished mix or project. While professional
+mastering is an art of its own, as a producer it’s valuable to know how to do a solid self-master for
+demos or understanding what the process entails. By the end, you should be able to take a stereo mix
+and apply final EQ, compression/limiting, and export it in the desired format.
+Core Topics:
+- Preparing the Mix for Mastering: Ideally, your mix should have headroom (peaks around -6 dBFS,
+not clipping). If you’re mastering a single song in the same project, ensure your master track fader is at
+0 and no clipping occurs. If you plan to master in a separate project, render your mix to a high-quality
+WAV (24-bit or 32-bit float) at the project sample rate. Import that into a new Reaper project for
+mastering (this separation can help you focus on mastering steps without the clutter of the mix project).
+- Mastering Chain Order: A typical simple mastering chain might be: EQ -> Compression ->
+(Saturation) -> Limiter. EQ to address any tonal imbalances (e.g., if the mix is too bright or boomy
+overall, small adjustments here), Compression to glue the track and tame macro dynamics (with low
+ratio like 1.2:1 to 1.5:1, slow attack, auto or medium release, just 1-2 dB gain reduction for gentle
+21
+control), optional Saturation or tape sim to add warmth or tame transients, and a final Limiter to raise
+loudness to target level while preventing clipping.
+- Using ReaEQ for Mastering: Use a linear phase EQ if available (ReaEQ is minimum phase; ReaFIR in EQ
+mode can do linear phase if needed, or some third-party linear EQs). But for minor tweaks, ReaEQ is
+fine. Typical moves: high-pass at ~20-30 Hz to remove subsonic rumble (unless your music needs sub
+bass), maybe a slight cut or boost in broad ranges (e.g., a dip around 200-300 Hz if mix is muddy, a
+gentle shelf boost at 10 kHz for “air” if it’s dull). Keep changes subtle (±1-2 dB) – mastering EQ is often
+about small broad moves.
+- Mastering Compression: If you use ReaComp, set it to a low ratio and maybe use auto-release for a
+transparent result. You might compress only a little, aiming to reduce dynamic range by a small amount
+(or sometimes not at all if the mix is already controlled). The goal is to add a touch of cohesion. Some
+mastering engineers forego compression and just use a limiter, but a light compressor can add flavor
+(especially if it has a nice analog modeling – ReaComp is clean, but you can explore gentle settings or a
+third-party mastering compressor for color).
+- Limiting and Loudness: The limiter is critical to achieving final loudness. Reaper doesn’t have a
+dedicated flashy limiter, but JS: Master Limiter or Event Horizon (from SWS) or the included ReaLimit
+(if available in your version) can do the job. Set the output ceiling to around -1.0 dB True Peak (to avoid
+inter-sample clips on MP3/AAC encoding). Adjust the threshold so that the loudest parts of the song hit
+the desired loudness. Use loudness meter (Reaper’s JS: Loudness Meter) to measure integrated LUFS.
+Depending on genre/platform: -14 LUFS is common for streaming normalization, but many masters are
+louder (e.g., -10 to -8 LUFS for pop). For learning, aim maybe -12 LUFS as a compromise – loud but not
+smashed. Listen for distortion or pumping as you lower threshold (if it sounds bad, back off or the mix
+might need changes). This is the delicate part – balancing loudness vs. quality.
+- Stereo Imaging (Optional): If your mix is a bit narrow or has low-frequency stereo issues, you might
+use an imaging tool. Reaper’s stock doesn’t have a dedicated imager, but you can do mid-side
+processing by encoding to MS (JSFX encoder) then EQing or widening highs on the side channel. Or use
+a free imager plugin to widen above a certain freq. This is advanced mastering move – use sparingly to
+avoid phase problems. Often, if the mix was good, you might not need this at all.
+- Mastering Utilities: Use tools like SPAN (free spectrum analyzer) to visualize the frequency content,
+or the loudness meter to ensure compliance. Reaper’s loudness meter can also help you match levels if
+you’re mastering multiple tracks – you’d want them to have a consistent loudness and tone from track
+to track.
+- Dithering: If you are outputting to 16-bit (for CD or certain distribution), apply dither on the final
+render (Reaper’s render dialog has a dither option). If staying 24-bit for digital release, dithering is less
+crucial, but it doesn’t hurt to dither whenever reducing bit depth. Reaper provides several noise shaping
+options. Just remember, do it only once at the very end.
+- Mastering Multiple Tracks (Album Sequencing): If you have multiple songs, you can arrange them
+sequentially in one Reaper project (each song’s file on the timeline, separated by gaps). You can then
+adjust each with its own FX or item/take FX. Reaper’s region render matrix is handy to output each
+region (song) as a separate file. For basic album mastering: make sure the loudness and EQ profile of
+songs feel coherent, adjust song spacing (crossfades if needed), and render each with appropriate track
+names/metadata (Reaper can tag WAV/BWF or render to FLAC, etc., with metadata). This is beyond a
+single song scenario but good to know you can master an EP’s sequence in Reaper.
+Practical Exercises:
+- Master Your Mixed Track: Take the mix you finished in Stage 6 or 7. Start a fresh project with that
+stereo file. Set up a mastering chain: ReaEQ -> ReaComp -> JS Master Limiter (or a limiter of your
+choice). Adjust EQ gently to see if you can improve the tonal balance – compare toggling it on/off. Then
+set ReaComp as described (maybe threshold so gain reduction is just a couple dB on peaks). Then
+adjust limiter for loudness. Compare the unmastered vs mastered by bypassing all FX – notice how
+mastered is louder and maybe slightly tighter in dynamics. Ensure you’re not introducing obvious
+22
+distortion or pumping – if you are, ease off settings. This is basic mastering on your own mix.
+- Reference Comparison: Import a reference track into this mastering project (bypass its master chain,
+it’s already mastered). Level-match your mix (before limiting) to the reference by ear (turn down the
+reference or your track so they’re about equal loudness). Compare frequency spectrum and punch.
+After mastering, compare again. Did you get closer in brightness or loudness? Use SPAN or Reaper’s
+spectrogram (in master track, you can enable spectrograph view) to visually compare frequency
+content. This can highlight if your track lacks sub bass or has too much midrange, etc., guiding your EQ
+moves.
+- Test Output Formats: Try rendering your mastered track to different formats: WAV 16-bit, MP3
+320kbps, FLAC. Listen to them (particularly MP3) to ensure the encoding didn’t introduce issues. Reaper
+uses the LAME encoder for MP3 – at high bitrates it should be fine. It’s good to know how to export both
+high quality for archives (WAV/FLAC) and delivery format (MP3 for demos, or whatever needed). Check
+that your metadata (artist, title, etc.) can be added in the render dialog for certain formats.
+- Alternate Mastering Approach (Use a Suite): Just for learning, try a demo of a dedicated mastering
+plugin or suite (like iZotope Ozone which often has a free trial, or a free all-in-one like T-Racks CS free).
+Apply it to your mix and experiment with its modules (EQ, exciter, widener, limiter, etc.). While Reaper’s
+native tools are great, using a suite designed for mastering might introduce you to common workflows
+and features (like multiband compression, dynamic EQ, etc.). Don’t rely solely on any “auto-master”
+presets, but see how they affect the sound. You might learn, for example, how a multiband compressor
+can tame just the low-end dynamics or how an exciter adds harmonics to make a mix brighter. You can
+attempt similar with ReaPlugs if needed (e.g., splitting bands via crossover JSFX and compress each).
+This is a more experimental exercise to broaden your understanding of mastering techniques.
+- Loudness Penalty Check: After mastering, use an online Loudness Penalty analyzer (or the plugin if
+you have it) or simply note your integrated LUFS and peaks. Many streaming services normalize to
+around -14 LUFS. If your master is hotter, they’ll turn it down. That’s okay as long as it still sounds good
+when turned down. As a quick check, replay your master and simply lower the Reaper master fader by
+the “penalty” amount (if you estimate say -5 dB for Spotify). Does it still punch nicely? If overly squashed
+dynamics, maybe you over-limited. This is just a conceptual check to avoid the new producer mistake of
+chasing loudness at the expense of quality. Finding that balance is part of mastering skill.
+Useful Resources:
+- Reaper Blog – Mastering in Reaper tutorials: Look for articles or videos titled “Mastering with
+Reaper’s stock plugins” or similar. There are a few out there showing how to use ReaEQ, ReaComp,
+ReaXcomp (the multiband compressor), ReaLimit, etc., for a mastering chain. The Reaper Blog has also
+covered how to render multiple songs with region matrix, adding track metadata, etc., for more
+advanced mastering tasks.
+- Ian Shepherd’s Mastering Advice: Ian Shepherd (a mastering engineer) has a lot of content on
+mastering basics, loudness, and tools. While not Reaper-specific, his tips on “landmine frequencies” or
+“how to use a loudness meter” are very valuable. Also, his Perception AB plugin is great for levelmatching master vs unmastered (though a simple bypass and fader adjust can suffice). His blog and
+YouTube (Production Advice) are good resources to get the mindset of mastering (e.g., being subtle,
+thinking about the listening environment differences, etc.).
+- Books/Courses on Mastering: If you want to dive deeper, books like Bob Katz’s Mastering Audio are
+the definitive resources. They’re heavy reading but worth it if mastering intrigues you. Specific to
+Reaper, there may be courses on platforms like Udemy or Lynda focusing on mastering in Reaper –
+could be worth a look for a structured approach.
+- Forums (Mastering Section): The Reaper forum likely has threads on mastering workflow. Gearspace
+forum has a mastering section (caution: can be opinionated, but there’s knowledge there). You can ask
+for advice on your mastering chain on r/Reaper or r/audioengineering – people could suggest
+improvements (like “try a slower attack on the comp” or “use a brickwall like LoudMax instead of that JS
+limiter” etc.). Just remember in mastering, subtlety and understanding your tools is key – avoid chasing
+23
+the latest plugin magic bullet; focus on listening critically.
+- Tools for Quality Control: There are free tools like TB_proAudio dpMeter (for LUFS), Youlean Loudness
+Meter (free version), and MAAT DROffline (for measuring DR – dynamic range). Consider using one to
+analyze your masters. Also, something like Voxengo SPAN (spectrum) as mentioned, and even the JSFX
+Spectrogram for frequency vs time. These help you verify that, for example, there’s no rogue sub-bass
+hit or a weird high frequency spike. Mastering is often about catching those last details.
+Optional Advanced Topics (for later):
+- Advanced Mastering Processes: Eventually you might explore multiband compression (ReaXcomp is
+Reaper’s multiband comp) to control specific frequency bands’ dynamics, dynamic EQ (automating EQ
+or using a dynamic EQ plugin to cut/boost only when certain frequencies get loud), stereo widening by
+Mid-Side EQ or Haas delay (careful with those), and advanced limiters with lookahead and multiband
+limiting. These can solve specific problems but also can harm the sound if misused – tread carefully, use
+your ears.
+- DDP and CD Authoring: If you ever need to deliver a DDP image for CD replication, there are
+extensions (like the open-source ReaBurn or third-party tools) that can integrate with Reaper for that.
+Not common nowadays unless you’re printing CDs, but good to know Reaper can support that workflow
+through plugins/scripts.
+- Mastering for Vinyl or Other Formats: Different mediums have different considerations (vinyl has
+bass mono compatibility needs, etc.). If you find yourself targeting such formats, research those
+specifics. Reaper’s toolset is capable (you might use a mid-side technique to mono the bass below
+100Hz for vinyl, for example). It’s an advanced mastering topic but could be relevant if you ever plan a
+vinyl release of your music.
+- Batch Mastering and Loudness Normalization: Reaper can batch process multiple files. For
+instance, you can set up a batch process to normalize a bunch of tracks to a certain LUFS or to apply the
+same FX chain to many files. This is useful if you have stems or want to quickly generate instrumental
+versions of a master (applying same processing minus vocals). SWS also has loudness actions to
+normalize items to target LUFS. Advanced use of these tools can speed up mastering tasks when
+dealing with collections of tracks.
+- Continuous Learning and Reference Monitoring: Mastering is a field where critical listening is
+paramount. As an advanced pursuit, invest time in ear training – learn to recognize frequency bands by
+ear, understand translation to different playback systems (test your masters in car, earbuds, big
+speakers, etc.), and keep referencing commercial tracks. Also, consider using calibration software (like
+Sonarworks SoundID) if your room/headphones aren’t flat, to get more reliable listening environment.
+Although not a Reaper technique per se, it significantly impacts the quality of your mastering decisions.
+Stage 10: Customization, Scripting, and Workflow Optimization
+in Reaper
+Having covered all major production skills, this final stage focuses on making Reaper your perfect
+workstation. Reaper’s flexibility allows deep customization – from simple GUI tweaks to writing scripts
+that add new features. In this stage, you’ll explore ways to tailor the DAW to your workflow, speeding up
+your productivity and unlocking advanced capabilities through the community’s extensions. The
+outcome is that you not only know how to use Reaper, but you can bend it to work exactly the way you
+want for maximum efficiency.
+Core Topics:
+- Custom Actions and Keybindings: Reaper’s Actions list (hit ? to open it) contains every command.
+You can assign keyboard shortcuts to any action or sequence of actions (custom actions) . 65 66
+24
+Identify repetitive tasks you do and see if there’s an action for them. For example, if you often split
+items and add a fade, you could make a custom action that does “Split item under cursor + fade edges”.
+Or assign a single key to “Trim item to selection”. Practice making a simple custom action: open Actions,
+click New..., add a couple of actions in sequence, save it, and bind to a key. Test it out. This is the
+gateway to massive workflow boosts. Some popular custom actions are provided by SWS (like create
+region from selection, etc.) – once SWS is installed (see below), you’ll have even more available.
+- Themes and GUI Adjustments: Reaper’s default theme is functional, but you might prefer a different
+look. Try downloading a popular theme (e.g., Reaper 6 Default Commala mod, or Hydra theme, or Smooth
+theme). Installing a theme is as simple as downloading the ReaperThemeZip file and double-clicking it
+(or placing in ColorThemes folder). Explore the Options > Themes menu and the theme adjuster script
+that comes with Reaper for v6/v7 (lets you tweak element sizes, colors if the theme supports it). A wellchosen theme can improve visibility of important elements (for instance, some themes highlight armed
+tracks or have bolder waveforms). It’s personal preference, but since you’ll spend hours in Reaper, find a
+theme that is comfortable for your eyes and mental model.
+- SWS Extension: Install the SWS Extensions . This is an unofficial add-on that adds hundreds of
+actions and features (like loudness analysis, snapshots, groove tools, etc.). For example, SWS Snapshots
+let you save mixes or FX states and recall them, SWS Auto Color can automatically color tracks by name
+or type (nice for organization) . After installing, skim the SWS section of the manual or a list of
+actions to be aware of what’s possible. One handy SWS feature: Resource Lists (you can keep banks of FX
+chains, track templates, etc., in a window for quick access). Another: Marker List and Region Playlist for
+advanced arrangement. SWS is a must-have for power users – it’s safe to install early on, even if you
+don’t use it immediately .
+- ReaPack Package Manager: Install ReaPack . This is a package manager for Reaper that gives you
+access to a vast repository of user-created scripts, effects, themes, etc. With ReaPack, you can browse
+and install scripts directly from within Reaper, and keep them updated. For instance, you’ll find scripts
+for things like “quantize MIDI to groove”, “item louder/softer steps”, “explode multichannel audio to
+tracks”, and much more. After installing, synchronize packages, then peruse the Browse Packages
+window. You can search by keyword. Install a couple of popular ones (e.g., loudness graph, MIDI scale
+finder, track wiring diagram, etc.) to see how they integrate (most scripts become actions you can bind to
+keys or buttons). This extends Reaper far beyond its stock capabilities and lets you customize it to an
+incredible degree.
+- Toolbars and Mouse Modifiers: Customize your toolbars with your most-used actions or scripts. For
+example, you could create a toolbar for MIDI editing with buttons to transpose ±12, humanize, etc., or a
+toolbar for recording with buttons to toggle preroll, metronome, etc. Right-click an empty toolbar area
+and choose Customize. You can add actions to the toolbar as buttons (even with custom icons). Similarly,
+explore Mouse Modifiers in Preferences – you can alter what different mouse+key combos do. For
+instance, you might set “Alt+drag on an item edge” to timestretch (which might already be default) or
+change “Double-click item” to open MIDI editor in a specific mode. Be careful not to stray too far from
+defaults until you’re sure (since tutorials assume defaults), but if something annoys you or could be
+streamlined, chances are you can adjust it.
+- ReaScript (Lua, EEL, Python): If you have programming inclination, Reaper allows scripting in Lua
+(and also EEL, a C-like script, or Python with setup). You can automate tasks or create new functionality.
+Start by looking at existing scripts (ReaPack ones or sample scripts) and perhaps tweak them. A simple
+first script could be one that, say, randomizes volume of selected items subtly, or exports all regions to
+separate files with a certain naming scheme. The Reaper API documentation is available and there’s a
+forum section for Q&A. Writing a script might be overkill for many, because so many are already shared
+via ReaPack, but for those niche needs, it’s empowering. Even if you don’t code, understanding that
+scripts are what underlie many custom actions can demystify things and allow you to troubleshoot or
+slightly customize them.
+- SWS Cycle Actions: A feature in SWS is Cycle Actions, which can create conditional or toggled actions
+(like one button that toggles between two states, running different commands). This is advanced, but
+67
+29
+68
+67
+25
+one example use: a single key to toggle metronome on if off, or off if on (without having to have two
+separate shortcuts). Cycle actions can also do sequences with conditions (like if record mode = normal,
+set to autopunch, else set to normal). This can achieve logic that vanilla custom actions can’t. If you find
+yourself thinking “I wish one key did X when in mode A and Y when in mode B,” cycle actions might be
+the answer. Not mandatory, but know it exists if you get into heavy customization.
+- Workflow Templates and Defaults: As you refine your workflow, create project templates and track
+templates to avoid reinventing the wheel. For instance, make a default project template that has your
+favorite tracks already set up (e.g., a folder for drums with 8 tracks inside, a couple of FX return tracks
+for reverb/delay, maybe a sidechain routing if you always use one). Set that as the default new project
+(in Preferences > Project). Also save track templates for instruments or setups you use often (like a vocal
+track with your go-to FX chain, or a guitar tracking chain with amp sim and noise gate). Then you can
+add those with two clicks whenever needed. This encapsulates your customizations into re-usable
+chunks. Over time, build a library of these templates for various scenarios (podcast template, full band
+template, orchestral template, etc.). It will drastically cut setup time when inspiration strikes.
+Practical Exercises:
+- Customize a Shortcut: Think of one operation you do frequently that doesn’t have a single key
+shortcut yet. For example, “glue items” or “toggle metronome” or “zoom to selection”. Go to Actions
+( ? ), find that action, and assign it to an unused key or a chord (like Ctrl+Shift+M for metronome
+perhaps). Test the shortcut. Once you see how easy it is, add a few more that make sense to you (avoid
+overwriting keys you already use often, unless you’re sure). You could also create a custom action like
+“Save + Increment project version number” (there are scripts for that). Over a week of usage, note every
+time you wish “there was a faster way” and then see if you can create it via actions. This iterative
+improvement is the heart of customizing Reaper – a month later, your workflow will be much smoother
+than initially.
+- Install SWS and ReaPack: If not done, install these. After installing ReaPack, use it to find and install
+at least 3 scripts that sound intriguing. Example: search “select notes” – you might find scripts to select
+every other MIDI note or highest note in chord, etc. Install it, then find it in Actions and try it out in a
+MIDI editor. Or search “loudness” and try a script that normalizes item volume to -23 LUFS. By actively
+using these community tools, you get a feel for how much is available. Also try an SWS feature like
+snapshots: set up a mix, then use SWS Snapshots window to save the mix, then mess up the mix and
+recall the snapshot to see it revert – neat, right? This exercise ensures you know the power of these
+extensions.
+- Add a Toolbar Button: Create a custom toolbar or modify an existing one. For practice, add a button
+that toggles the visibility of the mixer (Action “View: Toggle Mixer visible”). Choose an icon (Reaper
+provides some, or you can leave text label). Now you have a clickable button for it. Add another for
+something like opening performance meter. If you use certain scripts often, putting them on a toolbar
+can be handy (some scripts even provide toolbar icons). Maybe make a toolbar for editing with icons for
+common tasks (cut, copy, slip edit tool, etc.) if that suits you. Once done, dock the toolbar somewhere
+convenient. This is your own mini control panel – design it as you see fit.
+- Tweak a Mouse Modifier: Go to Preferences > Mouse Modifiers. One popular tweak: set right-drag in
+the arrange view to “marquee select items (middle-click to drag)”. By default Reaper uses right-drag for
+a marquee time selection IIRC. Some like to make it select items or select time + items. Try changing
+one modifier and testing it out (e.g., Alt+right drag to scrub, or double-click on empty area to stop
+playback – just examples). If you find no need now, it’s okay, but at least explore the options. You might
+spot something like “Media item fade fade-in curve: ctrl+drag” and realize “oh I can change fade curve
+by dragging with ctrl, cool”.
+- Hello World Script: If you’re up for it, open the Action “ReaScript: New script”. Choose Lua. It’ll open an
+editor. Copy-paste a simple example from the Reaper forum or ReaScript documentation (like a script
+that pops up a dialog “Hello World” or moves selected item one track down). Run it. If it works,
+congratulations, you ran a script you wrote (or copied)! If you know programming, try altering it
+26
+(change the message, or loop through selected tracks to do something simple). If coding isn’t your
+thing, you can skip, but often non-programmers find they can handle small Lua scripts to automate
+stuff when needed. Even understanding how to tweak others’ scripts (like changing a threshold value in
+a script that does batch fades) can be valuable.
+Useful Resources:
+- Reaper User Guide – Customization Chapter: The manual has sections on custom actions, toolbars,
+mouse modifiers, etc. It’s a good reference if you’re not sure how to do something (like “how to import a
+custom toolbar icon”).
+- Reapertips & Reaper Blog – Customization Posts: Alejandro (Reapertips) often shares tips on
+customization. For example, “6 things I wish I knew when I started using Reaper” might cover some
+custom workflow ideas . Reaper Blog has videos on SWS extensions, top scripts from ReaPack, and
+how to tweak themes. Seek those out; you’ll often find “I didn’t know Reaper could do that!” moments.
+- Reaper Stash and Forum: The Stash (stash.reaper.fm) is where users upload themes, icons, project
+templates, etc. Browse it for highly-rated themes – there are themes mimicking other DAWs (Pro Tools,
+Ableton) if you prefer those looks, or ones designed for specific purposes (dark themes for low light,
+high contrast for vision impairments, large text for hi-DPI, etc.). The forum’s Scripts & JSFX subforum is
+very active – if you have a script idea, search there; likely someone has made it. If not, you can even
+request it – the Reaper scripting community is incredibly helpful, sometimes writing a script for you if
+it’s simple and useful.
+- Video Series – “Reaper Customization” (Kenny or others): Kenny Gioia has some older videos like
+“Customizing Reaper” covering basics of actions, menus, toolbars. Those are helpful to watch once, to
+get an overview of possibilities . Also, check out Adam Steel’s Reaper 101 on YouTube; he often
+sprinkles workflow tips and might cover customizing in his newer series.
+- SWS and ReaPack Documentation: SWS has an online manual highlighting major features. ReaPack’s
+site lists popular repositories to add (though it comes with the main one by default, some script authors
+have their own ReaPack repos you can add). For instance, Lokasenna’s Scripts or BirdBird’s, etc., might
+need adding. Follow instructions on those if a tutorial mentions a script you can’t find – likely you need
+to add the repository URL (which ReaPack makes easy under Manage Repositories). Keep ReaPack
+synced (it can auto-sync on startup if you enable) so you get updates; script bugs get fixed and
+improvements added regularly.
+- ReaScript Help: If you dive into scripting, there’s a dev chat on the forum and even a Discord where
+scripters hang out. The ReaTeam GitHub has tons of script examples. Also, consider using Lokasenna’s
+ReaImGui if you want to make scripts with custom GUI – that’s an advanced frontier enabling you to
+essentially build mini-plugins. Many of the fancy community tools (like interactive RC files or new UI
+panels) are done via ReaScript + ImGui. Only for the truly adventurous, but just know that Reaper is
+extensible enough that users have added entire new functionalities (like spectral editing improvements,
+or a chord helper tool, etc.) through scripts.
+Optional Advanced Topics:
+- Custom Extensions (ReaPlug development): If scripting isn’t enough, one can write C++ extensions
+(like SWS itself is an extension). This is hardcore programming and beyond most users’ needs, but if you
+have the skills and a grand idea, you can extend Reaper at a very low-level. The SDK is available on the
+Cockos website.
+- JSFX Programming: Reaper includes the JSFX (Jesusonic FX) language for writing audio/MIDI effects
+(essentially DSP scripting). You can create your own audio effects or MIDI manipulators. It’s text-based
+and real-time, great for prototyping or making a very custom tool (like a specific filter or a MIDI filter
+that does something unusual). The community has produced hundreds of JSFX (many included with
+Reaper or via ReaPack). If you’re into sound design or want to learn DSP, writing a JSFX (like a distortion
+or delay or even synth) is educational and rewarding. There’s a JSFX programming guide on the Reaper
+site .
+69
+65
+70
+27
+- Osc and Web Control: Reaper can be controlled via OSC (Open Sound Control) or through the web
+interface. For instance, you can use a smartphone/tablet to control Reaper with a custom layout (adjust
+faders via OSC, etc.). Setting this up involves configuring Control Surfaces. It’s advanced but can be very
+useful for remote control (like recording yourself in another room). Similarly, the Web Interface feature
+can turn Reaper into a server that you connect to with a browser to perform basic actions (cool for
+using your phone as a transport control, for example). Explore these if you have a specific need like
+that.
+- Advanced Themes (Walter coding): If simply downloading themes isn’t enough and you want to
+tweak layouts drastically, Reaper’s themes can be edited via a language called WALTER. This is how you
+reposition UI elements, change their size behavior, etc. It’s akin to coding a UI skin. There’s
+documentation and a forum section for theming. It’s not for everyone, but if you enjoy pixel-perfect
+customization, you could modify an existing theme or create your own unique look that displays things
+exactly to your liking.
+- Collaborative and Network Tools: Reaper has some capabilities for collaborative work, like the
+NINJAM plugin for online jam sessions (built-in). There’s also an ability to sync Reaper instances via MIDI
+clock or LTC if working with others in different DAWs. And projects can be saved in human-readable
+format (RPP is text) which some use with version control (Git) for collaboration. These are niche
+advanced uses, but mentionable to show Reaper’s openness. If one day you plan to work remotely with
+a band or keep version control on your projects, Reaper won’t stop you – in fact, some users have
+workflows with GIT where they merge changes on RPP files. It requires discipline, but doable due to the
+text file nature of projects.
+- Staying Up-to-date: Finally, an advanced topic is simply keeping up with Reaper’s updates. The
+software updates frequently with new features and fixes. As a power user, you might follow the prerelease forum where new builds are tested (only if you like living on the edge). You can also participate
+in feature request discussions. Cockos listens to user feedback closely – many features today started as
+user requests. By staying engaged with the community and updates, you ensure you’re leveraging the
+latest tools. For instance, track wiring view or spectral edits or razor editing – these were added in
+recent versions; knowing about them as they come can influence your workflow positively. So, treat
+learning Reaper as an ongoing process. Even after mastering it, there’s always a new trick or feature
+around the corner in this DAW.
+Conclusion: You now have a comprehensive roadmap from the very basics of Reaper to its most
+advanced customization. By following these stages, doing the exercises, and utilizing the resources
+provided, you will progressively build competence in recording, editing, MIDI programming, mixing,
+mastering, and optimizing Reaper for your personal workflow. Remember that mastery comes with
+practice and iteration: revisit earlier stages as needed (for example, you might record more complex
+sources later or refine your mixing as your ears develop). The Reaper community and documentation
+are always there to help when you encounter something new or challenging – no question is too small,
+as every expert user was a beginner once.
+Reaper’s depth is immense, but that is its strength: as you grow, it grows with you. Take pride in the
+projects you complete at each stage (save them to look back on your progress), and most importantly,
+keep a creative mindset. After all, the purpose of learning Reaper inside-out is to remove technical
+barriers between you and making great music. With this roadmap, a bit of patience, and a lot of handson experimentation, you’ll find yourself becoming not just a Reaper power user, but a more confident
+producer. Happy music making!
+Sources:
+• Official Reaper User Guide and Videos for structured feature overviews . 32 39
+28
+Reaper community insights on workflow and extensions .
+Unison Audio’s Reaper guide for additional DAW feature explanations .
+Reddit discussions from r/Reaper for practical beginner tips and learning approaches .
+Cambridge Music Technology library for mixing practice resources .
+If Reaper was your first DAW, how long did it take you to get
+comfortable with using it? Any tips for a beginner that you wish you knew? : r/Reaper
+https://www.reddit.com/r/Reaper/comments/1bnbjwo/if_reaper_was_your_first_daw_how_long_did_it_take/
+I recently got Reaper, any tips for beginners? : r/Reaper
+https://www.reddit.com/r/Reaper/comments/10jrb9r/i_recently_got_reaper_any_tips_for_beginners/
+Learn Reaper DAW - Part 1
+https://orchestralmusicschool.com/learn-reaper-daw-part-1/514
+How To Record In REAPER (Step-by-Step Guide) - Pro Mix Academy
+https://promixacademy.com/blog/how-to-record-in-reaper/
+REAPER | Videos
+https://www.reaper.fm/videos.php
+REAPER | User Guide
+https://www.reaper.fm/userguide.php
+Reaper DAW 101: The Official Beginner’s
+Guide To Using Reaper
+https://unison.audio/reaper-daw/
+What's the best way for me to get started with Reaper? : r/Reaper
+https://www.reddit.com/r/Reaper/comments/1b475ag/whats_the_best_way_for_me_to_get_started_with/
+How to Use Reaper Automation and Envelopes | Envato Tuts+
+https://music.tutsplus.com/how-to-use-reaper-automation-and-envelopes--cms-107723t
+Reapertips | Learn all things REAPER DAW
+https://www.reapertips.com/
+Cambridge-MT
+https://www.cambridge-mt.co.uk/
+A Guide to Automation Items in REAPER - Reapertips
+https://www.reapertips.com/post/a-guide-to-automation-items-in-reaper
+Understanding REAPER Automation Transitions
+https://reaper.blog/2022/05/automation-transitions/
+• 67 29
+• 50 71
+• 2 30
+• 51
+1 2 11 18 22 25 29 61 66 67 68
+3 30 31
+4 5 6 12 13 14 15
+7 8 9 27 28
+10 17 26 32 33 37 41 42 44 45 48 52 53 57 59 64
+16 47 70
+19 20 21 34 35 36 39 40 43 49 50 55 56 62 63 65 71
+23 24 54
+38
+46 69
+51
+58
+60
+29

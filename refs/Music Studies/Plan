@@ -1,0 +1,673 @@
+Long-Term Reaper Mastery Training Plan (Electronic Music Production)
+Overview: This 12-week training plan (approx.) will take you from setting up Reaper to producing, mixing, and mastering a full electronic music track. You’ll practice in 4–6 sessions per week (30–60 minutes each). Each Stage below represents a focus area (roughly one week, but adjust as needed). Key milestones – complete a beat, create an 8-bar loop, arrange a full track, final mix and master – will track your progress. In addition to Reaper work, you’ll integrate daily instrument practice (e.g. 15 min of piano) and weekly music theory study (1–2 sessions) to build musical skills alongside DAW technique. The tone is self-paced – after work, you can tackle small chunks steadily. By the end, you’ll have tangible results (your own track) and a deep familiarity with Reaper. Let’s dive in!
+Stage 1: Installation, Setup & Basic Orientation (Week 1)
+Stage Goal: Get Reaper installed and configured, and become comfortable with the interface and basic operations before making music. By the end of Week 1 you’ll have Reaper running smoothly on your system and understand the core elements of its workspace. Skills to Master in Stage 1 (Checklist):
+ Install Reaper – Download the latest Reaper version and install it; understand licensing (e.g. Reaper’s free trial is fully functional, $60 discounted license for personal use).
+ Audio Device Setup – Configure your audio interface or sound card in Reaper’s preferences. Select the correct driver (use ASIO on Windows for low latency) and set sample rate/buffer size for stable performance. Ensure you can hear audio through Reaper.
+ Reaper UI Layout – Identify key interface sections: the Arrange view (main timeline), Track Control Panel (tracks on the left with volume, pan, record arm, etc.), the Mixer (bottom with channel strips), and the Transport bar (play/stop/record controls). Understand that Reaper uses “universal tracks” – any track can hold audio or MIDI or even video, offering great flexibility.
+ Basic Navigation & Operations – Create a new project, add tracks, rename them, and use transport controls (play, stop, record). Practice zooming and scrolling around the timeline, toggling the metronome, and adjusting project tempo. Locate key track buttons: Record Arm, Mute/Solo, Volume fader, Pan knob, FX (for adding plugins), and Route (for sends/routing). These will be your fundamental tools.
+Week 1 Suggested Sessions: (Total: ~4–5 short sessions)
+Session 1 (30 min): Install Reaper and run it. Open Preferences > Audio > Device and set your interface as input/output (e.g. choose ASIO driver). Adjust buffer size if needed. Goal: Hear sound from Reaper – for example, drag a known WAV/MP3 onto a track and hit play to ensure audio outputs correctly.
+Session 2 (30 min): Explore the Reaper interface. Create a new project and use Insert > New Track (or double-click in track area) to add a couple of tracks. Name the tracks (double-click track name). Practice basic controls: arm a track for recording (the record-arm button turns red), toggle the metronome, and click around the timeline to move the play cursor. Goal: Comfortably navigate the workspace (play, stop, move around) without confusion.
+Session 3 (45 min): Basic UI Interaction: Learn to zoom (mousewheel or +/- keys) and scroll through the timeline. Try splitting the view: toggle the Mixer view on/off (View > Mixer). Identify the Master track and note its meter. Play with UI elements: adjust a track’s volume fader and pan knob, mute/solo tracks to see their effect. Goal: Recognize what each part of the interface does and how to show/hide views.
+Session 4 (45 min): Project Management: Save your project (File > Save Project As…). Enable the option “Copy all media into project directory” to keep files organized. Practice importing an audio file (drag into arrange view) and saving again. Also, try Reaper’s undo (Ctrl+Z) and redo to see that you can revert actions. Goal: Understand how to start and save projects and that Reaper can keep your project files tidy in one folder.
+Session 5 (Optional, 30 min): Explore any tutorial resources: Check out Reaper’s official quick-start guide or a beginner video (“This is REAPER 7: Starting a New Project”) which covers adding tracks and basic setup. This will reinforce what you practiced by showing it in action.
+Ongoing Practice: Start your habit of daily 15-minute piano practice (even simple scales or melodies) to build finger dexterity and musical ear. Twice this week, spend ~30 minutes on basic music theory – e.g. learn what a measure and tempo mean, or what quarter-notes are – since this will help when working with Reaper’s grid and metronome. Milestone: Reaper is installed and configured. You can create/open projects, add tracks, and hear audio through your system. You have a mental map of Reaper’s main windows. This foundation sets you up for recording and creating audio next.
+Stage 2: Audio Recording Fundamentals (Week 2)
+Stage Goal: Learn to record audio into Reaper – both the technical steps and good practices (levels, monitoring). By the end of Week 2, you should be able to record an instrument or voice on a track, manage multiple takes, and understand basic recording workflow. Skills to Master in Stage 2 (Checklist):
+ Track Setup for Recording: Practice arming a track for recording and selecting the correct input (e.g. mic input 1 vs. input 2 for guitar). Understand mono vs. stereo inputs (use mono for single mics/instruments).
+ Input Monitoring: Enable input monitoring (the speaker icon) so you can hear yourself while recording. Learn the modes: Monitor on (you hear incoming audio) vs. Monitor off vs. Monitor only (not recording). Adjust your audio buffer if you notice a delay/echo while monitoring (lower buffer size for less latency).
+ Setting Recording Levels: Before hitting record, check that your input signal is neither too quiet nor clipping. Aim for peaks around -12 dBFS on the track meter for a healthy level with headroom. Avoid the meter going into the red (0 dB). If it’s too low or high, adjust your interface’s gain knob.
+ Basic Recording & Takes: Record a short performance (e.g. a 15-second vocal or guitar riff). Then record a second take over the same section. Learn how Reaper handles takes – by default it might create splits or “lanes” for each take. Reaper 7 introduced fixed lanes (a new comping system) which lets you record multiple takes in parallel lanes and easily switch between them. Don’t worry about fully mastering takes yet, just be aware that you can cycle through takes or use lanes for comping later.
+ File Management for Recordings: Note that recorded audio files are stored on disk (in the project’s directory if you set that up). Get in the habit of saving after recording and note where the files go. This way you can find your recordings outside Reaper if needed. Also, practice naming tracks before recording (so recorded files get logical names like “Guitar_001.wav”).
+Week 2 Suggested Sessions:
+Session 1 (30 min): Basic Recording Setup: Arm a track, choose input (your microphone or instrument input). Turn on input monitoring and test by making sound – you should see the meter react in real time. Adjust your audio interface gain so that while making your loudest sound, the meter stays below 0 dB (preferably peaking around -12 dBFS).
+Session 2 (30 min): First Recording: With the metronome on (set a reasonable tempo, e.g. 128 BPM for electronic, or 100 BPM to practice), hit record and perform something for ~8 bars. Press stop – your take appears as a waveform item on the track. Save the project. Now record another take over the same section (ensure Options > New recording that overlaps existing media items is set to creates new take). After stopping, note you have two takes in that item – you can cycle takes by pressing T or by clicking the item and choosing take in right-click menu. Listen to each take. Goal: Understand how Reaper captured multiple takes in one spot. (If you find takes confusing, Reaper’s new fixed lanes mode can be tried: enable it via track right-click > Track recording settings > Use fixed item lanes. This will show lanes for each take, a newer comping method.)
+Session 3 (45 min): Multi-take and Punch Recording: Practice recording a longer passage in sections. For example, record 4 bars of a verse, then stop. Move the play cursor a bit earlier, punch in to record that part again. Reaper can automatically create takes for overlapping recordings. Experiment with loop recording: set a time selection and enable loop record, then record multiple passes – you’ll get multiple take lanes. Don’t worry about perfect performance; just see how Reaper handles each pass. Goal: Gain confidence that you can always re-record and that all takes are retained.
+Session 4 (30 min): Review and Basic Comping: Play back your recorded takes. If using the default take system, split the item at a point and notice each take splits – you can then select take 2 for the first half, take 1 for second half, etc., effectively “comping” a composite performance. If using lanes, try the Comping tool: select best parts from each lane to create a comp area. It’s okay if this is tricky – comping is an advanced skill – but try to get the concept that you can choose the best pieces of each take.
+Session 5 (45 min): Additional Recording Scenarios: If you have multiple inputs (say you can record vocals and guitar simultaneously on separate tracks), practice that: create two tracks, set one to input 1 and the other to input 2, arm both, and record together. Reaper can record multiple tracks at once easily. Also try recording with a count-in: enable Metronome and count-in before recording (in metronome settings). Goal: Familiarize with various recording options (count-in, multiple tracks, etc.) so you won’t be caught off guard in future sessions.
+Ongoing Practice: Continue daily piano practice – perhaps start learning a simple melody or chord progression (this can become material to record later!). For theory this week, learn about rhythm and timing: understand quarter notes, eighth notes, and how they relate to BPM. This will help you when you start sequencing MIDI in the next stage. Milestone: First audio recorded. You have recorded at least one audio track in Reaper (possibly multiple takes) and played it back. You’ve ensured proper levels and maybe even tried basic comping. You’re ready to start arranging and editing that audio in the next stage.
+Stage 3: Audio Editing & Arrangement Basics (Week 3)
+Stage Goal: Transform raw recordings or loops into arranged sections. This week you’ll learn to edit audio items (trim, split, move, loop) and create a basic song structure on the timeline. By the end of Week 3, you should be able to take recorded/imported audio and build a simple arrangement (e.g. a looped beat or verse/chorus segments), setting the stage for adding MIDI instruments. Skills to Master in Stage 3 (Checklist):
+ Navigating & Selecting Items: Understand that each recording or audio file appears as an item on a track. Learn to select items (single click) and make time selections (click-drag on the timeline ruler) for editing ranges. Mastering selection is key to precise edits (e.g., selecting the exact range of a breath to cut).
+ Basic Editing Operations: Practice splitting an item (S key at cursor) to cut it into pieces. Use trim by dragging item edges to shorten or extend an item (if looping is enabled, extension will repeat the audio). Create fades by dragging the top corners of items (fade-in/out to avoid clicks). Also, use delete to remove a section. These let you remove silences or mistakes and smooth transitions in audio.
+ Moving & Arranging Items: Click and drag items to move them along the timeline or to other tracks. Hold Ctrl (Windows) or Option (Mac) while dragging to copy an item – e.g., duplicate a drum loop. Enable Snap (magnet icon) so items snap to the grid (which helps align to measures/beats). Toggle Snap off if you need free positioning. Learn to loop items: drag the right edge of an item with looping enabled (or Alt+drag on Windows) to repeat its content seamlessly.
+ Using Grid & Tempo: Set your project tempo (if you haven’t) and ensure the grid makes sense (e.g., grid lines at each beat or bar). Try importing a drum loop and see if it aligns; adjust tempo or use time-stretch so the loop fits the grid. This is important for electronic music where everything is rhythmic.
+ Regions & Markers: Start placing markers (M key) to label sections (e.g., Intro, Build, Drop). Experiment with regions: make a time selection and press Shift+R to create a region, which can be moved as a block (great for moving an entire chorus). These tools help in arranging the structure of a song.
+ Ripple Editing (awareness): Ripple editing moves items automatically when you insert or remove time. Turn on Ripple All Tracks and try deleting a piece – later items slide left. This is useful when rearranging sections so you don’t leave gaps or overlaps. Keep it off normally, but know it exists to help when restructuring a song.
+Week 3 Suggested Sessions:
+Session 1 (45 min): Trimming & Cleaning: Open your recording from Stage 2. Practice trimming excess silence: drag the item edges to cut off noise before/after the performance. Split (S) the item at a point of a mistake and delete that section, then slide the later audio to close the gap. Add small fades at cuts so there are no clicks. Goal: A cleaned-up audio take (e.g., your vocal track starts and ends cleanly with no dead air or pops).
+Session 2 (30 min): Looping & Duplication: Import a drum loop (one or two bars). If needed, adjust project tempo to match it or time-stretch the loop (Alt+drag edge) to fit the grid. Once it’s synced, loop it: drag its edge out for, say, 8 bars. Alternately, split out one bar and copy-paste it repeatedly. Now you have a continuous beat. Try rearranging the loop: split at beat divisions and shuffle slices (e.g., swap beat 2 and 4) to create variations. Goal: You’ve created a custom drum beat by editing an existing loop – Milestone: you’ve completed a basic beat!* 🎯
+Session 3 (45 min): Building a Simple Structure: Suppose you have a drum loop and perhaps a recorded riff (guitar or vocal). Arrange them into a pattern: e.g., Verse = drums + riff for 8 bars, Chorus = drums + riff duplicated louder or doubled. Use copying and moving to repeat sections. Place markers labeled “Verse” and “Chorus.” Duplicate the chorus section so it appears twice. Trim or extend sections as needed (maybe shorten a long section by cutting out 4 bars). Goal: Lay out a rough song structure with at least two distinct sections (even if very simple). Use markers/regions to delineate them.
+Session 4 (30 min): Introduction to Aligning & Quantizing: If you recorded something slightly off-beat, practice nudge it into place. Split and move a note or transient to hit a grid line. Explore “Quantize item positions” for audio (right-click item > Item processing). Also experiment with stretch markers: add a stretch marker (Shift+W on selected item) and drag it to time-shift part of the audio without cutting. These are advanced, so just toy around to know they exist. Goal: Realize you have tools to fix timing if needed.
+Session 5 (30 min, fun optional): Creative Editing: Try a fun edit like reversing an audio clip (Item properties > reverse) or applying a simple effect offline (apply FX to item as new take). Or use ripple editing: turn on Ripple, cut a 4-bar chunk out of your arrangement – watch everything to the right move left. Undo afterwards. Goal: Get comfortable experimenting – editing is non-destructive in Reaper (you can always undo), so don’t fear trying things.
+Ongoing Practice: Each day, after editing work, take a short break with your instrument – e.g., play the chord progression for the structure you’re building (even if it’s just two chords). This links your musical thinking with the DAW work. For theory, focus on song structure this week: learn typical arrangements (intro, verse, chorus, breakdown, etc.) in electronic music. Listen to a favorite Deadmau5 track and map out its sections. This will inspire how you arrange your own track. Milestone: Basic beat and arrangement created. By now, you have likely pieced together a beat (either from loops or by slicing audio) ✔️ and arranged a couple of sections on the timeline (maybe a verse/chorus or main drop loop). Your project might only be 30 seconds long, but you’ve learned how to cut, copy, and arrange audio – a critical step before adding your own MIDI instruments in the next stage.
+Stage 4: MIDI Composition & Editing Basics (Week 4)
+Stage Goal: Add software instruments for drums, bass, or synths using MIDI. In Week 4, you’ll learn to create MIDI tracks, record or draw notes in the piano roll, and edit MIDI (quantize, transpose, etc.). By the end of this stage, you’ll have programmed a simple drum pattern and melody – moving closer to that 8-bar electronic loop. Skills to Master in Stage 4 (Checklist):
+ MIDI Track Setup: Insert a new track to use as a MIDI instrument track. Remember, Reaper tracks handle MIDI and audio – you typically insert a virtual instrument (VSTi) plugin on the track first to generate sound. (Reaper comes with a basic synth ReaSynth and a sampler ReaSamplOmatic5000; these are fine to start.) Learn both ways: using the menu Insert > Virtual Instrument on New Track… (which automatically adds a track with a VSTi), or manually adding an instrument via the track FX button.
+ Recording MIDI & Using Virtual Keyboard: If you have a MIDI keyboard, enable it under Preferences > Audio > MIDI Devices, then set your track’s input to that device. Arm the track, hit Record, and play – Reaper will record MIDI notes (you’ll see little bars in the item). If you don’t have a MIDI controller, use Reaper’s Virtual MIDI Keyboard (under View menu) which lets you use your computer keyboard to play notes. Or you can insert an empty MIDI item and draw notes manually. Practice both real-time recording and manual note entry.
+ Piano Roll Editing: Open a MIDI item by double-clicking it to see the piano roll. Learn to add notes (draw mode, or double-click to insert), select/move notes (drag them or use arrow keys), change note length (drag note edges), and adjust note velocity (usually by dragging the velocity handles or editing in the lower lane). Understand grid snapping in MIDI – likely set to 1/16 notes by default – which ensures your notes line up rhythmically when you draw or move them.
+ Quantize & Transpose: Practice quantizing MIDI (common hotkey Q, or via MIDI editor menu) to snap recorded notes to the grid if your timing was off. Also try transposing – select notes and press +/- (numpad) or drag them up/down to change pitch. This is useful for trying different bass lines or melodies in new keys.
+ MIDI CC Automation: Notice the lanes below the piano roll (velocity is shown by default). These can show MIDI CC data like modulation, sustain pedal, etc.. For now, focus on velocity – e.g., vary your drum note velocities to add groove (lighter hi-hats, etc.). Just be aware you can also draw CC curves (like a mod wheel sweep) to automate instrument parameters via MIDI.
+ MIDI Workflow Tips: Realize you can loop MIDI items just like audio, and you can copy/paste notes or entire measures in the piano roll. Reaper’s MIDI editor has many features (like scale highlighting, or grouping notes so chords move together). These can be explored as you become comfortable. For now, ensure you can comfortably switch between drawing and selecting notes, and can zoom in the MIDI editor to edit details.
+Week 4 Suggested Sessions:
+Session 1 (45 min): Program a Drum Beat (MIDI): Create a new track for drums. If you have a drum plugin, use that; if not, use ReaSamplOmatic5000 to load a couple of drum samples (kick, snare, hat), or grab a free drum VST like MT Power DrumKit. Insert a 2-bar empty MIDI item. Open it in the piano roll – you’ll likely see a keyboard; if using a drum VST, the drums map to certain notes (e.g., C2 = kick). Draw a basic pattern: e.g., kicks on beats 1 and 3, snares on 2 and 4, hi-hats every 1/8 note. Press play – you should hear your pattern looping. Adjust velocities: maybe make off-beat hi-hats softer. Goal: Milestone – you’ve created a drum beat from scratch!* 🥁 (If you already did this by slicing loops in Stage 3, now you’ve done it via MIDI too.)
+Session 2 (45 min): Record a MIDI Melody: Add another track and insert ReaSynth (a simple built-in synth) or any synth plugin (there are many free synths – e.g., Vital or Surge, but ReaSynth is fine for basics). Arm the track for MIDI. Use the Virtual MIDI Keyboard (enable it, then your typing keys play notes) or a real MIDI keyboard if available. Hit Record and play a simple melody or chord progression for 4–8 bars (even “Twinkle Twinkle” or a C major scale will do). Don’t worry about perfection. Stop and listen back – the synth plays your notes. Open the MIDI item in the editor: quantize any notably off-grid notes (or manually drag them). Goal: Learn how performing vs. clicking-in notes feels, and how to correct timing after recording.
+Session 3 (30 min): MIDI Editing: Take the melody you recorded. In the piano roll, practice selecting a group of notes and transposing them up by, say, 2 semitones – does it sound better higher? Undo after testing. Shorten a long note by dragging its end. Try drawing a curve in the velocity lane to make the notes gradually louder (if using a dynamic instrument). If your synth responds to mod wheel (CC1), draw a mod wheel ramp (set the CC lane to 1-Mod Wheel) for fun. Goal: Build confidence in shaping MIDI data: you can tweak note timing, pitch, length, and expression after the fact.
+Session 4 (45 min): Combine MIDI and Audio: Use your new MIDI parts alongside your audio. For example, replace the audio drum loop from Stage 3 with your MIDI drum track (or layer them together). Arrange the MIDI melody to play during a certain section (e.g., have your 8-bar synth melody loop during the “chorus” region you made). Adjust item lengths so MIDI and audio line up in song structure. Goal: By end of this session, aim to have a combined 8-bar loop or section that has drums (MIDI) + at least one melodic element (MIDI) + maybe an audio element. This could be considered the core idea of your track – e.g., a loop that could be your chorus/drop.
+Session 5 (30 min): Additional MIDI Tools: Experiment with a few extras: try the step recording feature for MIDI (insert notes one by one at a fixed step – search Actions for "step record"). Or test MIDI item looping: duplicate your 4-bar MIDI bassline to play under a 8-bar melody. Also, open View > Musical scales in the MIDI editor and set a scale (e.g., A minor) – it can highlight notes in that scale, which helps you draw melodies in key. Goal: Discover at least one new MIDI editor feature that improves your workflow (e.g., scale highlighting or grouping notes for chords). Even if optional, it’s good to know what’s possible as you start writing music.
+Ongoing Practice: Keep up instrument practice – now is a great time to practice scales or chords on piano that correspond to the key of your MIDI composition. If your loop is in C major, play a C major scale or simple chord progression daily. For theory, learn basics of harmony: what notes make a chord (triads in a scale) and common chord progressions (like I–V–vi–IV). This will directly help when you flesh out chords or basslines for your track in the next stage. Milestone: Your first MIDI-driven musical idea. By the end of Stage 4, you have at least one programmed drum beat and a simple melody/chord progression recorded as MIDI ✔️. This is likely forming an 8-bar (or so) loop that could be the seed of a full track. You’re now ready to expand on this by layering more instruments and applying effects in the next stage.
+Stage 5: Working with Virtual Instruments & Plugins (Week 5)
+Stage Goal: Expand your production by adding multiple virtual instruments (drums, bass, synths, pads) and applying audio effects. In Week 5, you’ll learn how to manage VST instruments and FX plugins in Reaper, explore basic sound design (tweaking synth parameters), and use plugins like EQ or reverb to shape your sound. By the end, you will have a richer 8-bar loop or small arrangement with several tracks, and you’ll begin mixing them at a basic level. Skills to Master in Stage 5 (Checklist):
+ Loading Virtual Instruments (VSTi): Practice inserting VSTi plugins on tracks. Use Reaper’s FX Browser (click FX button on a track) to find instruments – Reaper’s built-in ones like ReaSynth (basic synth), ReaSamplOmatic5000 (sampler) are under VSTi category. You can also install third-party instruments (if you haven’t, try at least one free synth like Vital or a drum plugin). Learn to rescan plugins in Preferences if needed to make new plugins appear. Confirm that when you press keys on a track with a VSTi, you hear sound.
+ Managing FX Chains: Understand that a track’s FX chain processes audio top-to-bottom. For an instrument track, the instrument VSTi must come first (it takes MIDI in and outputs audio) and then any audio FX (like EQ, reverb) go after. Learn to reorder FX by drag-and-drop in the chain. For example, [Instrument] -> [Reverb] -> [EQ] would mean the synth’s output goes into reverb then EQ. Practice adding an EQ (ReaEQ) and Reverb (ReaVerbate) after a synth.
+ Using Reaper’s Stock FX: Explore the ReaPlugs suite that comes with Reaper – these cover EQ, compression, delay, reverb, etc. They may have simple UIs, but they’re powerful and efficient. For instance, ReaEQ can do all standard EQ shapes, ReaComp is a solid compressor. Know how to add an FX to a track and adjust basic parameters (e.g., in ReaEQ, try cutting some bass or boosting a high shelf to hear the difference).
+ Third-Party Plugins: If you have third-party VSTs (synths like Vital, Surge, or sample libraries like Spitfire LABS for pads/keys, or drum machines), practice installing and using one. Many great free plugins are available (Vital for synth, Sitala for drums, etc.). Focus on one new instrument: get it working in Reaper, browse a few presets, and maybe replace one of your tracks with it (e.g., use a nicer synth for your melody). Also try a third-party effect (e.g., a popular free reverb or delay) just to see how to use non-stock FX. This builds your ability to extend Reaper’s sonic palette.
+ Basic Sound Design Concepts: With a synth plugin (stock or third-party), experiment with its controls. Recognize parts of a synth: oscillators (waveforms that generate sound), filter (shapes the tone, e.g. low-pass filter for removing highs), envelopes (ADSR) which control how the volume or filter changes over time (attack, decay, sustain, release). For example, use a low-pass filter to make a bright synth pad sound mellow, or adjust the envelope to make a pluck sound vs. a pad. You don’t need to master synthesis theory, but start noticing how tweaking these changes the sound.
+ Layering Instruments: Add enough tracks so you have at least a drum track, bass track, and lead or pad track. They can all be MIDI instruments. Come up with complementary parts (e.g., bassline that fits your drums, a pad chord progression under your lead). Even if they are simple one-note parts, practice balancing them: lower the bass volume if it’s too loud, etc. This is basically pre-mixing.
+ Applying Basic Mixing FX: Use EQ on individual tracks to carve space (for example, high-pass the pad to remove muddy lows, so the bass and kick have room). Use compression if needed: e.g., compress the drum track slightly with ReaComp (there’s even a “Drum Bus” preset). Add delay or reverb on the lead synth to give it space. These are gentle introductions to mixing – you’re starting to shape tone and space even before the formal mixing stage.
+ Freeze/Render (if needed): If your computer struggles with too many plugins, know you can freeze tracks (right-click track > Freeze) to render the MIDI to audio and reduce CPU usage. In small projects you likely won’t need this yet, but it’s a good practice to remember as projects grow.
+Week 5 Suggested Sessions:
+Session 1 (60 min): Build a 4–8 Bar Mini-Production: Start fresh or use your Stage 4 project. Goal: Create a rich 8-bar loop with at least 3 instrument tracks (drums, bass, lead). For example, add a bassline: new track with a bass synth (ReaSynth can be tuned down, or a free bass VST). Program or play a bass pattern that fits your drum groove (maybe a long sub bass note on each bar, or a funky pattern). Add a chord pad or secondary melody: e.g., use LABS soft piano or a pad sound in Surge. After adding each, listen to all together and adjust volumes to balance. This is effectively creating the core loop of your track. By the end of this session, you should hit the milestone: a completed 8-bar loop with multiple instruments 🎵. Congratulate yourself – you’ve essentially written a small piece of music!
+Session 2 (45 min): Apply Effects to Your Tracks: Take the mini-production from Session 1 and enhance it with FX. On the drum track, insert ReaEQ and do a low-cut (high-pass) at ~50 Hz to remove sub-rumble, and maybe a small cut around 300 Hz if things sound “muddy.” On the bass, insert ReaComp: use a preset like “Bass gentle” or set ratio ~3:1, adjust threshold until ~3 dB reduction, to even it out. On the lead, add a Delay (ReaDelay or a free delay plugin) – set a subtle 1/4 note echo. Create a Reverb bus: add a new track “Reverb”, put ReaVerbate (100% wet) on it, and send your lead and maybe drums to it at low levels to give a sense of space (this way they share the same reverb ambiance). Goal: Learn how adding FX changes the sound and how sends work to share effects. Toggle FX on/off to train your ear: e.g., listen to drums with vs. without EQ, lead with vs. without delay.
+Session 3 (30 min): Sound Design Playtime: Pick one instrument (perhaps the synth lead). Instead of using presets only, tweak the synth’s parameters while the loop plays. For example, change the oscillator waveform from saw to square – note the timbre change. Adjust the filter cutoff – hear the brightness go down as you low-pass. Increase resonance – hear the filter peak. Shorten the amp envelope’s sustain/release – note the sound becomes a short stab instead of a long tail. If using ReaSynth (which is very simple), you might swap to a more advanced free synth for this exercise (Surge, Vital, etc.) so you have more knobs to turn. Goal: Develop intuition for basic synthesis controls and how they affect the sound. This will help you customize presets or create the sounds you imagine (sound design is a deep field, but these basics give you creative control).
+Session 4 (45 min): Integrate a New Plugin: Find and install one new instrument OR effect plugin that interests you (maybe a popular free reverb like Valhalla Supermassive, or a synth like TAL-Noisemaker). Add it to your project: if it’s an instrument, try replacing one track’s instrument with the new plugin and find a cool preset. If it’s an effect, put it on a track (or on the reverb bus) and experiment (e.g., Supermassive on a synth pad for huge ambience). This keeps your workflow updated with new sounds while learning how to incorporate new tools. Goal: Confirm you can expand Reaper with third-party tools, and manage any issues (like rescanning plugins if they don’t show up). Over time, adding quality plugins will improve your productions, so getting comfortable with it now is valuable.
+Session 5 (Optional, 30 min): Jam and Refine: Spend a session just listening to your 8-bar loop and making musical tweaks: change a bass note here, extend a melody there, try a different drum fill at the end of the loop. Use this time to practice your ears – ask yourself, “Does anything clash or sound off?” If so, adjust MIDI or plugin settings to fix it. Maybe you realize the pad and lead play clashing notes – try making the pad play chords that harmonize. This is a creative session to internalize that production is iterative; you tweak and refine continuously. Goal: Have an 8-bar loop you’re happy with as the basis for a full track. It should sound pleasing on loop – something you could imagine building a song from.
+Ongoing Practice: At this point you have a musical loop – try playing along with it on keyboard or guitar for fun each day. Improvise a new melody on top of your loop or try singing a hook – this keeps creativity flowing. For theory, focus on sound and texture: read about synthesis basics (attack/decay, waveforms) or watch a short tutorial on “synthesis for beginners” to reinforce what you did in Session 3. Also familiarize with frequency ranges – e.g., know that kick drums sit in low frequencies, hi-hats in highs – which helps when EQing. Milestone: Full 8-bar loop produced. ✔️ You now have a multi-track 8-bar (or longer) section with drums, bass, chords/melody, and some effects applied. This is effectively the heart of your track – for example, an EDM drop loop or main theme. You’ve also begun mixing considerations (level balancing, basic EQ/reverb) and dipped your toes into sound design. Next, you’ll tackle turning this loop into a full song and mixing it properly.
+Stage 6: Mixing Fundamentals (Weeks 6–7)
+Stage Goal: Learn how to blend your tracks into a cohesive mix. Over the next two weeks, you will take the multi-track production you’ve created (or use provided multitracks) and practice mixing – adjusting levels, panning, EQ, compression, and using sends for reverb/delay. By the end of Stage 6, your 8-bar loop (and any additional sections) will sound balanced, and you’ll be prepared to expand it to a full-length track. Skills to Master in Stage 6 (Checklist):
+ Mixing Environment – The Mixer Panel: Use Reaper’s Mixer view (View > Mixer or press Ctrl+M) to see channel strips for each track. Each strip has a volume fader, pan knob, FX inserts, sends, and meter. Practice mixing with this view – it often feels intuitive, like a physical mixer. (You can also mix using track controls in the arrange view, but knowing the Mixer panel is useful, especially as track counts grow.)
+ Volume Balancing (Static Mix): The cornerstone of mixing is setting relative volume levels. Start with all faders at a default level and listen. Then adjust: bring the kick and snare to a solid level, set bass so it supports but doesn’t overpower, ensure the lead is audible over the instruments, etc.. Aim for a balanced mix where nothing important is too buried or too loud. Watch the master meter – it should peak below 0 dB (ideally leave headroom, e.g. peaks around -6 dBFS). If the master is too hot, lower all faders a bit. This static balance is the foundation before any fancy processing.
+ Panning for Stereo Width: Use the pan knobs to position elements in the stereo field. For example, pan your hi-hats or a synth pad slightly to one side, maybe another synth to the opposite side, while keeping kick, bass, and lead vocal (if any) in the center. Panning creates width and prevents everything from stacking in the center. As an electronic track, you might not have as many natural stereo placements as a rock band, but even subtle panning of layers can give clarity.
+ Equalization (EQ): Use EQ to carve space for each element. Common moves: High-pass filter (low-cut) most tracks except kick and bass to remove rumble (e.g., cut below ~80 Hz on pads, leads). Cut “muddy” frequencies in the 200–500 Hz range on tracks that don’t need them (pads, vocals) to avoid a boomy mix. Add a little high-end shelf to hi-hats or air to a lead if needed for brightness. Practice soloing a track, sweeping a narrow EQ boost to find nasty frequencies, then cut them (this trains your ears). Keep EQ moves moderate (±3 dB) as a starting point – small changes can have a big impact.
+ Compression: Learn to control dynamics. On important tracks (vocals, bass, drums), try adding ReaComp (or another compressor). Start with ratio ~4:1 for drums or bass, threshold so that peaks get ~4 dB of gain reduction. Adjust attack/release: For drums, a slower attack can let the initial hit through for punch; for a pad, a faster attack can smooth volume. Use makeup gain to match the volume so you can A/B fairly. The goal is to make the track steadier in level and perhaps punchier, without squashing it too much. Also identify if bus compression is needed (e.g., compressing the drum group together) – Stage 8 will explore advanced bus techniques, but you can experiment now with simple cases.
+ Send Effects (Reverb & Delay): Instead of inserting separate reverbs on every track, use send tracks for common reverb and delay. We did this in Stage 5: a Reverb bus with 100% wet reverb plugin. Ensure key elements have appropriate reverb: e.g., drums might have a little send to a room reverb, a lead synth might have more send to a longer reverb for atmosphere. Similarly, you can set up a Delay bus (e.g., a 1/4 delay) and send your lead or vocals to it for echoes. This approach glues the mix (elements sound like they’re in the same space) and is efficient CPU-wise. Learn to adjust send levels for each track to dial in how wet they are.
+ Master Bus Checks: Put an EQ and Limiter on the master bus for safety. For instance, a gentle EQ that trims super lows (<20 Hz) and super highs (>18 kHz), and a limiter (like JS: Master Limiter or ReaLimit) just to catch any overs and maybe add a touch of glue. Keep any master processing subtle – mastering stage will handle final loudness, but during mixing you might do a tiny bit of compression or saturation on the mix bus to gel things. Important: Monitor the master output level – keep your mix peaking around -6 dBFS as you wrap up Stage 6, to leave headroom for mastering.
+ Referencing: Import a reference track (a professionally mixed song in the genre) to compare. Level match it (turn it down to roughly your mix loudness) and A/B. Listen critically: is your kick as punchy, is your mix too bass-heavy or too muddy compared to the reference? Use this to make notes and adjust your mix accordingly. This trains your ears and guides your mix decisions (for example, you might realize you need to brighten the hi-hats or lower the mids on a pad).
+Week 6–7 Suggested Sessions: (Mixing often takes multiple passes, so spread these over two weeks; don’t rush. Take breaks to rest your ears!)
+Session 1 (60 min): Static Mix & Pan: Reset your project mix (if you had rough balances, fine, you can start from there). Bring all faders down, then one by one raise important elements: start with drums and bass, then add synths, then vocals (if any). Get a static balance where nothing overwhelms and you can hear all parts clearly. Then do panning: separate overlapping instruments (e.g., two synth layers) by panning one left, one right a bit. Keep low frequencies (kick/bass) center. Listen on headphones and speakers if possible. Goal: Achieve a mix that “feels right” in volume and space before any heavy EQ or compression – often you’ll find a good static mix already sounds 70% there. Save this as a snapshot (or a new file) so you can compare later changes.
+Session 2 (60 min): EQ Carving: Apply EQ on each track methodically. Solo each track briefly to identify any problematic tones: e.g., a muddy resonance around 250 Hz on a synth – cut it a few dB. Un-solo and listen in context: does it sound cleaner without that frequency? EQ while listening to the mix, not just solo, for best results. High-pass everything non-bass at appropriate points (80 Hz for synths, maybe 200 Hz for high pads). If the bass or kick is boomy, cut a bit around 100–120 Hz on one to separate them. Add presence if needed (a small high-mid boost to help something cut through). Use narrow cuts for problem frequencies, broad boosts if enhancing. Goal: By end of this session, your mix should sound clearer and more separated – each instrument sits in its own “space” frequency-wise. Nothing should sound overly thin or dull; if it does, adjust the EQ (or leave that instrument full and cut others around it).
+Session 3 (60 min): Compression & Dynamics: Work on dynamics control. Start with drums: compress the drum bus or individual drum tracks (e.g., compress the kick a bit for consistency, the snare for snap). For example, on the drum bus try a 4:1 ratio, medium attack, release around 100ms, and threshold for ~3 dB gain reduction – this can “glue” the drums together by controlling peaks. Next, compress the bass if it has inconsistent volume, and any other instrument that jumps out. Be careful with attack/release: ensure the compression isn’t killing transients (unless that’s desired). Use your ears – volume-match the compressed vs bypassed signal to ensure you’re improving the sound, not just making it quieter or louder. Goal: A mix that stays balanced even when certain elements get dynamic (like a loud synth stab doesn’t overpower because compression tamed it slightly). The mix should pump with energy but not pump with unwanted gain swells (unless artistic).
+Session 4 (45 min): Reverb/Delay & Depth: Revisit your send effects. Listen to the mix dry (no reverb/delay sends) vs. with them. Increase the send on your lead sound to the reverb if it’s too dry – a lush tail can put it “in space.” Conversely, if the mix is washing out, reduce some send levels. Try a short room reverb on drums to give them cohesion. Use a tape delay or ping-pong delay on a rhythmic synth for interest. The goal is to create a sense of depth: some elements sound close (dry, upfront), others sound farther (wet, reverbed). Electronic music often uses less obvious reverb on the low end (to keep bass tight) but plenty on atmospheric elements. Goal: Achieve a pleasing depth where your mix doesn’t sound flat. When you close your eyes, you can imagine some instruments are back in a hall (big reverb on a pad) while some are in your face (dry kick drum). Check that the reverb isn’t making things muddy – use EQ on the reverb return to cut lows if necessary.
+Session 5 (45 min): Mix Review & Reference: Take a break (a few hours or a day), then listen fresh. Play your reference track and then your mix. Note differences. Perhaps your kick is weaker – you might raise it 2 dB or add a transient shaper. Maybe your mix is darker – you might add a small high shelf on the master or brighten some instruments. Or your mix is more dynamic (less compressed) than the commercial track – that’s okay, you’ll address loudness in mastering, but ensure nothing is too uneven (maybe automate or compress one element if it’s poking out). Goal: Finalize the 8-bar mix to a point where you’re happy with the balance and tonality. It should sound good on your headphones and speakers (and even laptop speakers if possible). Make small tweaks as needed. When satisfied, render a stereo file of this short mix and listen to it casually (in your car or phone) – make notes of any issues to fix. This external check often reveals things (e.g., bass too loud or vocal too quiet in a non-studio environment). Fix those in Reaper. Now you have a solid mix foundation!
+Ongoing Practice: Mixing is as much art as science. Use these two weeks to possibly explore extra resources: watch a tutorial on “Mixing in Reaper – basics” (Kenny Gioia’s videos on EQ, compression in Reaper are excellent). Consider downloading a practice multitrack from the Cambridge MT library to mix a different song – this can rapidly build your skills. And don’t forget ear health: take regular breaks, keep volume moderate while mixing after work (to avoid ear fatigue). For theory, learn about the frequency spectrum – which instruments occupy low, mid, high frequencies – reinforcing your EQ decisions (e.g., kick ~50 Hz fundamental, vocal ~1-3 kHz presence, etc.). Milestone: Core mix achieved. ✔️ Your main section (8-bars or more) is mixed to a point where it sounds like a coherent piece of music rather than disparate tracks. This is a huge step – you’ve essentially produced and mixed a chunk of a song. At this stage, you likely feel the track coming to life. Next, you’ll stretch this out into a full song arrangement (if you haven’t already) and use automation and advanced techniques to create movement and polish.
+Stage 7: Automation Techniques & Full Arrangement (Week 8)
+Stage Goal: Turn your loop into a full-length track and use automation to add dynamic changes, interest, and polish over time. In Week 8, you’ll map out the song structure (intro, breakdown, build-up, drop, etc.) and apply automation (volume fades, filter sweeps, effect changes) to keep the track engaging from start to finish. By the end, you’ll have a complete arrangement with transitions and the mix will “breathe” via automation. Skills to Master in Stage 7 (Checklist):
+ Arranging the Full Track: Take your core 8-bar (or 16-bar) loop and arrange it into a song. Common EDM structure: Intro (8 bars), Build-up (8 bars), Drop (8-16 bars), Break/Bridge, second Build, second Drop, Outro. Use your existing materials: for instance, start with drums filtered in (sparse), then unfilter and drop full beat at the Drop. Utilize your Verse/Chorus markers from Stage 3 and expand on them. This might involve duplicating regions (copy/paste sections) and then muting or adding elements to create variation (e.g., drop has all elements, verse has drums & bass only). Essentially, copy your loop out multiple times and then add/take away stuff to create a progression. This is a creative process – try to tell a story with the arrangement (build tension, release, etc.).
+ Volume Automation: Use automation envelopes for fine control of levels over time. Examples: gradually fade in a pad in the intro (volume envelope rising from -inf to 0 dB over 8 bars). Duck a element for a moment: e.g., automate a momentary mute or lower volume on a synth right before the drop to create a brief silence (dramatic effect). Also automate your master fader for a smooth fade-out ending if needed. These adjustments make the track feel alive rather than static.
+ Filter & FX Automation: Introduce movement by automating plugin parameters. A classic EDM move: filter sweep – put a low-pass filter (ReaEQ or a synth’s built-in filter) on a group or master, and automate the cutoff to slowly open up across a build-up. For instance, your intro could have the drums muffled (low-pass at 500 Hz) and you automate that filter to fully open by the time the drop hits, revealing full treble (this creates that rising brightness tension). Another example: automate reverb mix – maybe in a break, you push a synth’s reverb really high (100% wet, huge space) for a dreamier feel, then automate it back down when the beat returns. Or automate a delay send to create a delay throw on a vocal chop just at the end of a phrase.
+ Pan and Spatial Automation: Try automating panning for creative effect (especially on FX or whooshes). For example, have a white noise sweep pan from left to right over 4 bars. This adds movement across the stereo field. You can do this with a pan envelope on the track easily. Be cautious not to dizzy the listener, but occasional auto-pan can spice up repetitive sections.
+ Automation Modes (Write/Touch/Latch): Reaper lets you record automation by moving knobs/faders in real-time. For example, you can set a track’s automation mode to Touch, press play, and physically move a knob (like a MIDI controller knob or the on-screen knob) – Reaper will write that movement into an envelope. Practice this if you have a MIDI controller – “riding” a fader for a vocal or doing a live filter tweak can sometimes feel more musical than drawing with a mouse. If you don’t have a controller, you can still automate by moving on screen – e.g., press play and drag a track fader with the mouse in Touch mode to automate volume rides. Get comfortable switching back to Read mode after writing to prevent overwriting automation accidentally.
+ Automation Items (Advanced): Reaper uniquely has automation items – containers for automation that you can copy/paste. For repetitive automation patterns (like a rhythmic tremolo on a synth volume or a pan LFO effect), you can create an automation item and reuse it. This is an optional advanced skill; you might not need it for your track, but it’s useful to know it exists. For instance, if you want a “trance gate” effect (volume chopping on/off rapidly), you could draw that as an automation item and loop it, rather than drawing dozens of points manually.
+ Manage Automation Data: In a busy project, you might end up automating many things (volume, filter, FX, sends). Reaper allows you to hide/show envelopes to keep the screen tidy. Remember to enable Envelope points move with media so that if you shuffle arrangement, your automation moves too. Use naming and colors for envelopes if needed. The key is to stay organized: maybe finish one section’s automation before moving on, to not overwhelm yourself.
+Week 8 Suggested Sessions:
+Session 1 (60 min): Arranging the Track Structure: Take your well-mixed 8-bar loop and duplicate it multiple times to roughly song length (say ~3-4 minutes for an EDM track). Now sculpt the structure: Decide where the intro is – maybe start sparsely (no bass, only kick and a filtered pad). After 16 bars, bring in more elements (hats, full chords) – that’s the build-up. At bar 33, drop all elements – that’s your drop (main section). Then perhaps a breakdown where you remove drums and bass, leaving just melody and pad, building tension, and then a second drop. Finally an outro that strips elements away. Use regions to label these sections on the timeline for clarity (Intro, Build, Drop, etc.). Copy or cut your loops accordingly: e.g., your drop might simply be your 8-bar loop repeated twice with full instrumentation. Your intro might be that loop but with certain tracks muted. It’s like cooking: the ingredients (loops) are there, now you’re arranging the courses. Goal: Achieve a first draft of the full song arrangement. It might feel repetitive or abrupt in places – that’s okay, you’ll fix transitions with automation next. Ensure the structure has logical flow (e.g., energy rises into the drop, drops are impactful, etc.). Milestone: Full track arranged (structure laid out) 🎉 – you can now play your song from start to finish (though transitions might be rough).
+Session 2 (45 min): Volume Automations & Mutes: Listen through your whole arrangement and identify where automations can help. For instance, maybe your verse is too busy – automate the pad volume down slightly during verses to let vocals (if any) shine, then back up in choruses. Or automate your guitar track to mute (volume to -inf) during the breakdown section for a dramatic dropout, then unmute (fade up) when the beat returns. Implement these: show volume envelopes on relevant tracks, add points and adjust levels. Use slow fades for gradual changes, fast ramps or hard mutes for sudden changes. Also consider master volume automation for intros/outros: a common trick is a slight master volume boost in chorus for extra impact, or simply ensure a smooth final fade-out. Goal: All the broad strokes dynamics are handled – no section feels too loud or quiet unexpectedly, and intentional silences or fades are in place to enhance emotional impact.
+Session 3 (60 min): Filter Sweeps and Effects Automation: This is the fun, creative part. Implement at least one classic EDM filter sweep. For example, add ReaEQ on your master or a submix bus controlling many instruments; automate a low-pass filter from ~500 Hz at the intro slowly up to 20 kHz by the drop. This will make the song feel like it’s “opening up” – when the drop hits, you remove the filter for full frequency impact (the crowd goes wild!). Do similar on risers or noise sweeps: draw a high-pass filter envelope that cuts in to make a noise sweep get thinner over time. Next, pick a synth and automate a parameter: e.g., automate your lead synth’s cutoff knob to do a wub-wub or just a swelling tone in a bridge. Use either the Param > Show envelope for last touched method (tweak knob, then add envelope), or record yourself twisting it. Don’t forget FX automation: e.g., in the breakdown, automate reverb wet mix up on a vocal so it becomes very echoey and distant, then back down when drums kick in. Or automate a delay send to create the one-time echo on a specific word or synth stab (often called a delay throw). Goal: By end of this session, your track should have the tension and release moments enhanced by automation – filter sweeps making build-ups exciting, effects coming in/out to keep the ear interested. This transforms your arrangement from a static sequence to a dynamic journey.
+Session 4 (30 min): Pan & Creative Automations: Add any stereo movement or special effects: Perhaps automate a pan on a whoosh sound to go L→R as it crescendos. Or automate a tremolo plugin on a pad during one section for a gated feel, then bypass it later (you can automate the FX bypass parameter to basically turn an effect on/off at specific times). If you have any secondary builds or drops, think how to differentiate them – maybe the second drop you automate the lead synth to be an octave higher for extra energy (MIDI can be automated too, or you can simply have a pattern an octave up). Goal: Finalize all those little touches that make the track uniquely yours and less repetitive. Each section should have its own flavor, whether via added effects, different automation, or dropouts. Check your envelopes list (click the track envelope button) to ensure you haven’t missed any that are armed or left in write mode. Tidy up by setting all tracks back to Read mode to prevent accidents.
+Session 5 (45 min): Automation Review & Fine-Tuning: Play the track from start to finish and watch all the automation in action. Do you notice any mistakes? (E.g., a volume envelope that didn’t come back up in time, causing a part to be too quiet, or a filter that stayed closed too long.) Fix those by adjusting points. Listen without watching – focus on feel: Does the transition into the drop hit hard? If not, maybe automate a brief mute or more drastic filter sweep just before. Is the outro too abrupt? Maybe lengthen the master fade-out automation. Also be cautious that automation didn’t introduce clicks or unintended artifacts (if so, add tiny fade or smoother curves). Goal: Achieve a track that flows smoothly with all automation. Nothing should sound jarring (unless intentionally so), and the song should keep a listener’s interest with its evolution. Milestone: Full track produced and automated 🌟 – you have an arranged, dynamic piece of music ready for final mixing tweaks and mastering.
+Ongoing Practice: Automation is a game-changer in production – it can always be refined. A great exercise is to listen to a reference song and identify automation in it: “Ah, the synth filter opens up here, the delay repeats increase there, the volume of that pad swells here.” Try to emulate one technique you hear in a pro track in your project. Additionally, you can dive into Reaper-specific automation power: read a guide on Automation Items in Reaper or Parameter Modulation (Reaper can link parameters or use an LFO internally – an advanced concept where you don’t even need to draw automation for certain periodic changes). These can inspire more creative ideas. And as always, keep up some instrument playing – now that the track is arranged, maybe practice playing along the lead line or drum programming live to improve your sense of dynamics. Milestone: Full track arranged with automation. ✔️ You now have a complete song from intro to outro, with all the peaks and valleys crafted. The technical milestone is huge – you’ve effectively produced an entire track in Reaper, employing advanced techniques like automation. Artistically, you’ve shaped how the track feels over time. All that remains is to do a final mix pass and then master the track for distribution.
+Stage 8: Advanced Mixing – Routing, Buses & Sidechaining (Week 9)
+Stage Goal: Tackle advanced mixing techniques to refine your track: use buses and routing for group processing, and apply sidechain compression and other parallel processing for that polished, pumping EDM sound. In Week 9, you will tighten your mix using these methods and fix any mix issues that arose after full arrangement and automation. Skills to Master in Stage 8 (Checklist):
+ Submix Buses: Create bus tracks to group similar elements. For example, route all your drums to a “Drum Bus” track, all vocals (if any) to a “Vox Bus,” synths to a “Music Bus,” etc. This lets you treat a group as one unit – e.g., apply compression or EQ to the entire drum kit at once, or adjust the volume of all drums with one fader. In Reaper, you can do this by using folder tracks or sends. If you already used a folder for drums, that’s a bus. Otherwise, make a new track “Drum Bus,” and send all drum tracks to it (and remove their master send, effectively funneling them into the bus). Ensure the bus outputs to Master. Practice with one group (drums) and see that its bus fader now controls the whole drum mix.
+ Bus Processing: On your group buses, apply processing to gel sounds together. Common: compress the drum bus (a glue compressor to unify the hits). EQ the synth bus to, say, tame a harsh frequency present in all synths at once. Maybe add saturation to the vocal bus for character. This can simplify your mix stage (instead of tweaking 5 tracks separately, tweak one bus). Be subtle: a few dB of compression or EQ on a bus goes a long way.
+ Sidechain Compression (Pump Effect): The hallmark of EDM (à la Deadmau5) is that pumping effect where the bass or pads duck under the kick drum. Implement this using sidechain compression. Steps in Reaper: choose the track you want to duck (e.g., Bass or a Pad bus). Add ReaComp to it, and in ReaComp’s Detector input, choose “Auxiliary (Ext. Sidechain)”. Now send the Kick track to this track’s channels 3/4 (in Routing: Add new send to [Bass], and set Audio send from 1/2 -> 3/4). Adjust ReaComp: threshold so that when kick hits, it compresses the bass by maybe 4-6 dB, ratio ~4:1, fast attack, release around 50-100ms. Now the bass will drop in volume with each kick, creating that rhythmic pump. Do this for other elements if needed (pads, etc.). Listen: you should hear the mix breathe with the kick – a subtle or strong pump as desired. This not only is stylistic, it also clears space for the kick, improving mix clarity.
+ Parallel Compression (New York compression): Try parallel processing to add punch. Example: Parallel drum compression – send your drum bus to a new track “Drum Parallel” and put a compressor on it with heavy settings (high ratio, low threshold) to squash it. Then mix that underneath the dry drums (lower its fader until it’s just adding body). This retains drum transients but adds sustain and fatness from the compressed signal. Reaper’s routing makes this easy with sends. Similarly, you could parallel compress vocals or anything needing more thickness.
+ Other Creative Routing: Reaper can handle very complex routings (multi-channel tracks, etc.). Explore one advanced feature: for instance, if you have a synth pad, you can do mid/side processing by splitting it into Mid and Side components (there are JS plugins for that) and EQing them differently (widening the pad’s highs). Or use the Routing Matrix view to visually inspect all your sends and outputs – this is helpful to ensure no weird routing issues (like double sends causing a track to be too loud). While optional, just peeking at the routing matrix can improve your understanding of the signal flow.
+ Mix Refinement: Now that arrangement and automation are done, do a final mix pass addressing any issues. The arrangement might have introduced new challenges (e.g., a section where many elements play together could be too loud – maybe automate or bus-EQ that section). Use your ears and possibly re-reference a track to ensure your mix still holds up after all changes. Clean up any extraneous noise in sections (e.g., mute or trim items where that track isn’t active to reduce noise floor). Check transitions – sometimes a little volume automation or a short crossfade between sections can smooth things. Essentially, polish the mix so it’s ready for mastering.
+ Staying Organized: As projects get complex, use Reaper’s organization tools: color-code your tracks (maybe drum tracks all one color, buses a different color), name everything clearly, collapse folders you don’t need to see, etc. This doesn’t affect sound but makes the mixing stage less confusing. Also consider saving a new version of the project (like “MySong_mix1.rpp”) before big routing changes so you can always go back if needed.
+Week 9 Suggested Sessions:
+Session 1 (45 min): Group Bussing: Create buses for logical groups if not done. Route all vocals to a Vox bus, all drums to Drum bus, etc. Then mix using mainly bus faders: adjust overall drum vs synth levels, etc. Apply bus EQ: e.g., on the Synth bus, if all synths together feel a bit heavy around 500 Hz, a small cut there will clear the mix. Apply bus compression on the Drum bus for glue (2-3 dB gain reduction max to avoid over-compression). Monitor how these changes improve (or if they worsen) the mix. Goal: Simplify your mix stage by dealing with 4-5 stems (buses) rather than 20 individual tracks. The mix should still sound balanced or better. If something goes off (e.g., bus processing changed the tone too much), tweak or back off.
+Session 2 (45 min): Sidechain Magic: Implement sidechain compression on at least the bass track with kick as trigger. Also consider sidechaining pads or even reverb: a trick – sidechain compress the reverb return with the dry vocal, so vocal reverb ducks while vocal is singing and comes up in gaps. Or sidechain a long pad with a rhythmic percussion element to create a gated rhythmic effect. Listen to how sidechaining the bass tightens the low-end – kick punches through better. Adjust the amount of ducking to taste (you might want a subtle 2 dB duck or a strong pump). Goal: Achieve the desired “pump” level characteristic of the genre. The groove often feels more compelling with sidechain applied. Also, you’ve learned how to use ReaComp’s auxiliary input routing – a very valuable Reaper skill.
+Session 3 (30 min): Parallel Processing: Try the parallel drum compression exercise: duplicate or send drums to a new track, heavy compress, blend in. A/B it: does it make drums sound fuller? If yes, keep it; if it just makes it louder, adjust levels or compression settings. Likewise, experiment with parallel saturation: send a vocal to a new track with distortion, blend low – it can add presence. Or parallel reverb: sometimes you might parallel a reverb with different EQ to thicken something. These are optional flavors – use if needed. Goal: Understand the concept of parallel vs series processing: you now have the creativity to say “I want two versions of this track, one clean, one squashed, and mix them” which is powerful. Keep or discard parallel channels based on whether they improve the mix.
+Session 4 (45 min): Final Mix Polish: Step back and listen critically to the entire track. Use that reference track one more time for big-picture comparison. Walk around the room while it plays (you’d be surprised what you notice when not staring at the screen!). Tweak small things: maybe the hi-hats are a bit sharp – a 1 dB cut around 8k on the drum bus EQ fixes it. Or the drop could hit harder – perhaps automate the master down 1 dB just before the drop and back up at the drop for a tiny jump effect. Check that all automation still sounds right after your bus processing (bus compression might slightly alter some levels, so fine-tune the automation if needed). Goal: Finalize the mix. You should feel confident that this is how you want the track to sound. It should be dynamic (thanks to automation) yet cohesive (thanks to your mix and bus processing). The loudness might be lower than commercial tracks at this point – that’s fine because mastering is next. Ensure you have no clipping on any track or master. If master peaks a little above 0, lower the master fader or use a limiter gently. Print another stereo bounce of this fully mixed version for safe-keeping/listening.
+Session 5 (Optional, 30 min): Ear Rest and Minor Edits: If time permits, give yourself a day where you don’t listen to the track, then come back for one final check with fresh ears. You might catch something small like “the reverb tail is too long here” or “that effect is a bit too loud” – adjust those. Also, tidy up your project in preparation for mastering: render any MIDI to audio if you worry about plugin instability, and save a new project file for mastering stage (some prefer to master in a fresh project with the stereo file, but you can also master in the same project by making a copy).
+Ongoing Practice: At this juncture, you’ve essentially mixed a whole track – practice is about doing it again on other material. Consider trying a quick mix of another track (even a rough one) to keep honing your ear. Also, spend time understanding concepts deeper: e.g., read about gain staging (ensuring all your levels in the DAW/plugins are optimal – Reaper’s 64-bit mix engine is forgiving, but plugins have sweet spots). Or research mixing in mono as a technique to get balances right (you could sum your master to mono to check for phase issues). These aren’t mandatory for now, but exposure to such ideas will make you a stronger mixer. Another fun exercise: listen to your track on different systems (phone speaker, car, etc.) and note how the mix translates – this is what a mastering engineer does too. You can still make mix tweaks if something doesn’t translate (e.g., bass disappears on tiny speakers – maybe add a bit of higher harmonic to bass so it’s audible). Milestone: Mixdown complete. ✔️ You have taken your track through advanced mixing techniques, achieving clarity and punch. The mix is ready for the final step: mastering. It’s now about fine-tuning overall loudness and final polish per track, which is our next stage.
+Stage 9: Mastering Basics (Week 10)
+Stage Goal: Perform a basic self-mastering of your track: finalize the loudness, tonal balance, and format of your mixed track for release or sharing. In Week 10, you’ll learn how to use mastering tools (EQ, compressor, limiter) on the stereo mix, aiming to make it competitive in loudness and properly polished without ruining the mix. By the end, you’ll have a mastered WAV/MP3 of your song! Skills to Master in Stage 9 (Checklist):
+ Preparing for Mastering: If you choose to master in a separate project, render your final mix to a high-quality WAV (e.g., 24-bit or 32-bit float WAV). Then start a new Reaper project, import that stereo file as a new track. This approach keeps you from accidentally altering the mix and gives a clean slate for mastering FX. Alternatively, you can master in the same project on the master bus (just be careful to disable or remove those FX if you re-export a mix). Ensure the mix file peaks around -6 dBFS and isn’t clipping.
+ Mastering Chain Order: Typical chain: EQ -> Compressor -> (Saturation/Tape) -> Limiter. Understand each role: the EQ adjusts overall tonal balance (corrective or sweetening), the compressor glues the mix slightly and tames macro dynamics, an optional saturator can add warmth or tame peaks gently, and the limiter raises the loudness to your target while preventing clipping. Order matters, but small variations exist (some put EQ after compression too). We’ll use this basic order.
+ Tonal Balance (Master EQ): Insert an EQ (ReaEQ is fine). Use it to make broad, gentle adjustments. Common moves: High-pass at ~20 Hz to cut inaudible rumbles, a tiny dip around 200 Hz if mix is boomy/muddy, a tiny boost around 5 kHz or 10 kHz for brightness/air if needed. These adjustments should be subtle (±1-2 dB typically). If the mix is already great, you might not need any EQ – avoid the temptation to “do something” if it’s not needed. Use your reference track here as well to judge overall spectrum – if your track lacks a bit of high sparkle compared to reference, a small shelf boost at 8 kHz might be warranted, for example. ReaEQ is minimum-phase by default; that’s fine, but if you had linear-phase EQ need, ReaFIR in EQ mode can do it (for transparency). For small moves, minimum-phase is okay.
+ Mastering Compression: Add a compressor (ReaComp or a dedicated mastering comp). Settings: very low ratio (e.g., 1.2:1 up to 1.5:1), threshold so that you get maybe 1-2 dB of gain reduction on the loudest parts, attack around 20-30ms, release auto or ~100ms. The goal is a gentle “glue” and controlling of any stray peaks the limiter would otherwise deal with. It should be subtle – you often won’t hear it working, but bypassing might show the mix becomes slightly more coherent with it. If you prefer, skip compression if mix is already controlled. Many EDM masters forego compression and rely on limiter only; use your judgment based on how dynamic the track is.
+ Saturation (Optional): If you have a tape sim or saturator (Reaper’s JS Saturation, or third-party like Slate Digital tape, etc.), you can put it next for a bit of flavor/warmth. Again, subtlety is key: a slight drive that adds a dB of harmonic content, not audible distortion (unless stylistically desired). Saturation can naturally tame transients (like a soft limiter) and enrich the sound. Treat it as optional seasoning – if you engage it, listen to ensure it’s actually benefiting (maybe the kick feels a bit thicker, the high-hats a tad smoother). If unsure, leave it out.
+ Limiting & Loudness: The last step is the limiter. Reaper has JS: Master Limiter, and in newer versions, ReaLimit (which if available is great). Set the ceiling to about -1.0 dBFS (this is to avoid inter-sample peaks and give a tiny safety margin for encoding). Now adjust the threshold (or input gain) of the limiter to raise the track’s loudness. You should aim for a loudness target appropriate for your distribution: for streaming, around -14 LUFS is a standard, though EDM often is louder, maybe -8 to -10 LUFS for club tracks. Since you may not have a precise LUFS meter, you can use JS: Loudness Meter if included to measure. But even without it, use ears: push the limiter until the track is loud comparable to commercial tracks but does not audibly distort or pump unpleasantly. If you hear the sound getting squashed (the kick losing punch, the mix “breathing” badly), back off. It’s a trade-off: louder = less dynamic. Find a sweet spot where it’s punchy and loud enough. Perhaps you end up at e.g. -10 LUFS integrated; that’s fine. There’s no need to crush to death. The limiter may show a few dB of gain reduction on peaks, that’s okay; ideally, it’s just catching transients mostly.
+ Stereo Imaging (Advanced Optional): If you feel the mix is narrow or needs slight stereo adjustment, you could use a stereo imager. In Reaper, you can do mid-side EQ or use JS Mid/Side encoder with EQ. For example, widen the highs a bit by boosting side channel highs or use a dedicated imager plugin to widen above a certain frequency. Be cautious – too much widening can mess up mono compatibility and sound phasey. If your mix was good, you likely don’t need this. Maybe just check the stereo spread: are the sides active? If the mix is very wide already, maybe do nothing. If it’s a bit centered, a 5% width bump on highs could add air. Always A/B in mono after any imaging to ensure you didn’t cause a problem.
+ Final Checks and Export: Listen to the mastered track start to finish. Ensure no new issues: no sudden EQ weirdness, no clicks, no overs (true peak should be below 0 since ceiling is -1). Check fades: if the song ends, does it fadeout nicely or end appropriately? If not, you can automate master volume to fade at end within the mastering project. Compare the mastered to the unmastered: the mastered should be louder, a bit more polished, but not drastically different in mix balance (if it is, you might have overdone something). Then export the final master: Render to 16-bit WAV for CD, or 24-bit for archives, and perhaps a high-quality MP3 for sharing. Use dither when reducing to 16-bit (Reaper’s render dialog has a dither option – use it if going 24->16 bit). Tag the MP3 if needed (Reaper can embed metadata). Congrats – you have a master! Now listen on various systems like a casual listener would.
+Week 10 Suggested Sessions:
+Session 1 (30 min): Prep and EQ: Set up your mastering chain. Import the final mix into a new project. Apply the broad EQ moves: maybe high-pass at 25 Hz, a 1 dB dip at 250 Hz to clear muddiness, and 1 dB shelf boost at 10 kHz for air (example). Listen before/after EQ – ensure it’s an improvement. If not sure, err on side of minimalism. Goal: Overall frequency balance sounds just right or slightly improved.
+Session 2 (30 min): Compression and maybe Saturation: Add the gentle compressor. Tweak threshold so gain reduction needle barely moves on loud parts. A/B with it in/out: the difference should be subtle – maybe a bit more cohesion. If it dulls or pumps, adjust attack/release or ratio. If all good, move on. If using a saturator, add it and dial in subtle warmth (watch that it doesn’t break your peak levels too much). Goal: Dynamic range is controlled by a hair, transients still snap, mix hasn’t significantly changed – you’ve “glued” it 5% more.
+Session 3 (45 min): Limiting to Loudness: Time to get it loud. Increase limiter input until your track is at desired loudness. Use the reference track: volume-match your mastered track to it by ear – they should be comparable in loudness (or your track slightly quieter if you want more dynamics). If your reference is a modern loud master, be careful not to push too far chasing it. Check the loudest sections of your song – they will dictate how much you can raise the level. A typical EDM drop might be consistently loud, meaning you can’t raise too much without heavy limiting. That’s okay; find a compromise. Periodically bypass the limiter to see how much level it’s adding. Also, engage Reaper’s Loudness Meter (JSFX or the one in master track if available) to measure LUFS integrated over the whole track. This gives you a number – e.g., -12 LUFS – which you can use to compare to standards. But numbers aside, listen: does the track still punch and breathe? The kick should still have impact. If the kick/snare lost impact, the limiter might be clamping too hard – ease off threshold or try longer release. If some transients pop out too much causing limiter distortion, maybe your mix needed a fix, but you can also try a tiny bit lower ceiling (like -1.5 dB) or multiband compression if advanced (probably skip multiband for now). Goal: The track is now “commercial loud” without obvious distortion or pumping. Peak should be at -1 dBFS (or -1 dBTP if you have true peak meter).
+Session 4 (30 min): Quality Control: Listen through the whole mastered track carefully. Especially pay attention at transitions – any weird jumps in loudness? The limiter/compressor might react differently in sparse vs dense sections; ensure the intro isn’t way too quiet or the drop not overly squashed. Minor volume automation on the final render can help even it out if needed (or adjust the mix and re-export if it’s a big issue). Check that the noise floor is okay (no hum or hiss got amplified too much – if you had a noisy recording, maybe you needed a noise reduction earlier). If you notice any suboptimal aspects (e.g., track is now a bit too bright compared to reference after boosting highs), tweak the EQ a half dB here or there. Ensure no DC offset or anything odd (Reaper by default is fine). Goal: A final master that passes your personal quality check – if you had to deliver it, you’d be confident.
+Session 5 (15 min): Export and Archive: Render the master to required formats. If releasing on streaming, a 24-bit WAV at project sample rate is ideal (they will convert). For personal sharing or demo, a 16-bit 44.1kHz WAV plus an MP3 320kbps cover most needs. Use dither for the 16-bit conversion. Save your project with the master chain for future adjustments if needed. Also, compare one last time to reference at equal loudness – maybe even do a blind test (close your eyes, someone switches between your track and a Deadmau5 track) to see if any glaring differences. But remember, you have your own sound now!
+Ongoing Practice: Mastering is a specialized field – to really get good, practice on a variety of tracks (including those not produced by you, to get objectivity). But as a self-producing artist, always remember to focus on the mix – a great mix needs only gentle mastering. Keep an ear on loudness war trends but don’t feel pressured to crush everything – dynamics are making a comeback in many genres. It’s useful to occasionally read up on mastering topics: e.g., true peak vs sample peak, LUFS standards, dithering (why and when), etc. With Reaper, you have all the tools built-in to master effectively. Milestone: Track mastered and finalized. ✔️ You have a finished song in hand – fully produced, mixed, and mastered by you. This is a huge accomplishment. By systematically following stages, you’ve experienced the whole lifecycle of music production in Reaper. Take a moment to compare the very first raw recordings to the final master – the progress is tangible!
+Stage 10: Customization & Workflow Optimization (Beyond Week 10; Ongoing Learning)
+Stage Goal: (Optional Advanced) Now that you’re comfortable with Reaper’s core, you can progressively customize it to boost your workflow. This stage isn’t a one-week task but an ongoing exploration to make Reaper truly yours. You might create custom shortcuts, install scripts (ReaPack), and refine the environment so that your future projects are even more efficient. Areas to Explore:
+Custom Actions & Shortcuts: Reaper’s action list lets you string multiple actions into one or assign new hotkeys. For example, create a custom action to split items at time selection and add fade-outs with one keypress. Identify tasks you do often (like normalize item, or render stems) and see if a shortcut would save time. Many users share their custom actions (SWS extension adds a ton of actions too).
+Themes: If the default Reaper look isn’t to your taste, try user themes. A more visually inspiring theme can make long sessions more pleasant. There are Ableton-like themes, Logic-like ones, etc., or minimalist ones. Installing a theme is easy and reversible. The Default 7 theme is quite good, but personal preference matters. Also use the Theme Adjuster script to tweak layouts/colors (especially if you want bigger faders or different color schemes).
+SWS Extension: Install the free SWS extension pack. This adds hundreds of features (like loudness analysis, handy editing tools, auto-color tracks by name, snapshot recall of mixes). It’s a staple for power users. For example, SWS Autocolor can automatically color your tracks when named “Kick” or “Vocal” etc. – super useful for organization. Or SWS Snapshots can let you A/B different mix settings. Skim the manual or list of SWS features to see what could help you.
+ReaPack & Scripts: ReaPack is a package manager for Reaper – highly recommended. Through it, you can install user-created scripts that do almost anything. For instance, scripts for better MIDI editing, surround utilities, etc. One popular script is HeDa Loudness Graph (visualize loudness over time) or ReaEQ presets for common instruments. There are also scripts to create chord progressions, or toggle record modes in fancy ways. It’s a rabbit hole, but for specific needs, likely someone wrote a script. Use ReaPack’s browser to search keywords (e.g., “transpose selected items” or “swing tool”).
+Toolbar & Mouse Modifiers: Create custom toolbars with icons for tasks you often do. For instance, a toolbar for quick quantize, split, or open FX chain. Drag your favorite actions to a toolbar and assign icons. Also, examine mouse modifiers (Preferences > Mouse) – Reaper allows customizing what different mouse+key combos do. Maybe you want alt+mousewheel to scrub, or double-click on empty area to do something special. Out of the box Reaper’s modifiers are decent, but if there’s something you often wish “I could just alt-drag to do X”, chances are you can set that up. Just document any changes for yourself since it deviates from default.
+ReaScript (Programming): If you’re tech-savvy, you can write your own scripts in Lua or Python. Imagine automating repetitive tasks – e.g., a script to create a region at each marker, name it, and render each as a file (though SWS already covers some). Or something creative like generate procedural MIDI. This is advanced and optional – you don’t need to script to use Reaper, but knowing it’s possible means Reaper will grow with you infinitely.
+Community & Updates: Keep up with Reaper’s frequent updates. New versions (like 7.x) bring new features – e.g., you benefited from fixed lanes for comping in v7, and FX containers for parallel chains. Reading the update changelog or forums can tip you off to cool new capabilities to try. Also, engaging with the Reaper user community (forums, Reddit, Reaper Blog) can teach you tips/tricks (like using the wiring diagram view to visualize complex routings, introduced recently). Many experts share their project templates, custom actions, etc. – take advantage of that wealth of knowledge.
+Tone for Stage 10: Unlike previous stages, this is not a “must-do now” step, but rather an encouragement to continuously refine your workflow. Reaper’s strength is its depth and flexibility. Over time, investing a bit of effort into customization can save you tons of time (e.g., setting up a template project with your favorite VI and bus routing pre-made for new songs). As you become a Reaper power user, remember it’s an ongoing journey: even after years, there’s always another trick or script. But you already have what matters – the ability to produce music. The rest is about making that process as enjoyable and efficient as possible for you.
+Conclusion & Next Steps
+Congratulations on completing this training plan! 🎉 Over these stages, you’ve progressed from setting up Reaper to fully producing, mixing, and mastering a track. You’ve built a broad skill set:
+Reaper Fundamentals: Installation, configuration, and interface navigation (Stage 1).
+Recording & Editing: Capturing audio, editing takes, arranging audio and MIDI (Stages 2–4).
+Production: Using virtual instruments, sound design basics, creating loops and expanding them (Stage 5).
+Mixing: Balancing, EQ, compression, creative effects, and advanced routing like sidechaining (Stages 6 & 8).
+Automation: Bringing life to your track with dynamic changes and full arrangements (Stage 7).
+Mastering: Final polishing for distribution (Stage 9).
+Optimization: Adapting Reaper to your workflow for continuous improvement (Stage 10).
+Throughout this journey, you also integrated musical practice – daily instrument time and regular theory study – which will pay off by enhancing your compositions and ear. Remember, technical DAW skills and musical skills go hand-in-hand in making great music. Steady Progress: We emphasized steady, tangible progress in each stage. By focusing on specific goals each week, you avoided overwhelm and built confidence step by step. This is a realistic approach for after-work learning – you always knew what to focus on next, and you achieved milestones along the way (your first beat, first 8-bar loop, first full track, etc.). Looking Forward: Mastery doesn’t stop here. With one track done, the next goal is to repeat the process with new projects, each time refining your technique. Try producing a track in a different sub-genre of electronic music to challenge yourself with new sounds and structures. Over time, stages 6–9 (mixing/mastering) will become more and more intuitive and perhaps you’ll develop your signature sound. Whenever you feel stuck or curious: the Reaper user guide and forums are your friends, and the official video tutorials (by Kenny Gioia) are excellent for visual learners. Even as of Reaper 7, new features like FX Containers for parallel processing can open creative doors – keep exploring those (maybe you’ll incorporate an FX Container in your next mix to do sophisticated parallel chains inside one track!). Most importantly, keep making music. All these tools and skills exist to serve your creativity. Now that you can wield Reaper proficiently, focus on honing your artistry – songwriting, sound selection, arrangement – the fun stuff! Each song you finish will teach you new things and solidify your skills. End note: Mastering Reaper (and music production) is a marathon, not a sprint. Be patient with yourself, celebrate each finished project, and don’t shy away from reviewing earlier stages when needed (even pros revisit basics). With consistent practice and the solid foundation you’ve built, you’ll steadily turn your musical ideas into polished tracks. Happy producing, and enjoy the journey!
+Citations
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+WhatsNewReaper7Summary_r2.pdf
+
+file://file-7cTKAeRZAcjxLFbECfaBok
+WhatsNewReaper7Summary_r2.pdf
+
+file://file-7cTKAeRZAcjxLFbECfaBok
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+WhatsNewReaper7Summary_r2.pdf
+
+file://file-7cTKAeRZAcjxLFbECfaBok
+WhatsNewReaper7Summary_r2.pdf
+
+file://file-7cTKAeRZAcjxLFbECfaBok
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+WhatsNewReaper7Summary_r2.pdf
+
+file://file-7cTKAeRZAcjxLFbECfaBok
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+Comprehensive Roadmap to Mastering Reaper (DAW) for Complete Beginners.pdf
+
+file://file-BtygUUetMxz3mq7MCCgbHH
+All Sources
+Comprehe...nners.pdf
+WhatsNew...ry_r2.pdf

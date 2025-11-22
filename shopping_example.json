@@ -1,0 +1,9 @@
+{
+  "week": "2025-W48",
+  "shopping": [
+    { "name": "salmon fillets", "qty": 600, "unit": "g", "pack_size": "2x200g", "packs": 2, "aisle": "fish", "notes": "pregnancy-safe oily fish" },
+    { "name": "red onion", "qty": 500, "unit": "g", "pack_size": "1kg", "packs": 1, "aisle": "produce" },
+    { "name": "Greek yoghurt (whole milk)", "qty": 1500, "unit": "g", "pack_size": "500g", "packs": 3, "aisle": "dairy" },
+    { "name": "gluten-free pasta", "qty": 500, "unit": "g", "pack_size": "500g", "packs": 1, "aisle": "pasta", "notes": "Sarah" }
+  ]
+}

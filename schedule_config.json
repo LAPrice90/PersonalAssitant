@@ -1,0 +1,48 @@
+{
+  "timezone": "Europe/London",
+  "calendar_map": {
+    "primary": "laprice90@gmail.com",
+    "work": "8e22e5f7569a8c2b8104ac425a23a232eae1e3eecc3f3d06a96f83aa2ec76a95@group.calendar.google.com",
+    "family": "a66a6799c78d408ccb4051ff0359ab3bd2fe276f04982b816b6349ecddb53b0c@group.calendar.google.com",
+    "food": "fgdud7v553abqa2i8o0bt4vac8@group.calendar.google.com",
+    "chores": "e602ac0d8d4a91a53c59ccf2e6e9a0fe9154755737c507492b07f008065f0d2e@group.calendar.google.com",
+    "hobbies": "bb167916bbd1f470aed1fe96685b9125967777dc79004a6e34a553575d6f990b@group.calendar.google.com",
+    "notes": "b6e7902ce9bc252ae19c49838140331a8872f3effcd9ac435dc4fdf342f87ed6@group.calendar.google.com"
+  },
+  "work_hours": {
+    "mon": { "start": "09:00", "end": "17:00" },
+    "tue": { "start": "09:00", "end": "17:00" },
+    "wed": { "start": "09:00", "end": "17:00" },
+    "thu": { "start": "09:00", "end": "17:00" },
+    "fri": { "start": "09:00", "end": "17:00" }
+  },
+  "meals": [
+    { "name": "Breakfast", "start": "07:00", "end": "08:00", "category": "food" },
+    { "name": "Lunch", "start": "12:00", "end": "12:30", "category": "food" },
+    { "name": "Dinner", "start": "18:00", "end": "19:00", "category": "food" }
+  ],
+  "fixed_events": [
+    { "name": "Louis Rugby", "day": "mon", "start": "17:00", "end": "18:00", "category": "family" },
+    { "name": "Swimming", "day": "fri", "start": "17:30", "end": "18:00", "category": "family" },
+    { "name": "Bins - Recycling", "day": "sun", "start": "20:00", "end": "20:30", "category": "primary" }
+  ],
+  "hobby_windows": [
+    { "day": "tue", "start": "19:00", "end": "21:00", "category": "hobbies" },
+    { "day": "thu", "start": "19:00", "end": "21:00", "category": "hobbies" },
+    { "day": "sat", "start": "14:00", "end": "17:00", "category": "hobbies" }
+  ],
+  "rules": {
+    "buffer_minutes": 10,
+    "max_block_length_minutes": 120,
+    "earliest_task_time": "08:00",
+    "latest_task_time": "20:00"
+  },
+  "overrides": {
+    "per_day": {
+      "sat": { "work_hours": null },
+      "sun": { "work_hours": null }
+    },
+    "per_date": {
+    }
+  }
+}

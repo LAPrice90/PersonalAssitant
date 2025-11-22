@@ -1,30 +1,59 @@
-# Personal Assistant Calendar Service
+# Google Calendar + Tasks Starter
 
-This project provides a FastAPI-based backend that powers a personal assistant calendar.
+Helpers for Google Calendar and Google Tasks, plus planning tools.
 
-## Features
+## Setup
+- Put `credentials.json` in the repo root (keep it out of git).
+- Install deps: `pip install -r requirements.txt`
+- Run auth to create `token.json` (Calendar + Tasks scopes):
+  ```bash
+  python auth_gcal.py
+  ```
+  Approve in the browser; `token.json` is saved next to `credentials.json`.
 
-- Bearer token authentication.
-- Endpoints for checking availability, finding free slots, and creating, updating, or deleting events.
-- SQLite storage via SQLModel with UTC timestamps.
+## Scripts/helpers
+- `gcal_client.py`: list/create/patch calendar events.
+- `tasks_client.py`: list/create tasklists, add/complete tasks, and `add_task_with_block` to mirror a task into a calendar block.
+- `list_events.py`: list events (with notes/meta) across mapped calendars for a time window.
+- `plan_week.py`: read-only planner; prints busy items for a target week across mapped calendars. No writes.
+- Config: `schedule_config.json` holds calendar IDs/timezone.
 
-## Getting started
+## Quick examples
+- List calendars:
+  ```python
+  import gcal_client
+  print(gcal_client.list_calendars())
+  ```
+- Create an event:
+  ```python
+  import datetime as dt, gcal_client
+  start = dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=1)
+  end = start + dt.timedelta(hours=1)
+  ev = gcal_client.create_event("primary", "Test event", start, end, description="Hello world")
+  print(ev["htmlLink"])
+  ```
+- Create a task + optional calendar block:
+  ```python
+  import datetime as dt, tasks_client
+  tl = tasks_client.ensure_tasklist("Daily Tasks")
+  start = dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=2)
+  end = start + dt.timedelta(minutes=30)
+  res = tasks_client.add_task_with_block(
+      tasklist_id=tl,
+      title="Test task",
+      notes="Checkbox + time block",
+      calendar_id="your-calendar-id",  # omit to skip calendar block
+      start=start,
+      end=end,
+  )
+  print(res)
+  ```
+- Read-only weekly busy view:
+  ```bash
+  python plan_week.py            # next week
+  python plan_week.py --week 2025-W48
+  ```
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-export API_BEARER_KEY="supersecret"
-uvicorn app:app --host 0.0.0.0 --port 8080
-```
-
-With the server running, you can test the API:
-
-```bash
-curl -H "Authorization: Bearer supersecret" \
-  "http://localhost:8080/availability.find_slots?duration_min=45&window_start=2025-11-12T09:00:00Z&window_end=2025-11-12T17:00:00Z"
-
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer supersecret" \
-  -d '{"title":"Deep work","start":"2025-11-12T13:00:00Z","end":"2025-11-12T13:30:00Z","idempotency_key":"abc123"}' \
-  http://localhost:8080/events.create
-```
+## Notes
+- `token.json` auto-refreshes; rerun `auth_gcal.py` if you revoke access.
+- Times should include timezone (e.g., Europe/London). Use category→calendar mapping in `schedule_config.json` for routing.
